@@ -1,0 +1,17 @@
+mechanical BOM
+
+side screws 2 per side x 4 sides = 8 screws 
+topbot screws 8 per piece x 2 = 16
+total 24 screws
+
+1250779 BOSSARD
+B3X16/BN661
+
+or
+
+1250760 BOSSARD
+B3X12/BN661
+
+-------------------
+
+
