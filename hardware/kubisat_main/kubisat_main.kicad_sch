@@ -1,5 +1,241 @@
-(kicad_sch (version 20231120) (generator "eeschema") (generator_version "8.0")
-  (paper "A4")
-  (lib_symbols)
-  (symbol_instances)
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "8e012760-7134-459b-b212-1cb69dd2e1ec")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 29.21 27.94)
+		(size 35.56 36.83)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "2c7d03ec-a54e-4ab4-a35e-dcb69dfe6e0e")
+		(property "Sheetname" "cpu"
+			(at 29.21 27.2284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cpu.kicad_sch"
+			(at 29.21 65.3546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "kubisat_main"
+				(path "/8e012760-7134-459b-b212-1cb69dd2e1ec"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 193.04 27.94)
+		(size 41.91 36.83)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "2c86e300-786b-4193-97e9-c91ab29cb54d")
+		(property "Sheetname" "comms"
+			(at 193.04 27.2284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "comms.kicad_sch"
+			(at 193.04 65.3546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "kubisat_main"
+				(path "/8e012760-7134-459b-b212-1cb69dd2e1ec"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 138.43 27.94)
+		(size 40.64 36.83)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "30e74b89-024d-46d7-9097-1329f2d05fbe")
+		(property "Sheetname" "gps"
+			(at 138.43 27.2284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "gps.kicad_sch"
+			(at 138.43 65.3546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "kubisat_main"
+				(path "/8e012760-7134-459b-b212-1cb69dd2e1ec"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 82.55 80.01)
+		(size 41.91 31.75)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5d7be231-00d9-4faa-9eef-bc38a734758a")
+		(property "Sheetname" "comms_protection"
+			(at 82.55 79.2984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "comms_protection.kicad_sch"
+			(at 82.55 112.3446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "kubisat_main"
+				(path "/8e012760-7134-459b-b212-1cb69dd2e1ec"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 82.55 27.94)
+		(size 41.91 36.83)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8d56a7c6-8013-48fd-9fd1-ce286abab502")
+		(property "Sheetname" "power"
+			(at 82.55 27.2284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 82.55 65.3546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "kubisat_main"
+				(path "/8e012760-7134-459b-b212-1cb69dd2e1ec"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 29.21 80.01)
+		(size 35.56 31.75)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8e532783-196d-43c4-96de-ad3c2dbae54f")
+		(property "Sheetname" "sensors"
+			(at 29.21 79.2984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensors.kicad_sch"
+			(at 29.21 112.3446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "kubisat_main"
+				(path "/8e012760-7134-459b-b212-1cb69dd2e1ec"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
 )

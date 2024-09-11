@@ -574,6 +574,35 @@
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "8e012760-7134-459b-b212-1cb69dd2e1ec",
+      "Główny"
+    ],
+    [
+      "2c7d03ec-a54e-4ab4-a35e-dcb69dfe6e0e",
+      "cpu"
+    ],
+    [
+      "8d56a7c6-8013-48fd-9fd1-ce286abab502",
+      "power"
+    ],
+    [
+      "30e74b89-024d-46d7-9097-1329f2d05fbe",
+      "gps"
+    ],
+    [
+      "2c86e300-786b-4193-97e9-c91ab29cb54d",
+      "comms"
+    ],
+    [
+      "8e532783-196d-43c4-96de-ad3c2dbae54f",
+      "sensors"
+    ],
+    [
+      "5d7be231-00d9-4faa-9eef-bc38a734758a",
+      "comms_protection"
+    ]
+  ],
   "text_variables": {}
 }
