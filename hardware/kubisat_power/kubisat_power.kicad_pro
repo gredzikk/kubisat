@@ -428,7 +428,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "kubisat"
+    ]
   },
   "meta": {
     "filename": "kubisat_power.kicad_pro",
