@@ -682,20 +682,18 @@
 				(hide yes)
 			)
 		)
-		(symbol "TPS79601_0_1"
+		(symbol "TPS79601_1_1"
 			(rectangle
-				(start 12.7 -7.62)
-				(end -12.7 6.35)
+				(start -12.7 6.35)
+				(end 12.7 -7.62)
 				(stroke
 					(width 0)
 					(type default)
 				)
 				(fill
-					(type none)
+					(type background)
 				)
 			)
-		)
-		(symbol "TPS79601_1_1"
 			(pin input line
 				(at -15.24 -3.81 0)
 				(length 2.54)

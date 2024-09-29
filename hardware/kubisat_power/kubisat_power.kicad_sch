@@ -5,466 +5,6 @@
 	(uuid "32b93b47-8cdd-4826-9733-50714c97e1cd")
 	(paper "A4")
 	(lib_symbols
-		(symbol "1048P:1048P"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "BT"
-				(at -3.81 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" "1048P"
-				(at -3.81 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "1048P:BAT_1048P"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "MF" "Keystone Electronics"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "MAXIMUM_PACKAGE_HEIGHT" "14.85mm"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Package" "None"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Price" "None"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Check_prices" "https://www.snapeda.com/parts/1048P/Keystone+Electronics/view-part/?ref=eda"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "STANDARD" "Manufacturer Recommendations"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "PARTREV" "A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "SnapEDA_Link" "https://www.snapeda.com/parts/1048P/Keystone+Electronics/view-part/?ref=snap"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "MP" "1048P"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=625723&manufacturer=Keystone Electronics&part_name=1048P&search_term=None"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Description_1" "\nSMT Polarized Battery Holder for Dual 18650 Batteries | Keystone Electronics 1048P\n"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "MANUFACTURER" "Keystone"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Availability" "In Stock"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "SNAPEDA_PN" "1048P"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(symbol "1048P_0_0"
-				(polyline
-					(pts
-						(xy -3.81 4.445) (xy -2.54 4.445)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.175 5.08) (xy -3.175 3.81)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -6.35) (xy -1.27 -5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -5.08) (xy -2.54 -5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -5.08) (xy -1.27 -3.81)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.54) (xy -2.54 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.54) (xy -1.27 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 5.08) (xy -1.27 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -7.62) (xy 1.27 -5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -5.08) (xy 1.27 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -5.08) (xy 2.54 -5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 2.54) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 2.54) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 3.81) (xy 1.27 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.175 -7.62) (xy 3.175 -6.35)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 -6.985) (xy 2.54 -6.985)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 7.62 2.54 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "N1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 -5.08 0)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "N2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 2.54 0)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "P1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -5.08 180)
-					(length 5.08)
-					(name "~"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "P2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Battery_Management:DW01A"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3225,6 +2765,446 @@
 				)
 			)
 		)
+		(symbol "kubisat:BK-18650-PC4"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "BT"
+				(at -3.81 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "BK-18650-PC4"
+				(at -3.81 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "BK-18650-PC4:BAT_BK-18650-PC4"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MF" "MPD (Memory Protection Devices)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MAXIMUM_PACKAGE_HEIGHT" "21.54 mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Package" "None"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Price" "None"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Check_prices" "https://www.snapeda.com/parts/BK-18650-PC4/Memory+Protection+Devices/view-part/?ref=eda"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "STANDARD" "Manufacturer Recommendations"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "PARTREV" "K"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "SnapEDA_Link" "https://www.snapeda.com/parts/BK-18650-PC4/Memory+Protection+Devices/view-part/?ref=snap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MP" "BK-18650-PC4"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Description_1" "\nBattery Holder (Open) 18650 2 Cell PC Pin\n"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Availability" "In Stock"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MANUFACTURER" "MPD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "BK-18650-PC4_0_0"
+				(polyline
+					(pts
+						(xy -3.81 -3.175) (xy -2.54 -3.175)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 4.445) (xy -2.54 4.445)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 -2.54) (xy -3.175 -3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 5.08) (xy -3.175 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -5.08) (xy -2.54 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -5.08) (xy -1.27 -7.62)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -1.27 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy -1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 5.08) (xy -1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -5.08) (xy 1.27 -6.35)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -5.08) (xy 2.54 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -3.81) (xy 1.27 -5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 3.81) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1+"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1-"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -5.08 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2+"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -5.08 180)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2-"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "kubisat:CN3791"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4599,6 +4579,12 @@
 		(uuid "1787ff13-42c4-4a05-9323-f215d687084f")
 	)
 	(junction
+		(at 167.64 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1938fba0-be8a-4ca5-8936-db21ad415da9")
+	)
+	(junction
 		(at 252.73 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4651,12 +4637,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3487cc73-1fa6-4fe0-8537-6296e4a08c87")
-	)
-	(junction
-		(at 147.32 31.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3d05ee60-ed0d-42aa-84b3-46faf080a3b5")
 	)
 	(junction
 		(at 165.1 88.9)
@@ -4869,12 +4849,6 @@
 		(uuid "a3ad4fcf-df4f-4469-b22b-b56c7111699b")
 	)
 	(junction
-		(at 167.64 31.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a9490827-ae43-427f-bd26-c19548b03bc9")
-	)
-	(junction
 		(at 243.84 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4911,6 +4885,12 @@
 		(uuid "b28b773a-b11d-479d-956c-afbe8b459465")
 	)
 	(junction
+		(at 147.32 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b65702a3-9b47-46bf-9934-0f65d71c5cf9")
+	)
+	(junction
 		(at 259.08 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4945,12 +4925,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cf2ac720-fc14-4315-9e86-d0a8525b288c")
-	)
-	(junction
-		(at 167.64 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d2e41157-8d35-4483-a2be-bbfc3bcd12fe")
 	)
 	(junction
 		(at 238.76 115.57)
@@ -5023,6 +4997,16 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fea5e414-7dac-4c3e-ad17-4dffc1fbf038")
+	)
+	(wire
+		(pts
+			(xy 167.64 44.45) (xy 167.64 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00d60a93-70c0-4b0a-821a-31fd4ae87c52")
 	)
 	(wire
 		(pts
@@ -5186,16 +5170,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 45.72) (xy 149.86 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f9f8c08-1c4a-4186-be70-1ab564efbf80")
-	)
-	(wire
-		(pts
 			(xy 222.25 39.37) (xy 222.25 41.91)
 		)
 		(stroke
@@ -5313,16 +5287,6 @@
 			(type default)
 		)
 		(uuid "195973ac-14fa-48ec-bf39-7ce1eb2ca9ec")
-	)
-	(wire
-		(pts
-			(xy 149.86 45.72) (xy 149.86 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "197eea46-2cf3-415b-b68c-c9f76026fac6")
 	)
 	(wire
 		(pts
@@ -5546,6 +5510,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 44.45) (xy 149.86 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "347cc858-9d98-49fb-9ba5-08e6df1de1a9")
+	)
+	(wire
+		(pts
 			(xy 168.91 154.94) (xy 168.91 153.67)
 		)
 		(stroke
@@ -5603,6 +5577,16 @@
 			(type default)
 		)
 		(uuid "38428f53-94aa-404b-8f6f-f08becf5a168")
+	)
+	(wire
+		(pts
+			(xy 165.1 44.45) (xy 167.64 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3940b7d6-c84a-4734-bcea-33ca0d30eb49")
 	)
 	(wire
 		(pts
@@ -5916,7 +5900,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 31.75) (xy 147.32 24.13)
+			(xy 147.32 24.13) (xy 147.32 36.83)
 		)
 		(stroke
 			(width 0)
@@ -6526,16 +6510,6 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 43.18) (xy 165.1 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7980a316-fd79-4317-b8e4-a9d72c056bfc")
-	)
-	(wire
-		(pts
 			(xy 168.91 144.78) (xy 168.91 146.05)
 		)
 		(stroke
@@ -6553,16 +6527,6 @@
 			(type default)
 		)
 		(uuid "7b00d971-9117-463f-9bd4-66f017e1efa8")
-	)
-	(wire
-		(pts
-			(xy 165.1 31.75) (xy 167.64 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b57bd1c-296f-4e15-ad5f-fc7d1a49a327")
 	)
 	(wire
 		(pts
@@ -6753,6 +6717,16 @@
 			(type default)
 		)
 		(uuid "8bfe9435-edf1-4318-98d0-1a3ff9446628")
+	)
+	(wire
+		(pts
+			(xy 147.32 36.83) (xy 147.32 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c6c6287-0ccf-4b51-a8e3-3b578c218c1e")
 	)
 	(wire
 		(pts
@@ -7186,26 +7160,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 39.37) (xy 165.1 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b2f72de4-c47f-4b97-a433-5fb7636607d7")
-	)
-	(wire
-		(pts
-			(xy 167.64 36.83) (xy 167.64 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b400cf5f-7358-4cf3-8f00-de3b4f1e3253")
-	)
-	(wire
-		(pts
 			(xy 176.53 146.05) (xy 168.91 146.05)
 		)
 		(stroke
@@ -7243,16 +7197,6 @@
 			(type default)
 		)
 		(uuid "b9b8a9e6-d7e6-4a13-8b11-eea5faba8e95")
-	)
-	(wire
-		(pts
-			(xy 147.32 31.75) (xy 147.32 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9ed5177-65b8-4793-bcef-d1f66bb31916")
 	)
 	(wire
 		(pts
@@ -7366,16 +7310,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 31.75) (xy 167.64 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c58bd7f0-1711-4200-a945-707ce252ac31")
-	)
-	(wire
-		(pts
 			(xy 119.38 73.66) (xy 119.38 76.2)
 		)
 		(stroke
@@ -7466,7 +7400,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 31.75) (xy 147.32 31.75)
+			(xy 149.86 36.83) (xy 147.32 36.83)
 		)
 		(stroke
 			(width 0)
@@ -7826,6 +7760,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 36.83) (xy 167.64 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea6b41cc-6a8a-4f8f-9cfa-6e82ec4017e3")
+	)
+	(wire
+		(pts
 			(xy 180.34 128.27) (xy 179.07 128.27)
 		)
 		(stroke
@@ -7966,6 +7910,16 @@
 	)
 	(wire
 		(pts
+			(xy 167.64 36.83) (xy 167.64 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5b1be97-a14f-47e9-8944-4bb8bd3e8019")
+	)
+	(wire
+		(pts
 			(xy 238.76 154.94) (xy 238.76 151.13)
 		)
 		(stroke
@@ -8013,6 +7967,16 @@
 			(type default)
 		)
 		(uuid "f74d4b8d-20df-4cf4-906d-ae6577f04fb4")
+	)
+	(wire
+		(pts
+			(xy 167.64 36.83) (xy 167.64 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8c8d508-bff6-42a1-9868-313b92521980")
 	)
 	(wire
 		(pts
@@ -10367,32 +10331,33 @@
 		)
 	)
 	(symbol
-		(lib_id "1048P:1048P")
-		(at 157.48 34.29 0)
+		(lib_id "kubisat:BK-18650-PC4")
+		(at 157.48 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4c758d36-6b3e-4d12-a839-821f5c74c6bb")
+		(fields_autoplaced yes)
+		(uuid "4e41d9e9-7261-4764-b354-69477c6549bf")
 		(property "Reference" "BT1"
-			(at 151.384 34.036 0)
+			(at 156.845 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "1048P"
-			(at 152.654 36.068 0)
+		(property "Value" "BK-18650-PC4"
+			(at 156.845 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "1048P:BAT_1048P"
-			(at 157.48 34.29 0)
+		(property "Footprint" "BK-18650-PC4:BAT_BK-18650-PC4"
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10402,7 +10367,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 157.48 34.29 0)
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10411,7 +10376,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 157.48 34.29 0)
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10419,8 +10384,8 @@
 				(hide yes)
 			)
 		)
-		(property "MF" "Keystone Electronics"
-			(at 157.48 34.29 0)
+		(property "MF" "MPD (Memory Protection Devices)"
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10429,8 +10394,8 @@
 				(hide yes)
 			)
 		)
-		(property "MAXIMUM_PACKAGE_HEIGHT" "14.85mm"
-			(at 157.48 34.29 0)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "21.54 mm"
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10440,7 +10405,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 157.48 34.29 0)
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10450,7 +10415,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 157.48 34.29 0)
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10459,8 +10424,8 @@
 				(hide yes)
 			)
 		)
-		(property "Check_prices" "https://www.snapeda.com/parts/1048P/Keystone+Electronics/view-part/?ref=eda"
-			(at 157.48 34.29 0)
+		(property "Check_prices" "https://www.snapeda.com/parts/BK-18650-PC4/Memory+Protection+Devices/view-part/?ref=eda"
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10470,7 +10435,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 157.48 34.29 0)
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10479,8 +10444,8 @@
 				(hide yes)
 			)
 		)
-		(property "PARTREV" "A"
-			(at 157.48 34.29 0)
+		(property "PARTREV" "K"
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10489,8 +10454,8 @@
 				(hide yes)
 			)
 		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/1048P/Keystone+Electronics/view-part/?ref=snap"
-			(at 157.48 34.29 0)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/BK-18650-PC4/Memory+Protection+Devices/view-part/?ref=snap"
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10499,8 +10464,8 @@
 				(hide yes)
 			)
 		)
-		(property "MP" "1048P"
-			(at 157.48 34.29 0)
+		(property "MP" "BK-18650-PC4"
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10509,28 +10474,8 @@
 				(hide yes)
 			)
 		)
-		(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=625723&manufacturer=Keystone Electronics&part_name=1048P&search_term=None"
-			(at 157.48 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Description_1" "\nSMT Polarized Battery Holder for Dual 18650 Batteries | Keystone Electronics 1048P\n"
-			(at 157.48 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MANUFACTURER" "Keystone"
-			(at 157.48 34.29 0)
+		(property "Description_1" "\nBattery Holder (Open) 18650 2 Cell PC Pin\n"
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10540,7 +10485,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 157.48 34.29 0)
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10549,8 +10494,8 @@
 				(hide yes)
 			)
 		)
-		(property "SNAPEDA_PN" "1048P"
-			(at 157.48 34.29 0)
+		(property "MANUFACTURER" "MPD"
+			(at 157.48 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10559,17 +10504,17 @@
 				(hide yes)
 			)
 		)
-		(pin "N2"
-			(uuid "f799a5fe-dfaf-43d0-8c18-cb6afb97cfdf")
+		(pin "2+"
+			(uuid "57493925-88b0-4557-9cc7-579612265d87")
 		)
-		(pin "N1"
-			(uuid "1760875f-502b-433a-8ad4-78997036fbe3")
+		(pin "2-"
+			(uuid "dbbcdd81-5058-4272-aa1b-87e6b9fbe8b6")
 		)
-		(pin "P1"
-			(uuid "5b0195ba-e869-4f48-b27d-e2b6bf67c708")
+		(pin "1-"
+			(uuid "7c960083-ff0c-4285-af93-50002a1b538e")
 		)
-		(pin "P2"
-			(uuid "5d6d004b-14a4-4399-a839-b4ff8c4b49e6")
+		(pin "1+"
+			(uuid "dc0d3872-5fb1-432e-ad63-2c9049da33f4")
 		)
 		(instances
 			(project ""
