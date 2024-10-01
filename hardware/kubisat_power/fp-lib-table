@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "kubisat")(type "KiCad")(uri "${KIPRJMOD}/kubisat.pretty")(options "")(descr ""))
+)
