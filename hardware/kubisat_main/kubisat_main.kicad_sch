@@ -44,7 +44,7 @@
 		)
 	)
 	(sheet
-		(at 193.04 27.94)
+		(at 138.43 27.94)
 		(size 41.91 36.83)
 		(fields_autoplaced yes)
 		(stroke
@@ -56,7 +56,7 @@
 		)
 		(uuid "2c86e300-786b-4193-97e9-c91ab29cb54d")
 		(property "Sheetname" "comms"
-			(at 193.04 27.2284 0)
+			(at 138.43 27.2284 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -65,7 +65,7 @@
 			)
 		)
 		(property "Sheetfile" "comms.kicad_sch"
-			(at 193.04 65.3546 0)
+			(at 138.43 65.3546 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -82,7 +82,7 @@
 		)
 	)
 	(sheet
-		(at 138.43 27.94)
+		(at 82.55 27.94)
 		(size 40.64 36.83)
 		(fields_autoplaced yes)
 		(stroke
@@ -94,7 +94,7 @@
 		)
 		(uuid "30e74b89-024d-46d7-9097-1329f2d05fbe")
 		(property "Sheetname" "gps"
-			(at 138.43 27.2284 0)
+			(at 82.55 27.2284 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -103,7 +103,7 @@
 			)
 		)
 		(property "Sheetfile" "gps.kicad_sch"
-			(at 138.43 65.3546 0)
+			(at 82.55 65.3546 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -153,44 +153,6 @@
 			(project "kubisat_main"
 				(path "/8e012760-7134-459b-b212-1cb69dd2e1ec"
 					(page "7")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 82.55 27.94)
-		(size 41.91 36.83)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "8d56a7c6-8013-48fd-9fd1-ce286abab502")
-		(property "Sheetname" "power"
-			(at 82.55 27.2284 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "power.kicad_sch"
-			(at 82.55 65.3546 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "kubisat_main"
-				(path "/8e012760-7134-459b-b212-1cb69dd2e1ec"
-					(page "3")
 				)
 			)
 		)
