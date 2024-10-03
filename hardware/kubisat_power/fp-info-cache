@@ -1,4 +1,4 @@
-24315272993671492
+24317000969886381
 1048P
 BAT_1048P
 
@@ -49349,6 +49349,13 @@ four-pin M8
 0
 6
 5
+Connector_USB
+GCT_USB4140-GF-0230-C_REV0.4
+
+
+0
+10
+10
 Connector_USB
 USB3_A_Molex_48393-001
 USB 3.0, type A, right angle, http://www.molex.com/pdm_docs/sd/483930003_sd.pdf

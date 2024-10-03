@@ -1072,7 +1072,7 @@
 				(hide yes)
 			)
 		)
-		(symbol "LDI8119-3.3EN_0_1"
+		(symbol "LDI8119-3.3EN_1_1"
 			(rectangle
 				(start -8.89 5.08)
 				(end 8.89 -5.08)
@@ -1081,11 +1081,9 @@
 					(type default)
 				)
 				(fill
-					(type none)
+					(type background)
 				)
 			)
-		)
-		(symbol "LDI8119-3.3EN_1_1"
 			(pin power_in line
 				(at -11.43 2.54 0)
 				(length 2.54)
