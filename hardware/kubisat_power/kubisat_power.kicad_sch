@@ -6010,6 +6010,16 @@
 	)
 	(wire
 		(pts
+			(xy 21.59 129.54) (xy 21.59 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2467596d-eff9-4bd4-92d5-8aef64f44364")
+	)
+	(wire
+		(pts
 			(xy 181.61 72.39) (xy 170.18 72.39)
 		)
 		(stroke
@@ -7587,16 +7597,6 @@
 			(type default)
 		)
 		(uuid "a044fc86-ed38-43b6-ac4c-932a7d2d7b3a")
-	)
-	(wire
-		(pts
-			(xy 21.59 135.89) (xy 21.59 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a199586e-583e-4686-83c7-bf9c0fb8dba5")
 	)
 	(wire
 		(pts
@@ -9578,6 +9578,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "5V_SENSE_OUT"
+		(shape input)
+		(at 21.59 129.54 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c069c09c-a687-4798-9c2f-51110e205b74")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 38.4846 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -18075,72 +18097,6 @@
 			(project ""
 				(path "/32b93b47-8cdd-4826-9733-50714c97e1cd"
 					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+BATT")
-		(at 21.59 134.62 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f5ba8a16-e7fa-4235-bf81-fa6c7c4e405a")
-		(property "Reference" "#PWR028"
-			(at 21.59 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+BATT"
-			(at 21.59 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 21.59 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 21.59 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 21.59 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3f577bf9-4863-4c15-9de1-7c6bf508fc79")
-		)
-		(instances
-			(project ""
-				(path "/32b93b47-8cdd-4826-9733-50714c97e1cd"
-					(reference "#PWR028")
 					(unit 1)
 				)
 			)
