@@ -3,6 +3,10 @@
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
+#include <SoftwareSerial.h>
+
+// The serial connection to the GPS module
+SoftwareSerial ss(4, 3);
 
 Adafruit_MPU6050 mpu;
 
@@ -11,6 +15,8 @@ void setup(void) {
   while (!Serial) {
     delay(10); // will pause Zero, Leonardo, etc until serial console opens
   }
+
+  ss.begin(9600);
 
   // Try to initialize!
   if (!mpu.begin()) {
@@ -52,6 +58,11 @@ void loop() {
   Serial.print("GyroZ:");
   Serial.print(g.gyro.z);
   Serial.println("");
-
-  delay(10);
+  
+  if (ss.available() > 0){
+    byte gpsData = ss.read();
+    Serial.println(gpsData);
+    Serial.println();
+  }
+  delay(10);  
 }

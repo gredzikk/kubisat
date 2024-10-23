@@ -1,4 +1,4 @@
-24315275135717865
+24317004842997047
 1048P
 BAT_1048P
 
@@ -87814,6 +87814,13 @@ Skyworks
 0
 7
 7
+RF
+XL1278-SMT
+
+
+0
+32
+16
 RF_Antenna
 AVX_M620720
 868Mhz, 915Mhz ISM antenna, 6 x 2 x 1.08mm, http://datasheets.avx.com/ethertronics/AVX-E_M620720.pdf

@@ -2813,7 +2813,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RF_GPS:XCVR_NEO-6M-GPS"
+		(property "Footprint" "NEO-6M-GPS:XCVR_NEO-6M-GPS"
 			(at 76.2 121.92 0)
 			(effects
 				(font
