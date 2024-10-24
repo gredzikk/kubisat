@@ -3366,7 +3366,7 @@
 	)
 	(symbol
 		(lib_id "Sensor_Magnetic:MMC5883MA")
-		(at 111.76 46.99 0)
+		(at 109.22 45.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3375,7 +3375,7 @@
 		(fields_autoplaced yes)
 		(uuid "3586a1a0-a2ec-4056-b3c9-8dd5f2c9c0a1")
 		(property "Reference" "U4"
-			(at 118.872 34.544 0)
+			(at 116.332 33.274 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3383,7 +3383,7 @@
 			)
 		)
 		(property "Value" "MMC5883MA"
-			(at 123.19 36.576 0)
+			(at 120.65 35.306 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3391,7 +3391,7 @@
 			)
 		)
 		(property "Footprint" "Package_LGA:LGA-16_3x3mm_P0.5mm"
-			(at 111.76 64.77 0)
+			(at 109.22 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3400,7 +3400,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.memsic.com/userfiles/files/DataSheets/Magnetic-Sensors-Datasheets/MMC5883MA-RevC.pdf"
-			(at 113.03 21.844 0)
+			(at 110.49 20.574 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3409,7 +3409,7 @@
 			)
 		)
 		(property "Description" "3-axis Magnetic Sensor, I2C Interface, LGA-16"
-			(at 111.506 24.13 0)
+			(at 108.966 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
