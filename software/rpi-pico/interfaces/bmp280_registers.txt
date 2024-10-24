@@ -1,0 +1,13 @@
+name        hexaddr     mode
+TEMP_XLSB   FC          R
+TEMP_LSB    FB          R
+TEMP_MSB    FA          R
+PRESS_XLSB  F9          R
+PRESS_LSB   F8          R
+PRESS_MSB   F7          R
+CONFIG      F5          RW
+CTRL_MESS   F4          RW
+STATUS      F3          R
+RESET       E0          W       
+ID          D0          R
+CALIB25..00 A1..88      R
