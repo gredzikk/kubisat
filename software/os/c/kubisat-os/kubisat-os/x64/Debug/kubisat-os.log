@@ -1,0 +1,261 @@
+﻿  data_types.cpp
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(11,20): error C3430: wyliczenie z zakresem musi mieć nazwę
+  (kompilowanie pliku źródłowego „data_types.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(18,20): error C3430: wyliczenie z zakresem musi mieć nazwę
+  (kompilowanie pliku źródłowego „data_types.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(42,20): error C3430: wyliczenie z zakresem musi mieć nazwę
+  (kompilowanie pliku źródłowego „data_types.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(56,20): error C3430: wyliczenie z zakresem musi mieć nazwę
+  (kompilowanie pliku źródłowego „data_types.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(15,5): error C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(46,10): error C2065: "BOOLEAN": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(46,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(46,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(50,10): error C2065: "INTEGER": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(50,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(50,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(54,10): error C2065: "UNSIGNED": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(54,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(54,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(58,10): error C2065: "LONG": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(58,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(58,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(62,10): error C2065: "DOUBLE": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(62,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(62,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(66,10): error C2065: "HEX_STRING": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(66,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(66,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(70,10): error C2065: "STRUCT": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(70,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(70,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(77,10): error C2065: "ARRAY": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(77,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(77,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(46,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(50,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(54,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(58,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(62,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(66,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(70,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(77,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(87,5): warning C4065: instrukcja switch zawiera etykietę "default" ale nie zawiera etykiet "case"
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(111,10): error C2065: "BOOLEAN": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(111,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(111,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(112,10): error C2065: "INTEGER": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(112,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(112,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(113,10): error C2065: "UNSIGNED": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(113,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(113,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(114,10): error C2065: "ENUM": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(114,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(114,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(116,10): error C2065: "LONG": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(116,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(116,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(118,10): error C2065: "DOUBLE": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(118,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(118,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(111,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(112,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(113,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(114,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(116,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(118,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(122,5): warning C4065: instrukcja switch zawiera etykietę "default" ale nie zawiera etykiet "case"
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(134,24): error C2079: "result" używa niezdefiniowanego union "dlms_parse_payload::dlms_payload"
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(138,10): error C2065: "STRUCT": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(138,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(138,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(144,10): error C2065: "ARRAY": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(144,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(144,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(147,10): error C2065: "HEX_STRING": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(147,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(147,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(152,10): error C2065: "BOOLEAN": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(152,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(152,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(153,10): error C2065: "DOUBLE": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(153,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(153,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(154,10): error C2065: "INTEGER": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(154,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(154,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(155,10): error C2065: "LONG": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(155,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(155,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(156,10): error C2065: "UNSIGNED": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(156,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(156,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(157,10): error C2065: "ENUM": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(157,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(157,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(163,10): error C2065: "NULL_DATA": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(163,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(163,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,8): error C2679: dwuargumentowy "=": nie znaleziono żadnego operatora, który przyjmuje prawostronny operand typu "int" (lub nie istnieje akceptowalna konwersja)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(80,1):
+      może to być „dlms_payload &dlms_payload::operator =(dlms_payload &&)”
+          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,8):
+          „dlms_payload &dlms_payload::operator =(dlms_payload &&)”: nie można dokonać konwersji argumentu 2 z „int” do „dlms_payload &&”
+              D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+              Przyczyna: nie można skonwertować z "int" na "dlms_payload"
+              D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+              „dlms_payload::dlms_payload”: żadna przeciążona funkcja nie może przekonwertować wszystkich typów argumentów
+                  D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(80,1):
+                  może to być „dlms_payload::dlms_payload(dlms_payload &&)”
+                      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                      „dlms_payload::dlms_payload(dlms_payload &&)”: nie można dokonać konwersji argumentu 1 z „int” do „dlms_payload &&”
+                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                          Przyczyna: nie można skonwertować z "int" na "dlms_payload"
+                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                          Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
+                  D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(80,1):
+                  lub       "dlms_payload::dlms_payload(const dlms_payload &)"
+                      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                      „dlms_payload::dlms_payload(const dlms_payload &)”: nie można dokonać konwersji argumentu 1 z „int” do „const dlms_payload &”
+                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                          Przyczyna: nie można skonwertować z "int" na "const dlms_payload"
+                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                          Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
+                  D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                  podczas próby dopasowania listy argumentów "(int)"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(80,1):
+      lub       "dlms_payload &dlms_payload::operator =(const dlms_payload &)"
+          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,8):
+          „dlms_payload &dlms_payload::operator =(const dlms_payload &)”: nie można dokonać konwersji argumentu 2 z „int” do „const dlms_payload &”
+              D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+              Przyczyna: nie można skonwertować z "int" na "const dlms_payload"
+              D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+              „dlms_payload::dlms_payload”: żadna przeciążona funkcja nie może przekonwertować wszystkich typów argumentów
+                  D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(80,1):
+                  może to być „dlms_payload::dlms_payload(dlms_payload &&)”
+                      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                      „dlms_payload::dlms_payload(dlms_payload &&)”: nie można dokonać konwersji argumentu 1 z „int” do „dlms_payload &&”
+                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                          Przyczyna: nie można skonwertować z "int" na "dlms_payload"
+                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                          Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
+                  D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(80,1):
+                  lub       "dlms_payload::dlms_payload(const dlms_payload &)"
+                      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                      „dlms_payload::dlms_payload(const dlms_payload &)”: nie można dokonać konwersji argumentu 1 z „int” do „const dlms_payload &”
+                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                          Przyczyna: nie można skonwertować z "int" na "const dlms_payload"
+                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                          Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
+                  D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
+                  podczas próby dopasowania listy argumentów "(int)"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,8):
+      podczas próby dopasowania listy argumentów "(dlms_payload, int)"
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(138,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(144,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(147,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(152,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(153,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(154,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(155,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(156,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(157,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(163,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(165,5): warning C4060: instrukcja switch zawiera etykiety "case" lub "default"
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(172,28): warning C4267: "=": konwersja z "size_t" do "uint8_t", możliwa utrata danych
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(174,32): error C2675: jednoargumentowy "!": "dlms_data_type" nie definiuje tego operatora lub konwersji do typu akceptowalnego dla wstępnie zdefiniowanego operatora
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(187,5): error C2664: „void get_size_from_pdu(uint8_t *,uint8_t *,char *)”: nie można dokonać konwersji argumentu 1 z „size_t *” do „uint8_t *”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(187,23):
+      Wskazane typy nie są powiązane; konwersja wymaga operatora reinterpret_cast, rzutowania w stylu języka C lub rzutowania w stylu funkcji ujętego w nawiasach
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(170,6):
+      zobacz deklarację „get_size_from_pdu”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(187,5):
+      podczas próby dopasowania listy argumentów "(size_t *, uint8_t *, char *)"
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(194,21): error C2065: "ARRAY": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(197,26): error C2065: "STRUCT": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(212,10): error C2065: "HEX_STRING": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(212,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(212,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(218,10): error C2065: "INTEGER": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(218,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(218,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(224,10): error C2065: "UNSIGNED": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(224,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(224,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(230,10): error C2065: "LONG": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(230,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(230,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(236,10): error C2065: "STRUCT": niezadeklarowany identyfikator
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(236,10): error C2131: wyrażenie nie zostało obliczone do stałej
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(236,10):
+      napotkano wyrażenie lub podwyrażenie niebędące stałą
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(212,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(218,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(224,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(230,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(236,10): error C2051: wyrażenie case nie jest stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(245,5): warning C4065: instrukcja switch zawiera etykietę "default" ale nie zawiera etykiet "case"
