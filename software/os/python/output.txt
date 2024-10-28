@@ -1,0 +1,13 @@
+Printing struct_obj
+Type: STRUCT
+  Element 0:
+Type: LONG
+Value: 2137
+  Element 1:
+Type: BOOLEAN
+Value: True
+  Element 2:
+Type: HEX_STRING
+Value: b'siemka'
+
+serialized struct: 08030408590001067369656d6b61

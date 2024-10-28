@@ -1,6 +1,3 @@
-#ifndef DATA_TYPES_HPP
-#define DATA_TYPES_HPP
-
 #include <cstdint>
 #include <cstdlib>
 #include <memory>
@@ -8,14 +5,14 @@
 
 typedef uint8_t* logical_name[5];
 
-typedef enum class {
+typedef enum sensor_type {
     INA3221 = 0,
     MPU6050,
     QMC5883L,
     BMP280,
 }sensor_type;
 
-typedef enum class {
+typedef enum DataRegister {
     DATA_REGISTER_0 = 0,
     DATA_REGISTER_1,
     DATA_REGISTER_2,
@@ -39,7 +36,7 @@ typedef enum class {
     DATA_REGISTER_20
 }DataRegister;
 
-enum class dlms_data_type {
+typedef enum dlms_data_type {
     BOOLEAN,
     INTEGER,
     UNSIGNED,
@@ -51,9 +48,9 @@ enum class dlms_data_type {
     STRUCT,
     NULL_DATA
 }
-;
+dlms_data_type;
 
-typedef enum class {
+typedef enum dlms_data_unit {
     METER,
     VOLT,
     AMPERE,
@@ -67,7 +64,7 @@ typedef enum class {
 }
 dlms_data_unit;
 
-typedef union {
+typedef union dlms_payload {
     uint8_t* HEX_STRING;
     int8_t* INTEGER;
     uint8_t* UNSIGNED;
@@ -121,4 +118,3 @@ cosem_data create_cosem_data(uint8_t* logical_name, dlms_object value);
 std::size_t dlms_parse_object(dlms_object* dest, char* pdu);
 std::unique_ptr<uint8_t[]> create_logical_name(sensor_type sensor, DataRegister data);
 
-#endif // DATA_TYPES_HPP

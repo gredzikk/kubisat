@@ -1,223 +1,7 @@
 ﻿  data_types.cpp
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(11,20): error C3430: wyliczenie z zakresem musi mieć nazwę
-  (kompilowanie pliku źródłowego „data_types.cpp”)
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(18,20): error C3430: wyliczenie z zakresem musi mieć nazwę
-  (kompilowanie pliku źródłowego „data_types.cpp”)
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(42,20): error C3430: wyliczenie z zakresem musi mieć nazwę
-  (kompilowanie pliku źródłowego „data_types.cpp”)
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(56,20): error C3430: wyliczenie z zakresem musi mieć nazwę
-  (kompilowanie pliku źródłowego „data_types.cpp”)
-  
+  main.cpp
 D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(15,5): error C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(46,10): error C2065: "BOOLEAN": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(46,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(46,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(50,10): error C2065: "INTEGER": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(50,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(50,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(54,10): error C2065: "UNSIGNED": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(54,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(54,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(58,10): error C2065: "LONG": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(58,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(58,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(62,10): error C2065: "DOUBLE": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(62,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(62,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(66,10): error C2065: "HEX_STRING": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(66,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(66,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(70,10): error C2065: "STRUCT": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(70,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(70,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(77,10): error C2065: "ARRAY": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(77,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(77,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(46,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(50,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(54,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(58,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(62,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(66,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(70,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(77,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(87,5): warning C4065: instrukcja switch zawiera etykietę "default" ale nie zawiera etykiet "case"
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(111,10): error C2065: "BOOLEAN": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(111,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(111,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(112,10): error C2065: "INTEGER": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(112,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(112,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(113,10): error C2065: "UNSIGNED": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(113,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(113,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(114,10): error C2065: "ENUM": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(114,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(114,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(116,10): error C2065: "LONG": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(116,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(116,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(118,10): error C2065: "DOUBLE": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(118,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(118,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(111,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(112,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(113,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(114,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(116,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(118,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(122,5): warning C4065: instrukcja switch zawiera etykietę "default" ale nie zawiera etykiet "case"
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(134,24): error C2079: "result" używa niezdefiniowanego union "dlms_parse_payload::dlms_payload"
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(138,10): error C2065: "STRUCT": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(138,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(138,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(144,10): error C2065: "ARRAY": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(144,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(144,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(147,10): error C2065: "HEX_STRING": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(147,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(147,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(152,10): error C2065: "BOOLEAN": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(152,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(152,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(153,10): error C2065: "DOUBLE": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(153,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(153,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(154,10): error C2065: "INTEGER": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(154,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(154,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(155,10): error C2065: "LONG": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(155,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(155,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(156,10): error C2065: "UNSIGNED": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(156,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(156,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(157,10): error C2065: "ENUM": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(157,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(157,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(163,10): error C2065: "NULL_DATA": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(163,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(163,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,8): error C2679: dwuargumentowy "=": nie znaleziono żadnego operatora, który przyjmuje prawostronny operand typu "int" (lub nie istnieje akceptowalna konwersja)
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(80,1):
-      może to być „dlms_payload &dlms_payload::operator =(dlms_payload &&)”
-          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,8):
-          „dlms_payload &dlms_payload::operator =(dlms_payload &&)”: nie można dokonać konwersji argumentu 2 z „int” do „dlms_payload &&”
-              D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-              Przyczyna: nie można skonwertować z "int" na "dlms_payload"
-              D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-              „dlms_payload::dlms_payload”: żadna przeciążona funkcja nie może przekonwertować wszystkich typów argumentów
-                  D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(80,1):
-                  może to być „dlms_payload::dlms_payload(dlms_payload &&)”
-                      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                      „dlms_payload::dlms_payload(dlms_payload &&)”: nie można dokonać konwersji argumentu 1 z „int” do „dlms_payload &&”
-                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                          Przyczyna: nie można skonwertować z "int" na "dlms_payload"
-                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                          Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-                  D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(80,1):
-                  lub       "dlms_payload::dlms_payload(const dlms_payload &)"
-                      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                      „dlms_payload::dlms_payload(const dlms_payload &)”: nie można dokonać konwersji argumentu 1 z „int” do „const dlms_payload &”
-                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                          Przyczyna: nie można skonwertować z "int" na "const dlms_payload"
-                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                          Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-                  D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                  podczas próby dopasowania listy argumentów "(int)"
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(80,1):
-      lub       "dlms_payload &dlms_payload::operator =(const dlms_payload &)"
-          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,8):
-          „dlms_payload &dlms_payload::operator =(const dlms_payload &)”: nie można dokonać konwersji argumentu 2 z „int” do „const dlms_payload &”
-              D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-              Przyczyna: nie można skonwertować z "int" na "const dlms_payload"
-              D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-              „dlms_payload::dlms_payload”: żadna przeciążona funkcja nie może przekonwertować wszystkich typów argumentów
-                  D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(80,1):
-                  może to być „dlms_payload::dlms_payload(dlms_payload &&)”
-                      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                      „dlms_payload::dlms_payload(dlms_payload &&)”: nie można dokonać konwersji argumentu 1 z „int” do „dlms_payload &&”
-                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                          Przyczyna: nie można skonwertować z "int" na "dlms_payload"
-                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                          Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-                  D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(80,1):
-                  lub       "dlms_payload::dlms_payload(const dlms_payload &)"
-                      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                      „dlms_payload::dlms_payload(const dlms_payload &)”: nie można dokonać konwersji argumentu 1 z „int” do „const dlms_payload &”
-                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                          Przyczyna: nie można skonwertować z "int" na "const dlms_payload"
-                          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                          Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-                  D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,20):
-                  podczas próby dopasowania listy argumentów "(int)"
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,8):
-      podczas próby dopasowania listy argumentów "(dlms_payload, int)"
-  
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(138,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(144,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(147,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(152,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(153,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(154,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(155,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(156,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(157,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(163,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(165,5): warning C4060: instrukcja switch zawiera etykiety "case" lub "default"
 D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(172,28): warning C4267: "=": konwersja z "size_t" do "uint8_t", możliwa utrata danych
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(174,32): error C2675: jednoargumentowy "!": "dlms_data_type" nie definiuje tego operatora lub konwersji do typu akceptowalnego dla wstępnie zdefiniowanego operatora
 D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(187,5): error C2664: „void get_size_from_pdu(uint8_t *,uint8_t *,char *)”: nie można dokonać konwersji argumentu 1 z „size_t *” do „uint8_t *”
       D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(187,23):
       Wskazane typy nie są powiązane; konwersja wymaga operatora reinterpret_cast, rzutowania w stylu języka C lub rzutowania w stylu funkcji ujętego w nawiasach
@@ -226,36 +10,526 @@ D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(187,5)
       D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(187,5):
       podczas próby dopasowania listy argumentów "(size_t *, uint8_t *, char *)"
   
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(194,21): error C2065: "ARRAY": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(197,26): error C2065: "STRUCT": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(212,10): error C2065: "HEX_STRING": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(212,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(212,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(8,14): error C2011: "sensor_type'': "enum" wpisz ponownie definicję
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(8,14):
+      zobacz deklarację „sensor_type”
   
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(218,10): error C2065: "INTEGER": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(218,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(218,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(15,14): error C2011: "DataRegister'': "enum" wpisz ponownie definicję
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(15,14):
+      zobacz deklarację „DataRegister”
   
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(224,10): error C2065: "UNSIGNED": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(224,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(224,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(39,14): error C2011: "dlms_data_type'': "enum" wpisz ponownie definicję
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(39,14):
+      zobacz deklarację „dlms_data_type”
   
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(230,10): error C2065: "LONG": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(230,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(230,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(53,14): error C2011: "dlms_data_unit'': "enum" wpisz ponownie definicję
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(53,14):
+      zobacz deklarację „dlms_data_unit”
   
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(236,10): error C2065: "STRUCT": niezadeklarowany identyfikator
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(236,10): error C2131: wyrażenie nie zostało obliczone do stałej
-      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(236,10):
-      napotkano wyrażenie lub podwyrażenie niebędące stałą
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(67,15): error C2011: "dlms_payload'': "union" wpisz ponownie definicję
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(67,15):
+      zobacz deklarację „dlms_payload”
   
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(212,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(218,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(224,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(230,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(236,10): error C2051: wyrażenie case nie jest stałą
-D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(245,5): warning C4065: instrukcja switch zawiera etykietę "default" ale nie zawiera etykiet "case"
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16): error C2011: "dlms_object'': "struct" wpisz ponownie definicję
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(86,16): error C2011: "cosem_data'': "struct" wpisz ponownie definicję
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(86,16):
+      zobacz deklarację „cosem_data”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(92,16): error C2011: "cosem_scaler_unit'': "struct" wpisz ponownie definicję
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(92,16):
+      zobacz deklarację „cosem_scaler_unit”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(98,16): error C2011: "cosem_register'': "struct" wpisz ponownie definicję
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(98,16):
+      zobacz deklarację „cosem_register”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(15,5): error C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (kompilowanie pliku źródłowego „main.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(18,12): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_data"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(86,16):
+      zobacz deklarację „cosem_data”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(19,16): error C2079: "result" używa niezdefiniowanego struct "cosem_data"
+  (kompilowanie pliku źródłowego „main.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(20,27): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(21,20): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(25,16): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_register"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(98,16):
+      zobacz deklarację „cosem_register”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(26,20): error C2079: "result" używa niezdefiniowanego struct "cosem_register"
+  (kompilowanie pliku źródłowego „main.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(27,27): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(28,20): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(29,50): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(33,19): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_scaler_unit"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(92,16):
+      zobacz deklarację „cosem_scaler_unit”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(34,23): error C2079: "result" używa niezdefiniowanego struct "cosem_scaler_unit"
+  (kompilowanie pliku źródłowego „main.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(35,22): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(36,20): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(41,13): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_register"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(98,16):
+      zobacz deklarację „cosem_register”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(41,51): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_register"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(98,16):
+      zobacz deklarację „cosem_register”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(41,43): error C2661: "pow": brak przeciążonej funkcji przyjmującej 1 argumenty
+  (kompilowanie pliku źródłowego „main.cpp”)
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\cmath(801,1):
+      może to być „conditional<std::is_same_v<_Ty1,long double>||std::is_same_v<_Ty2,long double>,long double,conditional<std::is_same_v<_Ty1,float>&&std::is_same_v<_Ty2,float>,float,double>::type>::type pow(_Ty1,_Ty2) noexcept”
+          D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(41,43):
+          „conditional<std::is_same_v<_Ty1,long double>||std::is_same_v<_Ty2,long double>,long double,conditional<std::is_same_v<_Ty1,float>&&std::is_same_v<_Ty2,float>,float,double>::type>::type pow(_Ty1,_Ty2) noexcept”: oczekuje 2 argumentów — podano 1
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(41,43):
+      podczas próby dopasowania listy argumentów "(int)"
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(45,13): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(48,32): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(48,16): warning C4473: „printf”: przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(48,16):
+      symbole zastępcze i ich parametry oczekują 1 argumentów ze zmienną liczbą argumentów, ale podano następującą liczbę zmiennych argumentów: 0
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(48,16):
+      brakujący argument 1 o zmiennej liczbie parametrów jest wymagany w ciągu formatu „%s”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(52,32): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(52,16): warning C4473: „printf”: przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(52,16):
+      symbole zastępcze i ich parametry oczekują 1 argumentów ze zmienną liczbą argumentów, ale podano następującą liczbę zmiennych argumentów: 0
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(52,16):
+      brakujący argument 1 o zmiennej liczbie parametrów jest wymagany w ciągu formatu „%d”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(56,32): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(56,16): warning C4473: „printf”: przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(56,16):
+      symbole zastępcze i ich parametry oczekują 1 argumentów ze zmienną liczbą argumentów, ale podano następującą liczbę zmiennych argumentów: 0
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(56,16):
+      brakujący argument 1 o zmiennej liczbie parametrów jest wymagany w ciągu formatu „%u”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(60,32): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(60,16): warning C4473: „printf”: przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(60,16):
+      symbole zastępcze i ich parametry oczekują 1 argumentów ze zmienną liczbą argumentów, ale podano następującą liczbę zmiennych argumentów: 0
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(60,16):
+      brakujący argument 1 o zmiennej liczbie parametrów jest wymagany w ciągu formatu „%d”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(64,32): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(64,16): warning C4473: „printf”: przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(64,16):
+      symbole zastępcze i ich parametry oczekują 1 argumentów ze zmienną liczbą argumentów, ale podano następującą liczbę zmiennych argumentów: 0
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(64,16):
+      brakujący argument 1 o zmiennej liczbie parametrów jest wymagany w ciągu formatu „%f”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(68,31): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(68,16): warning C4473: „printf”: przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(68,16):
+      symbole zastępcze i ich parametry oczekują 1 argumentów ze zmienną liczbą argumentów, ale podano następującą liczbę zmiennych argumentów: 0
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(68,16):
+      brakujący argument 1 o zmiennej liczbie parametrów jest wymagany w ciągu formatu „%s”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(72,32): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(74,31): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(79,32): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(81,31): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(92,36): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_data"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(86,16):
+      zobacz deklarację „cosem_data”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(92,12): warning C4473: „printf”: przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(92,12):
+      symbole zastępcze i ich parametry oczekują 1 argumentów ze zmienną liczbą argumentów, ale podano następującą liczbę zmiennych argumentów: 0
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(92,12):
+      brakujący argument 1 o zmiennej liczbie parametrów jest wymagany w ciągu formatu „%s”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(93,23): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_data"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(86,16):
+      zobacz deklarację „cosem_data”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(98,36): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_register"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(98,16):
+      zobacz deklarację „cosem_register”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(98,12): warning C4473: „printf”: przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(98,12):
+      symbole zastępcze i ich parametry oczekują 1 argumentów ze zmienną liczbą argumentów, ale podano następującą liczbę zmiennych argumentów: 0
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(98,12):
+      brakujący argument 1 o zmiennej liczbie parametrów jest wymagany w ciągu formatu „%s”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(99,30): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_register"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(98,16):
+      zobacz deklarację „cosem_register”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(99,12): warning C4473: „printf”: przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(99,12):
+      symbole zastępcze i ich parametry oczekują 1 argumentów ze zmienną liczbą argumentów, ale podano następującą liczbę zmiennych argumentów: 0
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(99,12):
+      brakujący argument 1 o zmiennej liczbie parametrów jest wymagany w ciągu formatu „%d”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(100,32): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_register"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(98,16):
+      zobacz deklarację „cosem_register”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(100,12): warning C4473: „printf”: przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(100,12):
+      symbole zastępcze i ich parametry oczekują 1 argumentów ze zmienną liczbą argumentów, ale podano następującą liczbę zmiennych argumentów: 0
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(100,12):
+      brakujący argument 1 o zmiennej liczbie parametrów jest wymagany w ciągu formatu „%d”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(101,30): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_register"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(98,16):
+      zobacz deklarację „cosem_register”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(101,12): warning C4473: „printf”: przekazano niewystarczającą liczbę argumentów dla ciągu formatowania
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(101,12):
+      symbole zastępcze i ich parametry oczekują 1 argumentów ze zmienną liczbą argumentów, ale podano następującą liczbę zmiennych argumentów: 0
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(101,12):
+      brakujący argument 1 o zmiennej liczbie parametrów jest wymagany w ciągu formatu „%u”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(134,24): error C2079: "result" używa niezdefiniowanego union "dlms_payload"
+  (kompilowanie pliku źródłowego „main.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(137,13): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(139,51): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(140,29): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(148,16): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(158,16): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(166,5): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(172,28): warning C4267: "=": konwersja z "size_t" do "uint8_t", możliwa utrata danych
+  (kompilowanie pliku źródłowego „main.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(186,5): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(187,24): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(194,9): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(197,14): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(198,29): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(199,30): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(202,9): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(203,14): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(207,13): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(208,17): error C2079: "obj" używa niezdefiniowanego struct "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(249,12): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_data"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(86,16):
+      zobacz deklarację „cosem_data”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(249,12): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(250,16): error C2079: "data_obj" używa niezdefiniowanego struct "cosem_data"
+  (kompilowanie pliku źródłowego „main.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(256,16): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_register"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(98,16):
+      zobacz deklarację „cosem_register”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(256,16): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(256,16): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_scaler_unit"
+  (kompilowanie pliku źródłowego „main.cpp”)
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(92,16):
+      zobacz deklarację „cosem_scaler_unit”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(257,20): error C2079: "reg" używa niezdefiniowanego struct "cosem_register"
+  (kompilowanie pliku źródłowego „main.cpp”)
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(8,17): error C2079: "sub_objects" używa niezdefiniowanego struct "dlms_object"
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(12,18): error C2109: indeks dolny wymaga tablicy lub wskaźnika typu
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(12,22): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(13,18): error C2109: indeks dolny wymaga tablicy lub wskaźnika typu
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(13,22): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(15,17): error C2079: "register_object_1" używa niezdefiniowanego struct "dlms_object"
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(15,37): error C2664: „dlms_object create_dlms_object(dlms_data_type,size_t,void *)”: nie można dokonać konwersji argumentu 3 z „int” do „void *”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(15,67):
+      Konwersja z typu całkowitego na typ wskaźnika wymaga operatora reinterpret_cast, rzutowania w stylu języka C lub rzutowania w stylu funkcji ujętego w nawiasach
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(207,13):
+      zobacz deklarację „create_dlms_object”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(15,37):
+      podczas próby dopasowania listy argumentów "(dlms_data_type, int, int)"
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(15,35): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(17,5): error C2664: „void print_dlms_object(const dlms_object &)”: nie można dokonać konwersji argumentu 1 z „int” do „const dlms_object &”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(17,23):
+      Przyczyna: nie można skonwertować z "int" na "const dlms_object"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(17,23):
+      użycie niezdefiniowanego typu „dlms_object”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(44,6):
+      zobacz deklarację „print_dlms_object”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(17,5):
+      podczas próby dopasowania listy argumentów "(int)"
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(20,20): error C2440: "inicjowanie": nie można konwertować z "std::unique_ptr<uint8_t [],std::default_delete<uint8_t []>>" na "char *"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(20,20):
+      Nie jest dostępny żaden operator konwersji zdefiniowany przez użytkownika, który mógłby wykonać tę konwersję lub operator nie może zostać wywołany
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(30,16): error C2079: "data" używa niezdefiniowanego struct "cosem_data"
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(30,23): error C2664: „cosem_data create_cosem_data(uint8_t *,dlms_object)”: nie można dokonać konwersji argumentu 1 z „logical_name” do „uint8_t *”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(30,41):
+      Wskazane typy nie są powiązane; konwersja wymaga operatora reinterpret_cast, rzutowania w stylu języka C lub rzutowania w stylu funkcji ujętego w nawiasach
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(249,12):
+      zobacz deklarację „create_cosem_data”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(30,23):
+      podczas próby dopasowania listy argumentów "(logical_name, int)"
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(30,21): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_data"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(86,16):
+      zobacz deklarację „cosem_data”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(32,5): error C2664: „void print_cosem_data(const cosem_data &)”: nie można dokonać konwersji argumentu 1 z „int” do „const cosem_data &”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(32,22):
+      Przyczyna: nie można skonwertować z "int" na "const cosem_data"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(32,22):
+      użycie niezdefiniowanego typu „cosem_data”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(86,16):
+      zobacz deklarację „cosem_data”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(90,6):
+      zobacz deklarację „print_cosem_data”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(32,5):
+      podczas próby dopasowania listy argumentów "(int)"
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(34,5): error C2664: „void dlms_free_object(dlms_object &)”: nie można dokonać konwersji argumentu 1 z „int” do „dlms_object &”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(193,6):
+      zobacz deklarację „dlms_free_object”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(34,5):
+      podczas próby dopasowania listy argumentów "(int)"
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(36,18): warning C4305: "inicjowanie": obcięcie z "int" do "int8_t"
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(36,20): warning C4309: "inicjowanie": obcięcie stałej wartości
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(37,17): error C2079: "integer_data" używa niezdefiniowanego struct "dlms_object"
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(37,32): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(37,30): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "dlms_object"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(79,16):
+      zobacz deklarację „dlms_object”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(40,20): error C2440: "inicjowanie": nie można konwertować z "std::unique_ptr<uint8_t [],std::default_delete<uint8_t []>>" na "char *"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(40,20):
+      Nie jest dostępny żaden operator konwersji zdefiniowany przez użytkownika, który mógłby wykonać tę konwersję lub operator nie może zostać wywołany
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(50,16): error C2079: "data1" używa niezdefiniowanego struct "cosem_data"
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(50,24): error C2664: „cosem_data create_cosem_data(uint8_t *,dlms_object)”: nie można dokonać konwersji argumentu 1 z „logical_name” do „uint8_t *”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(50,42):
+      Wskazane typy nie są powiązane; konwersja wymaga operatora reinterpret_cast, rzutowania w stylu języka C lub rzutowania w stylu funkcji ujętego w nawiasach
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(249,12):
+      zobacz deklarację „create_cosem_data”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(50,24):
+      podczas próby dopasowania listy argumentów "(logical_name, int)"
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(50,22): error C2027: wykorzystanie niezdefiniowanego przez użytkownika typu "cosem_data"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(86,16):
+      zobacz deklarację „cosem_data”
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(51,5): error C2664: „void print_cosem_data(const cosem_data &)”: nie można dokonać konwersji argumentu 1 z „int” do „const cosem_data &”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(51,22):
+      Przyczyna: nie można skonwertować z "int" na "const cosem_data"
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(51,22):
+      użycie niezdefiniowanego typu „cosem_data”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.h(86,16):
+      zobacz deklarację „cosem_data”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(90,6):
+      zobacz deklarację „print_cosem_data”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(51,5):
+      podczas próby dopasowania listy argumentów "(int)"
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(53,5): error C2664: „void dlms_free_object(dlms_object &)”: nie można dokonać konwersji argumentu 1 z „int” do „dlms_object &”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\data_types.cpp(193,6):
+      zobacz deklarację „dlms_free_object”
+      D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(53,5):
+      podczas próby dopasowania listy argumentów "(int)"
+  
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(22,14): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\dev\kubisat\kubisat\software\os\c\kubisat-os\kubisat-os\main.cpp(42,14): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generowanie kodu...
