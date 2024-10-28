@@ -22,3 +22,16 @@
 | - Manufacturer ID:    FE  --> |
 | - Die ID:             FF  --> |
 +-------------------------------+
+
+string_val:
+    config
+    man_id
+    die_id
+
+numeric_val:
+    ch1_current
+    ch1_voltage
+    ch2_current
+    ch2_voltage
+    ch3_current
+    ch3_voltage

@@ -11,3 +11,14 @@ STATUS      F3          R
 RESET       E0          W       
 ID          D0          R
 CALIB25..00 A1..88      R
+
+string_val:
+    config
+    control_message
+    status
+    id
+
+numeric_val:
+    temp
+    press
+    

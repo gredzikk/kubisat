@@ -29,3 +29,18 @@ Power Mode
 Maximum Performance mode
 
 config <- UBX
+
+$GPGGA,211455.000,5022.3220,N,01850.9486,E,1,4,20.73,337.7,M,42.1,M,,*66
+$GPVTG,290.28,T,,M,1.18,N,2.19,K,A*3E
+
+
+unit:
+    TIME_UTC
+    DEGREE_NORTH
+    DEGREE_SOUTH
+    DEGREE_EAST
+    DEGREE_WEST
+    GPS_FIX_TYPE
+    SATELLITES_NO
+    METER
+    

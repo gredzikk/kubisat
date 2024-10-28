@@ -12,3 +12,18 @@ hexaddr     mode    name
 10          R       Identification Register A Read
 11          R       Identification Register B Read
 12          R       Identification Register C Read
+
+
+string_val:
+    config A
+    config B
+    mode
+    status
+    id A
+    id B
+    id C
+
+measurement:
+    X
+    Y
+    Z

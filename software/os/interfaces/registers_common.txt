@@ -1,0 +1,63 @@
+QMC5883L
+
+    data_X      TESLA   INTEGER
+    data_Y      TESLA   INTEGER
+    data_Z      TESLA   INTEGER
+    config_A    -       BIT_STRING/INTEGER
+    config_B    -       BIT_STRING/INTEGER
+    mode        -       BIT_STRING/INTEGER
+    status      -       BIT_STRING/INTEGER
+    id_A        -       BIT_STRING/INTEGER
+    id_B        -       BIT_STRING/INTEGER  
+    id_C        -       BIT_STRING/INTEGER
+    
+
+INA3221
+
+    ch1_current AMPERE  INTEGER 
+    ch1_voltage VOLT    INTEGER 
+    ch2_current AMPERE  INTEGER
+    ch2_voltage VOLT    INTEGER
+    ch3_current AMPERE  INTEGER
+    ch3_voltage VOLT    INTEGER
+    config      -       HEX_STRING
+    man_id      -       HEX_STRING
+    die_id      -       HEX_STRING
+
+
+BMP280
+
+    temp            DEGREE_CELSIUS  INTEGER
+    press           PASCAL          INTEGER
+    config          -               BIT_STRING/INTEGER
+    control_meas    -               BIT_STRING/INTEGER
+    id              -               INTEGER
+
+
+MPU6050
+
+    sample_rate_div     -                   INTEGER
+    full_scale_range_G  -                   INTEGER
+    full_scale_range_A  -                   INTEGER
+    accel_xout          G                   INTEGER    
+    accel_yout          G                   INTEGER
+    accel_zout          G                   INTEGER
+    temp_out            DEGREE_CELSIUS      INTEGER
+    gyro_xout           DEGREE_PER_SECOND   INTEGER    
+    gyro_yout           DEGREE_PER_SECOND   INTEGER
+    gyro_zout           DEGREE_PER_SECOND   INTEGER
+    power_mgmt_1        -                   INTEGER
+    power_mgmt_2        -                   INTEGER
+    who_am_i            -                   HEX_STRING
+
+
+NEO-6M
+
+    time_utc        HHMMSS.SSS                      INTEGER
+    latitude        DEGREE_NORTH / DEGREE_SOUTH     INTEGER
+    longitude       DEGREE_EAST / DEGREE_WEST       INTEGER
+    quality         -                               ENUM/INTEGER
+    satellites_no   -                               INTEGER
+    altitude        METER                           INTEGER
+    heading         DEGREE                          INTEGER
+    speed_kmh       KILOMETER_PER_HOUR              INTEGER
