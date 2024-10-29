@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen">
+
+    <title>Wprowadzenie</title>
+  </head>
+
+<body>
+
+    <div class="container">
+        <div id="header">
+            <h1>Wprowadzenie</h1>
+            <h2>Visual C++ for Linux Development</h2>
+        </div>
+    
+    <table>
+    <tr>    
+    <div id="main_content">
+        
+        <td>
+        <div id="lpanel">
+            <h1>Konfigurowanie projektu na potrzeby programowania w systemie Linux</h1>
+
+            <p>Dzięki temu pakietowi roboczemu możesz tworzyć kod w języku C++ dla serwerów, komputerów stacjonarnych i urządzeń z systemem Linux. Możesz zarządzać połączeniami z tymi maszynami z poziomu programu VS. Program VS będzie automatycznie kopiował i zdalnie kompilował Twoje źródła oraz umożliwi uruchomienie aplikacji za pomocą debugera. Nasz system projektów obsługuje wybieranie konkretnych architektur jako docelowych, w tym ARM.</p>
+            <img src="images\ArchOptions.gif"/>
+            
+            <h1>Łączenie z systemem Linux</h1>
+            <h2>Wymagania wstępne</h2>
+            <p>Obecnie obsługujemy tylko kompilację zdalną na maszynie docelowej z systemem Linux. Nie jesteśmy ograniczeni do określonych dystrybucji systemu Linux, ale mamy zależności od obecności pewnych narzędzi. W szczególności potrzebujemy narzędzi openssh-server, g++, gdb i gdbserver. Użyj swojego ulubionego menedżera pakietów, aby je zainstalować, na przykład w systemach opartych na dystrybucji Debian: sudo apt-get install openssh-server g++ gdb gdbserver</p>
+            
+            <h2>Pierwsze połączenie</h2>
+            <p>Gdy po raz pierwszy jako docelowa zostanie wybrana maszyna z systemem Linux, zostanie wyświetlony monit o informacje dotyczące połączenia. Jest to wyzwalane przez kompilowanie projektu.</p>
+            <img src="images\firstconnection.png"/>
+                
+            <h2>Dodawanie i usuwanie połączeń</h2>
+            <p>Aby dodać nowe połączenie, przejdź do pozycji Narzędzia > Opcje i wyszukaj pozycji Połączenie. Menedżer połączeń będzie w obszarze Wiele platform. Z tego miejsca możesz dodawać i usuwać połączenia.</p>
+            <img src="images\ManageConnections.gif"/>
+            
+            <p>Aby zmienić połączenie, które jest używane przez projekt, przejdź do ustawień ogólnych właściwości projektu i zaktualizuj opcję Zdalny kompilator.</p>
+            <img src="images\ChangeRemote.gif"/>
+            
+            <h1>Właściwości projektu</h1>
+            <p>Wszystkie opcje niezbędne do sterowania kompilacją w języku C++ są ujawniane na stronach właściwości projektu. Omówimy kilka z nich, które są związane z działaniem w systemie Linux. Po pierwsze w obszarze ustawień ogólnych zdalny katalog główny jest domyślnie ustawiony na wartość ~/projects/. Zdalny katalog projektu ustawiamy tak, aby był zgodny z nazwą projektu w tej lokalizacji.</p>
+            <img src="images\OutputTypes.gif"/>
+            
+            <p>Przeglądając ogólne ustawienia projektu, zobaczysz, jak zostały skonfigurowane katalogi danych wyjściowych i pośrednich. Ponadto zobaczysz, że ten projekt został skonfigurowany jako aplikacja, a zatem nasz plik wykonywalny znajduje się w lokalizacji bin/x64/Debug jako ConsoleApplication1.out. Zwróć uwagę, że w przypadku typów konfiguracji obsługujemy również biblioteki statyczne i dynamiczne.</p>
+            
+            <p>Dodaj dodatkowe zależności biblioteki na stronie właściwości Konsolidator > Dane wejściowe.</p>
+            <img src="images\linker.png"/>
+            
+            <p>Możesz przekazać dodatkowe polecenia przed uruchomieniem do debugera, aby wykonywać takie operacje jak uruchamianie aplikacji graficznych na zdalnej maszynie z systemem Linux.</p>
+            <img src="images\debuggerexport.png"/>
+            
+            <p>Możesz również wysłać zdarzenia po zakończeniu kompilowania, aby kontrolować zachowanie zdalne, tak jak w tym przykładzie, który eksportuje pin gpio do użycia bez konieczności uruchamiania pliku wykonywalnego jako administrator.</p>
+            <img src="images\postbuild.png"/>
+            
+        </div>
+        </td>
+        <td>
+        <div id="rpanel">
+
+            <h1>Zasoby</h1>
+
+            <p>Zapoznaj się ze <a href="http://aka.ms/vslinux">stroną programowania w języku VC++ dla systemu Linux</a>, na której będziemy publikować aktualizacje i udostępniać bardziej szczegółowe informacje o użyciu.</p>
+            <h1>Podziel się opinią</h1>
+            <p>Użyj funkcji wysyłania opinii w programie Visual Studio lub skontaktuj się z nami za pośrednictwem <a href=" https://developercommunity.visualstudio.com/">społeczności deweloperów</a></p>
+        </div>
+        </td>   
+    </div>
+    </tr>
+    </table>
+    </div>
+</body>
+</html>
