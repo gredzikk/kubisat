@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(ina3221-test ina3221-test.cpp Beastdevices_INA3221.cpp )
+add_executable(ina3221-test ina3221-test.cpp Beastdevices_INA3221.cpp BMP280.cpp )
 
 pico_set_program_name(ina3221-test "ina3221-test")
 pico_set_program_version(ina3221-test "0.1")
