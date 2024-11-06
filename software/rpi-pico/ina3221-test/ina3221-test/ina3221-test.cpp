@@ -42,6 +42,7 @@ struct INA3221Data {
 struct BMP280Data {
     float temperature; // in Celsius
     float pressure;    // in kPa
+    float humidity;    // in %RH
 };
 
 struct DataLog {
@@ -163,13 +164,15 @@ INA3221Data collectINA3221Data(INA3221 &ina3221, float &totalMahDrained, std::de
 BMP280Data collectBMP280Data(BMP280 &bmp280) {
     BMP280Data data;
 
-    int32_t raw_temperature, raw_pressure;
-    if (bmp280.read_raw(&raw_temperature, &raw_pressure)) {
+    int32_t raw_temperature, raw_pressure, raw_humidity;
+    if (bmp280.read_raw_all(&raw_temperature, &raw_pressure, &raw_humidity)) {
         data.temperature = bmp280.convert_temperature(raw_temperature);
         data.pressure = bmp280.convert_pressure(raw_pressure, raw_temperature);
+        data.humidity = bmp280.convert_humidity(raw_humidity);
     } else {
         data.temperature = 0.0f; // Handle error as needed
         data.pressure = 0.0f;    // Handle error as needed
+        data.humidity = 0.0f;    // Handle error as needed
     }
 
     return data;
@@ -191,6 +194,7 @@ void printBMP280Data(const BMP280Data &data) {
     std::cout << std::fixed << std::setprecision(2);
     std::cout << "Temperature: " << data.temperature << " C\n";
     std::cout << "Pressure: " << data.pressure << " kPa\n";
+    std::cout << "Humidity: " << data.humidity << " %RH\n";
 }
 
 void printData(const INA3221Data &inaData, const BMP280Data &bmpData) {
