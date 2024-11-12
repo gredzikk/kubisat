@@ -9,7 +9,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Initialise pico_sdk from installed location
 # (note this can come from environment, CMake cache etc)
 
-# == DO NEVER EDIT THE NEXT LINES for Raspberry Pi Pico VS Code Extension to work ==
+# == DO NOT EDIT THE FOLLOWING LINES for the Raspberry Pi Pico VS Code Extension to work ==
 if(WIN32)
     set(USERHOME $ENV{USERPROFILE})
 else()
@@ -28,33 +28,37 @@ set(PICO_BOARD pico CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(blink_serial C CXX ASM)
+project(ds3231_test C CXX ASM)
+
+set(PICO_CXX_ENABLE_EXCEPTIONS 1)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/lib)
+add_executable(ds3231_test ds3231_test.cpp)
 
-add_executable(blink_serial blink_serial.cpp )
-
-pico_set_program_name(blink_serial "blink_serial")
-pico_set_program_version(blink_serial "0.1")
+pico_set_program_name(ds3231_test "ds3231_test")
+pico_set_program_version(ds3231_test "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(blink_serial 0)
-pico_enable_stdio_usb(blink_serial 1)
+pico_enable_stdio_uart(ds3231_test 0)
+pico_enable_stdio_usb(ds3231_test 1)
 
 # Add the standard library to the build
-target_link_libraries(blink_serial
-        pico_stdlib
-        hardware_i2c
-        )
-
-# Add the standard include files to the build
-target_include_directories(blink_serial PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}
-  ${CMAKE_CURRENT_LIST_DIR}/.. # for our common lwipopts or any other standard includes, if required
+target_link_libraries(ds3231_test
+    hardware_rtc
+    pico_stdlib
+    hardware_i2c
+    ds3231
 )
 
-pico_add_extra_outputs(blink_serial)
+# Add the standard include files to the build
+target_include_directories(ds3231_test PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}
+)
+
+
+pico_add_extra_outputs(ds3231_test)
 

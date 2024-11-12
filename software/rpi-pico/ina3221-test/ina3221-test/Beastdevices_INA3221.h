@@ -5,10 +5,10 @@
 #include <iostream>
 
 typedef enum {
-    INA3221_ADDR40_GND = 0b1000000, // A0 pin -> GND
-    INA3221_ADDR41_VCC = 0b1000001, // A0 pin -> VCC
-    INA3221_ADDR42_SDA = 0b1000010, // A0 pin -> SDA
-    INA3221_ADDR43_SCL = 0b1000011  // A0 pin -> SCL
+    INA3221_ADDR40_GND = 0x64, // A0 pin -> GND
+    INA3221_ADDR41_VCC = 0x65, // A0 pin -> VCC
+    INA3221_ADDR42_SDA = 0x66, // A0 pin -> SDA
+    INA3221_ADDR43_SCL = 0x67  // A0 pin -> SCL
 } ina3221_addr_t;
 
 // Channels
@@ -105,9 +105,6 @@ class INA3221 {
         uint16_t reserved:1;
     } masken_reg_t;
 
-    // Arduino's I2C library
-    int fd;
-
     // I2C address
     ina3221_addr_t _i2c_addr;
 
@@ -128,7 +125,7 @@ class INA3221 {
 
 public:
 
-    INA3221(ina3221_addr_t addr) : fd(-1),  _i2c_addr(addr) {};
+    INA3221(ina3221_addr_t addr) : _i2c_addr(addr) {};
     // Initializes INA3221
     void begin();
 
