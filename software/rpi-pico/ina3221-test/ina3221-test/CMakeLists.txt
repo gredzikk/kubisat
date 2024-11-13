@@ -41,8 +41,8 @@ pico_set_program_name(ina3221-test "ina3221-test")
 pico_set_program_version(ina3221-test "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(ina3221-test 1)
-pico_enable_stdio_usb(ina3221-test 0)
+pico_enable_stdio_uart(ina3221-test 0)
+pico_enable_stdio_usb(ina3221-test 1)
 
 # Add the standard library to the build
 target_link_libraries(ina3221-test

@@ -55,7 +55,7 @@ public:
 
     // Convert raw data to actual values
     float convert_temperature(int32_t temp_raw) const;
-    float convert_pressure(int32_t pressure_raw, int32_t temp_raw) const;
+    float convert_pressure(int32_t pressure_raw) const;
     float convert_humidity(int32_t humidity_raw) const;
 
 private:

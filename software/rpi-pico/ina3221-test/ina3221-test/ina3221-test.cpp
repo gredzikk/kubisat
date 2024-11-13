@@ -18,16 +18,6 @@ const float TIME_INTERVAL_HOURS = 1.0 / 3600.0; // Time interval in hours (1 sec
 // I2C defines
 #define I2C_PORT i2c0
 
-// UART defines
-#define UART_ID uart0
-#define BAUD_RATE 115200
-
-// UART pins
-#define UART_TX_PIN 12
-#define UART_RX_PIN 13
-
-// Data Structures
-
 struct INA3221Data {
     float batteryVoltage;
     float usbCurrent;
@@ -70,12 +60,10 @@ int main()
     gpio_pull_up(PICO_DEFAULT_I2C_SDA_PIN);
     gpio_pull_up(PICO_DEFAULT_I2C_SCL_PIN);
 
-    // Set up UART
-    uart_init(UART_ID, BAUD_RATE);
-    gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
-    gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
-    
-    uart_puts(UART_ID, "Initializing UART...\n");
+    for (int i = 20; i > 0; --i) {
+    std::cout << "Program starts in " << i << " seconds..." << std::endl;
+    sleep_ms(1000);
+}
 
     // Initialize INA3221
     INA3221 ina3221(INA3221_ADDR40_GND);
@@ -84,22 +72,22 @@ int main()
     ina3221.setBusMeasEnable();
     ina3221.setAveragingMode(INA3221_REG_CONF_AVG_16);
     
-    uart_puts(UART_ID, "Initialized INA3221 sensor.\n");
+    printf( "Initialized INA3221 sensor.\n");
 
     // Initialize BMP280
     BMP280 bmp280(I2C_PORT, BMP280::ADDR_SDO_LOW);
     if (!bmp280.init()) {
-        uart_puts(UART_ID, "Failed to initialize BMP280 sensor.\n");
+        printf( "Failed to initialize BMP280 sensor.\n");
         return -1;
     }
-    uart_puts(UART_ID, "Initialized BMP280 sensor.\n");
+    printf( "Initialized BMP280 sensor.\n");
 
     // Data Structures for Logging
     std::deque<float> timeRemainingHistory;
     float totalMahDrained = 0.0;
     DataLog collectedData;
 
-    uart_puts(UART_ID, "Entering main loop...\n");
+    printf( "Entering main loop...\n");
 
     while (true) {
         // Collect Data from INA3221
@@ -167,7 +155,7 @@ BMP280Data collectBMP280Data(BMP280 &bmp280) {
     int32_t raw_temperature, raw_pressure, raw_humidity;
     if (bmp280.read_raw_all(&raw_temperature, &raw_pressure, &raw_humidity)) {
         data.temperature = bmp280.convert_temperature(raw_temperature);
-        data.pressure = bmp280.convert_pressure(raw_pressure, raw_temperature);
+        data.pressure = bmp280.convert_pressure(raw_pressure);
         data.humidity = bmp280.convert_humidity(raw_humidity);
     } else {
         data.temperature = 0.0f; // Handle error as needed
