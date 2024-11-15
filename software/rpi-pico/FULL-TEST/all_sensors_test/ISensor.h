@@ -26,8 +26,6 @@ enum class DataType {
     TEMPERATURE,
     PRESSURE,
     HUMIDITY,
-    RADIO_RSSI,
-    RADIO_SNR
 };
 
 class ISensor {
