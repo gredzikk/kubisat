@@ -1,36 +1,38 @@
 #ifndef DS3231_H
 #define DS3231_H
 
-#include <stdint.h>
-#include "pico/util/datetime.h"
+#include <string>
+#include <array>
+#include "pico/stdlib.h"
 #include "hardware/i2c.h"
-#include <time.h>
-
-#define DS3231_ADDR 0x68
-#define I2C_TIMEOUT_CHAR 500
-#define I2C_REG_READ 1
-#define I2C_REG_WRITE 0
-
-#define CHECK_DT(tag, min, max)  if ((dt->tag < min) || (dt->tag > max)) return false
 
 class DS3231 {
-public: 
-    DS3231(i2c_inst_t* i2c) : i2c(i2c) {};
-    int32_t getDatetime(datetime_t *dt);
-    int32_t setDatetime(datetime_t *dt);
+public:
+    // Weekday names
+    static const std::array<std::string, 7> WEEKDAYS;
+    
+    // Constructor
+    DS3231(uint sda_pin = 4, uint scl_pin = 5, i2c_inst_t* i2c_port = i2c0, 
+           uint speed = 400*1000, uint8_t address = 0x68);
+    
+    // Set time using binary-coded decimal format
+    bool setTime(uint8_t sec, uint8_t min, uint8_t hour, 
+                 uint8_t weekday, uint8_t day, uint8_t month, uint16_t year);
+    
+    // Get time in two formats
+    bool getTime(uint8_t& sec, uint8_t& min, uint8_t& hour,
+                std::string& weekday, uint8_t& day, uint8_t& month, uint16_t& year);
+    std::string getTimeString();
 
 private:
     i2c_inst_t* i2c;
-
-    // Returns number of bytes written, or PICO_ERROR_GENERIC if address not acknowledged,
-    // no device present, or PICO_ERROR_TIMEOUT if a timeout occurred. 
-    int32_t readRegister(uint8_t reg, uint8_t* pBuf, uint32_t len);
-    int32_t writeRegister(uint8_t reg, uint8_t* pBuf, uint32_t len);
+    uint8_t address;
+    static constexpr uint8_t RTC_REGISTER = 0x00;
+    
+    // Utility functions
+    uint8_t bcd2bin(uint8_t val);
+    uint8_t bin2bcd(uint8_t val);
+    std::string preZero(uint8_t val);
 };
-
-bool checkDatetime(datetime_t *dt);
-
-// Calculates the day of the week Sunday = 0
-uint8_t getDayOfWeek(uint16_t year, uint8_t month, uint8_t day);
 
 #endif

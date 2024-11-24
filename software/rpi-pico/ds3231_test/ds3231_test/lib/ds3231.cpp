@@ -1,97 +1,93 @@
 #include "DS3231.h"
+#include <iomanip>
+#include <sstream>
 
-// convert BCD to number
-static inline uint8_t bcdnum(uint8_t bcd) {
-    return ((bcd/16) * 10) + (bcd % 16);
+const std::array<std::string, 7> DS3231::WEEKDAYS = {
+    "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"
+};
+
+DS3231::DS3231(uint sda_pin, uint scl_pin, i2c_inst_t* i2c_port, 
+               uint speed, uint8_t address) : i2c(i2c_port), address(address) {
+    // Initialize I2C
+    i2c_init(i2c, speed);
+    gpio_set_function(sda_pin, GPIO_FUNC_I2C);
+    gpio_set_function(scl_pin, GPIO_FUNC_I2C);
+    gpio_pull_up(sda_pin);
+    gpio_pull_up(scl_pin);
 }
 
-// convert number to BCD
-static inline uint8_t numbcd(uint8_t num) {
-    return ((num/10) * 16) + (num % 10);
+bool DS3231::setTime(uint8_t sec, uint8_t min, uint8_t hour,
+                    uint8_t weekday, uint8_t day, uint8_t month, uint16_t year) {
+    uint8_t buffer[8];
+    buffer[0] = 0;
+    buffer[1] = bin2bcd(sec);
+    buffer[2] = bin2bcd(min);
+    buffer[3] = bin2bcd(hour);
+    buffer[4] = bin2bcd(weekday);
+    buffer[5] = bin2bcd(day);
+    buffer[6] = bin2bcd(month);
+    buffer[7] = bin2bcd(year - 2000);
+
+    // Write time to RTC
+    uint8_t reg = RTC_REGISTER;
+    i2c_write_blocking(i2c, address, &reg, 1, true);
+    return i2c_write_blocking(i2c, address, buffer, sizeof(buffer), false) == sizeof(buffer);
 }
 
-bool checkDatetime(datetime_t *dt) {
-    CHECK_DT(year, 0, 4095);
-    CHECK_DT(month, 1, 12);
-    CHECK_DT(day, 1, 31);
-    CHECK_DT(dotw, 0, 6);
-    CHECK_DT(hour, 0, 23);
-    CHECK_DT(min, 0, 59);
-    CHECK_DT(sec, 0, 59);
+bool DS3231::getTime(uint8_t& sec, uint8_t& min, uint8_t& hour,
+                    std::string& weekday, uint8_t& day, uint8_t& month, uint16_t& year) {
+    uint8_t buffer[7];
+    uint8_t reg = RTC_REGISTER;
+    
+    if (i2c_write_blocking(i2c, address, &reg, 1, true) != 1) {
+        return false;
+    }
+    
+    if (i2c_read_blocking(i2c, address, buffer, sizeof(buffer), false) != sizeof(buffer)) {
+        return false;
+    }
 
+    sec = bcd2bin(buffer[0]);
+    min = bcd2bin(buffer[1]);
+    hour = bcd2bin(buffer[2]);
+    weekday = WEEKDAYS[bcd2bin(buffer[3])];
+    day = bcd2bin(buffer[4]);
+    month = bcd2bin(buffer[5]);
+    year = bcd2bin(buffer[6]) + 2000;
+    
     return true;
 }
 
-int32_t DS3231::getDatetime(datetime_t *dt) {
-    uint8_t buf[7];
-
-    int err = readRegister(0, buf, sizeof(buf));
-    if(err != sizeof(buf))
-        return err;
-
-    dt->sec = bcdnum(buf[0]);
-    dt->min = bcdnum(buf[1]);
-    dt->hour = bcdnum(buf[2]);
-    dt->dotw = bcdnum(buf[3]) - 1;
-    dt->day = bcdnum(buf[4]);
-    dt->month = bcdnum(buf[5] & 0x1F);
-    dt->year = bcdnum(buf[6]) + 2000;
-
-    if(!checkDatetime(dt))
-        return -101;
-    return 0;
-}
-
-int32_t DS3231::setDatetime(datetime_t *dt) {
-    if(!checkDatetime(dt))
-        return -101;
-
-    uint8_t buf[8];
-    buf[0] = 0;
-    buf[1] = numbcd(dt->sec);
-    buf[2] = numbcd(dt->min);
-    buf[3] = numbcd(dt->hour);
-    buf[4] = numbcd(dt->dotw + 1);
-    buf[5] = numbcd(dt->day);
-    buf[6] = numbcd(dt->month);
-    buf[7] = numbcd(dt->year - 2000);
-
-    int err = writeRegister(0, buf, sizeof(buf)) != sizeof(buf);
-    if(err != sizeof(buf))
-        return err;
-    return 0;
-}
-
-// returns Number of bytes written, or PICO_ERROR_GENERIC if address not acknowledged, no device present, or PICO_ERROR_TIMEOUT if a timeout occurred. 
-int32_t DS3231::readRegister(uint8_t reg, uint8_t* pBuf, uint32_t len) {
-    // Select the register we want to read from
-    int32_t err = i2c_write_timeout_us(i2c, DS3231_ADDR, &reg, I2C_REG_READ, true, I2C_TIMEOUT_CHAR);
-    // Read into buffer
-    if(err == 1)
-        err = i2c_read_timeout_us(i2c, DS3231_ADDR, pBuf, len, false, len * I2C_TIMEOUT_CHAR);
-    return err;
-}
-
-// returns Number of bytes written, or PICO_ERROR_GENERIC if address not acknowledged, no device present, or PICO_ERROR_TIMEOUT if a timeout occurred. 
-int32_t DS3231::writeRegister(uint8_t reg, uint8_t* pBuf, uint32_t len) {
-    // Select the register we want to read from
-    int32_t err = i2c_write_timeout_us(i2c, DS3231_ADDR, &reg, I2C_REG_WRITE, true, I2C_TIMEOUT_CHAR);
-    if(err == 0)
-        err = i2c_write_timeout_us(i2c, DS3231_ADDR, pBuf, len, false, len * I2C_TIMEOUT_CHAR);
-    return err;
-}
-
-uint8_t getDayOfWeek(uint16_t year, uint8_t month, uint8_t day) {
-    // adjust month year
-    if (month < 3) {
-        month += 12;
-        year -= 1;
+std::string DS3231::getTimeString() {
+    uint8_t sec, min, hour, day, month;
+    uint16_t year;
+    std::string weekday;
+    
+    if (!getTime(sec, min, hour, weekday, day, month, year)) {
+        return "Error reading RTC";
     }
+    
+    std::stringstream ss;
+    ss << preZero(hour) << ":" << preZero(min) << ":" << preZero(sec)
+       << "      " << weekday << " " 
+       << static_cast<int>(day) << "." 
+       << static_cast<int>(month) << "." 
+       << year;
+    
+    return ss.str();
+}
 
-    // split year
-    uint32_t c = year / 100;
-    year = year % 100;
+uint8_t DS3231::bcd2bin(uint8_t val) {
+    return ((val/16) * 10) + (val % 16);
+}
 
-    // Zeller's congruence
-    return (c / 4 - 2 * c + year + year / 4 + 13 * (month + 1) / 5 + day - 1) % 7;
+uint8_t DS3231::bin2bcd(uint8_t val) {
+    return ((val/10) * 16) + (val % 10);
+}
+
+std::string DS3231::preZero(uint8_t val) {
+    if (val < 10) {
+        return "0" + std::to_string(val);
+    }
+    return std::to_string(val);
 }

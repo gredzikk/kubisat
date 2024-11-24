@@ -1,49 +1,34 @@
 #include "lib/ds3231.h"
 #include <stdio.h>
 #include "pico/stdlib.h"
-#include <stdlib.h>
-#include <string>
+#include <iostream>
 
-char buf[7];
-std::string week[7] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-
-#define I2C_PORT i2c0
-
-int main()  
-{
+int main() {
+    // Initialize USB serial for output
     stdio_init_all();
-    i2c_init(I2C_PORT, 100 * 1000);
-    gpio_set_function(PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C);
-    gpio_set_function(PICO_DEFAULT_I2C_SDA_PIN, GPIO_FUNC_I2C);
-    gpio_pull_up(PICO_DEFAULT_I2C_SDA_PIN);
-    gpio_pull_up(PICO_DEFAULT_I2C_SCL_PIN);
+    sleep_ms(5000); // Wait for serial to be ready
+    
+    printf("DS3231 RTC Test\n");
 
-    sleep_ms(20000);
-    printf("DS3231 Test Program ...\n\n"); 
-
-    DS3231 rtc(i2c0);
-    datetime_t dt;
-
-    // Set initial time
-    dt.year = 2023;
-    dt.month = 10;
-    dt.day = 1;
-    dt.dotw = 0; // Sunday
-    dt.hour = 12;
-    dt.min = 0;
-    dt.sec = 0;
-    rtc.setDatetime(&dt);
-
-    while(1)  
-    {  
-        rtc.getDatetime(&dt);
-
-        // Print date and time
-        printf("20%02d/%02d/%02d  ", dt.year, dt.month, dt.day);
-        printf("%02d:%02d:%02d  ", dt.hour, dt.min, dt.sec);
-        printf("%s\n", week[dt.dotw]);
-
-        sleep_ms(1000); 
-    }  
+    // Create RTC object with default pins (SDA=16, SCL=17)
+    DS3231 rtc;
+    
+    // Optionally set initial time (24-hour format)
+    // Parameters: sec, min, hour, weekday(0-6), day, month, year
+    rtc.setTime(0,41,20,4,14,11,2024); // 14:30:00 MON 15.03.2024
+    
+    while(1) {
+        uint8_t sec, min, hour, day, month;
+        uint16_t year;
+        std::string weekday;
+        
+        if(rtc.getTime(sec, min, hour, weekday, day, month, year)) {
+            printf("%02d:%02d:%02d %s %02d.%02d.%d\n", 
+                   hour, min, sec, weekday.c_str(), day, month, year);
+        }
+        
+        sleep_ms(1000); // Wait 1 second between readings
+    }
+    
     return 0;
 }

@@ -48,3 +48,16 @@ bool DS3231Wrapper::setTime(datetime_t* dt) {
 bool DS3231Wrapper::configure(const std::map<std::string, std::string>& config) {
     return true;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

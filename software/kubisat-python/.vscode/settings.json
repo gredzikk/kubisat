@@ -1,0 +1,35 @@
+{
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingModuleSource": "none"
+    },
+    "python.terminal.activateEnvironment": false,
+    "micropico.openOnStart": true,
+    "python.analysis.typeshedPaths": [
+        "~/.micropico-stubs/included"
+    ],
+    "python.analysis.extraPaths": [
+        "~/.micropico-stubs/included"
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#c4bbb6",
+        "activityBar.background": "#c4bbb6",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#308f52",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#c4bbb6",
+        "statusBar.background": "#ada19a",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#96877e",
+        "statusBarItem.remoteBackground": "#ada19a",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#ada19a",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#ada19a99",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#ada19a"
+}
