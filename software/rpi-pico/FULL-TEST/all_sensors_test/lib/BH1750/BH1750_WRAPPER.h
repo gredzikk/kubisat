@@ -19,7 +19,6 @@ public:
     bool isInitialized() const override;
     SensorType getType() const override;
     
-    // Implement the configure method
     bool configure(const std::map<std::string, std::string>& config);
 };
 

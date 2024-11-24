@@ -1,4 +1,5 @@
 #include "DS3231_WRAPPER.h"
+#include <iostream>
 
 DS3231Wrapper::DS3231Wrapper(i2c_inst_t* i2c) : sensor(i2c) {}
 
@@ -46,6 +47,66 @@ bool DS3231Wrapper::setTime(datetime_t* dt) {
 }
 
 bool DS3231Wrapper::configure(const std::map<std::string, std::string>& config) {
+    if (!initialized) return false;
+    
+    // Get current time first
+    if (!sensor.getDatetime(&current_time)) {
+        std::cerr << "Failed to get current time" << std::endl;
+        return false;
+    }
+
+    datetime_t new_time = current_time; // Start with current values
+    bool time_modified = false;
+
+    for (const auto& [key, value] : config) {
+        try {
+            if (key == "year") {
+                new_time.year = std::stoi(value);
+                time_modified = true;
+            }
+            else if (key == "month") {
+                new_time.month = std::stoi(value);
+                time_modified = true;
+            }
+            else if (key == "day") {
+                new_time.day = std::stoi(value);
+                time_modified = true;
+            }
+            else if (key == "hour") {
+                new_time.hour = std::stoi(value);
+                time_modified = true;
+            }
+            else if (key == "minute") {
+                new_time.min = std::stoi(value);
+                time_modified = true;
+            }
+            else if (key == "second") {
+                new_time.sec = std::stoi(value);
+                time_modified = true;
+            }
+            else if (key == "dotw") {
+                new_time.dotw = std::stoi(value);
+                time_modified = true;
+            }
+            else {
+                std::cerr << "Unknown configuration key: " << key << std::endl;
+                return false;
+            }
+        }
+        catch (const std::exception& e) {
+            std::cerr << "Error parsing time value for " << key << ": " << e.what() << std::endl;
+            return false;
+        }
+    }
+
+    if (time_modified) {
+        // Calculate day of week if not provided
+        if (config.find("dotw") == config.end()) {
+            new_time.dotw = getDayOfWeek(new_time.year, new_time.month, new_time.day);
+        }
+        return setTime(&new_time);
+    }
+
     return true;
 }
 
