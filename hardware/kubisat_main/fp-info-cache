@@ -1,4 +1,4 @@
-24317004842997047
+24323572999266788
 1048P
 BAT_1048P
 
@@ -8315,6 +8315,13 @@ connector cf
 0
 54
 50
+Connector_Card
+J_SD_Card-micro_socket_A
+SD Card Socket, Olimex, MICRO-SD-CARD 
+
+0
+13
+10
 Connector_Card
 SD-SIM_microSD-microSIM_Molex_104168-1620
 microSD and microSIM connector, https://www.molex.com/pdm_docs/sd/1041681620_sd.pdf
@@ -63468,6 +63475,27 @@ solder jumper open
 0
 5
 3
+KiCadLibraries
+Crystal_SMD_HC49-US
+SMD Crystal HC-49-SD http://cdn-reichelt.de/documents/datenblatt/B400/xxx-HC49-SMD.pdf, 11.4x4.7mm^2 package
+SMD SMT crystal
+0
+2
+2
+KiCadLibraries
+RP2040-QFN-56
+QFN, 56 Pin (http://www.cypress.com/file/416486/download#page=40), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
+QFN DFN_QFN
+0
+70
+57
+KiCadLibraries
+RPi_Pico_SMD_TH
+Through hole straight pin header, 2x20, 2.54mm pitch, double rows
+Through hole pin header THT 2x20 2.54mm double row
+0
+86
+43
 LED_SMD
 LED-APA102-2020
 http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf
