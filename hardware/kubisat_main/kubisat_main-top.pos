@@ -1,0 +1,31 @@
+### Footprint positions - created on 2024-11-28T22:34:31+0100 ###
+### Printed by KiCad version 8.0.4
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                 Package                                                PosX       PosY       Rot  Side
+C1        10u                 CP_EIA-3216-18_Kemet-A                              47.2500   -84.7000   90.0000  top
+C2        10u                 CP_EIA-3216-18_Kemet-A                              38.4000   -84.6500   90.0000  top
+C16       100n                C_0805_2012Metric                                   40.7000   -89.3500    0.0000  top
+J2        Micro_SD_Card_Det1  J_SD_Card-micro_socket_A                            68.6650   -44.7156    0.0000  top
+J4        POWER_IN            JST_PH_S6B-PH-SM4-TB_1x06-1MP_P2.00mm_Horizontal    71.2000  -107.8500    0.0000  top
+J5        IPX                 U.FL_Hirose_U.FL-R-SMT-1_Vertical                   45.3500  -111.6200  -90.0000  top
+J6        POWER               JST_PH_S3B-PH-SM4-TB_1x03-1MP_P2.00mm_Horizontal    56.0500  -107.7000    0.0000  top
+L1        27uH                L_0805_2012Metric                                   44.2500  -107.9500    0.0000  top
+Q1        BSS138              SOT-23                                              78.4625   -99.7625  -90.0000  top
+Q2        BSS138              SOT-23                                              72.5500   -99.8000  -90.0000  top
+R1        4k7                 R_0805_2012Metric                                   72.1000   -65.3500  180.0000  top
+R2        4k7                 R_0805_2012Metric                                   72.0500   -67.5000  180.0000  top
+R3        4k7                 R_0805_2012Metric                                   65.4000   -55.6375   90.0000  top
+R4        4k7                 R_0805_2012Metric                                   67.6500   -55.6375   90.0000  top
+R5        4k7                 R_0805_2012Metric                                   69.9000   -55.6375   90.0000  top
+R6        4k7                 R_0805_2012Metric                                   72.1500   -55.6500   90.0000  top
+R7        10k                 R_0805_2012Metric                                   75.6000   -99.8125  -90.0000  top
+R8        10k                 R_0805_2012Metric                                   69.6000   -99.8375  -90.0000  top
+R9        10k                 R_0805_2012Metric                                   78.5000   -96.7125  180.0000  top
+R10       10k                 R_0805_2012Metric                                   72.5500   -96.7375  180.0000  top
+R11       22                  R_0805_2012Metric                                   40.2500  -107.9500    0.0000  top
+SW2       RESET               SW_Push_1P1T_NO_CK_KMR2                            106.7500   -54.8000  -90.0000  top
+U1        DS3231M             SOIC-16W_7.5x10.3mm_P1.27mm                         64.6500   -66.0000  -90.0000  top
+U3        NEO-6M-GPS          ublox_NEO                                           39.4000   -98.8500   90.0000  top
+U5        ~                   SOT-23-5                                            42.8375   -84.7500  180.0000  top
+## End

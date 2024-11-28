@@ -8755,8 +8755,8 @@
 		(uuid 7609b043-8dbf-487e-ab37-0fb1e948155f)
 	)
 	(rectangle
-		(start 227.33 13.97)
-		(end 283.21 78.74)
+		(start 168.91 99.06)
+		(end 238.76 163.83)
 		(stroke
 			(width 0.3048)
 			(type dash)
@@ -11905,7 +11905,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
+		(property "Value" "+3V3"
 			(at 74.93 35.306 0)
 			(effects
 				(font
@@ -11970,7 +11970,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
+		(property "Value" "+3V3"
 			(at 140.97 187.96 0)
 			(effects
 				(font
@@ -13071,7 +13071,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
+		(property "Value" "+3V3"
 			(at 185.166 121.666 0)
 			(effects
 				(font
@@ -13409,7 +13409,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
+		(property "Value" "+3V3"
 			(at 104.14 187.706 0)
 			(effects
 				(font

@@ -1,0 +1,11 @@
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_main\prod\kubisat_main-F_Cu.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_main\prod\kubisat_main-B_Cu.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_main\prod\kubisat_main-F_Paste.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_main\prod\kubisat_main-B_Paste.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_main\prod\kubisat_main-F_Silkscreen.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_main\prod\kubisat_main-B_Silkscreen.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_main\prod\kubisat_main-F_Mask.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_main\prod\kubisat_main-B_Mask.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_main\prod\kubisat_main-Edge_Cuts.gbr'.
+Utworzono plik zadań Gerber 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_main\prod\kubisat_main-job.gbrjob'.
+Informacja: Gotowe.
