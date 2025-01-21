@@ -9,64 +9,77 @@
 
 using std::string;
 
-const int csPin = 1;          // LoRa radio chip select
-const int resetPin = 29;      // LoRa radio reset
-const int irqPin = 10;        // change for your board; must be a hardware interrupt pin
+#define UART_ID uart1
+#define BAUD_RATE 115200
+#define UART_TX_PIN 8
+#define UART_RX_PIN 9
 
-string outgoing;              // outgoing message
+const int csPin = 1;	 // LoRa radio chip select
+const int resetPin = 29; // LoRa radio reset
+const int irqPin = 10;	 // change for your board; must be a hardware interrupt pin
 
-uint8_t msgCount = 0;         // count of outgoing messages
+string outgoing; // outgoing message
 
-uint8_t localAddress = 21;  // address of this device
-uint8_t destination = 37;   // destination to send to
+uint8_t msgCount = 0; // count of outgoing messages
 
-long lastSendTime = 0;        // last send time
+uint8_t localAddress = 21; // address of this device
+uint8_t destination = 37;  // destination to send to
+
+long lastSendTime = 0;			   // last send time
 long unsigned int interval = 2000; // interval between sends
-long lastReceiveTime = 0;     // last receive time
+long lastReceiveTime = 0;		   // last receive time
 
-void logMessage(const string& message) {
+void logMessage(const string &message) {
     uint32_t timestamp = to_ms_since_boot(get_absolute_time());
-    printf("[%lu ms] %s\n", timestamp, message.c_str());
+    char buffer[256];
+    snprintf(buffer, sizeof(buffer), "[%lu ms] %s\n", timestamp, message.c_str());
+    uart_puts(UART_ID, buffer);
 }
 
-void sendMessage(string outgoing) {
-  int n = outgoing.length();
-  char send[n+1];
-  strcpy(send, outgoing.c_str());
-	logMessage("ground to sat: " + string(send) + " [" + std::to_string(n) +"]");
-  LoRa.beginPacket();                   // start packet
-  LoRa.write(destination);              // add destination address
-  LoRa.write(localAddress);             // add sender address
-  LoRa.write(msgCount);                 // add message ID
-  LoRa.write(n + 1);                    // add payload length
-  LoRa.print(send);                     // add payload
-  LoRa.endPacket();                     // finish packet and send it
-  msgCount++;                           // increment message ID
+void sendMessage(string outgoing)
+{
+	int n = outgoing.length();
+	char send[n + 1];
+	strcpy(send, outgoing.c_str());
+	logMessage("ground to sat: " + string(send) + " [" + std::to_string(n) + "]");
+	LoRa.beginPacket();		  // start packet
+	LoRa.write(destination);  // add destination address
+	LoRa.write(localAddress); // add sender address
+	LoRa.write(msgCount);	  // add message ID
+	LoRa.write(n + 1);		  // add payload length
+	LoRa.print(send);		  // add payload
+	LoRa.endPacket();		  // finish packet and send it
+	msgCount++;				  // increment message ID
 }
 
-void onReceive(int packetSize) {
-	if (packetSize == 0) return;          // if there's no packet, return
+void onReceive(int packetSize)
+{
+	if (packetSize == 0)
+		return; // if there's no packet, return
 	// read packet header uint8_ts:
-	int recipient = LoRa.read();          // recipient address
-	uint8_t sender = LoRa.read();            // sender address
-	uint8_t incomingMsgId = LoRa.read();     // incoming msg ID
-	uint8_t incomingLength = LoRa.read();    // incoming msg length
+	int recipient = LoRa.read();		  // recipient address
+	uint8_t sender = LoRa.read();		  // sender address
+	uint8_t incomingMsgId = LoRa.read();  // incoming msg ID
+	uint8_t incomingLength = LoRa.read(); // incoming msg length
 
 	string incoming = "";
 
-	while (LoRa.available()) {
+	while (LoRa.available())
+	{
 		incoming += (char)LoRa.read();
 	}
 
-	if (incomingLength != incoming.length() + 1) {   // check length for error
+	if (incomingLength != incoming.length() + 1)
+	{ // check length for error
 		printf("error: message length does not match length\n");
-		return;                             // skip rest of function
+		return; // skip rest of function
 	}
 
-  // if the recipient isn't this device or broadcast,
-	if (recipient != localAddress && recipient != 0xFF) {
+	// if the recipient isn't this device or broadcast,
+	if (recipient != localAddress && recipient != 0xFF)
+	{
 		printf("This message is not for me.\n");
-		return;                             // skip rest of function
+		return; // skip rest of function
 	}
 
 	logMessage("Received from: 0x" + std::to_string(sender));
@@ -78,70 +91,85 @@ void onReceive(int packetSize) {
 	logMessage("Snr: " + std::to_string(LoRa.packetSnr()));
 }
 
-
-int main() {
+int main()
+{
 	stdio_init_all();
-	sleep_ms(20000);
-	logMessage("\nground station\n");
 
-	if (!LoRa.begin(500E6)) {
-		logMessage("LoRa init failed. Check your connections.\n");
-		while (true);
-	}
+    uart_init(UART_ID, BAUD_RATE);
+    gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
+    gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
+    uart_set_hw_flow(UART_ID, false, false);
+    uart_set_format(UART_ID, 8, 1, UART_PARITY_NONE);
 
-	logMessage("init succeeded.\n");
-	string userInput;
-	bool waitingForReply = false;
-	uint32_t messageStartTime = 0;
-	const uint32_t REPLY_TIMEOUT = 30000;
-	bool promptShown = false;
+    logMessage("\nPower on\n");
 
-	while (1) {
-		uint32_t currentTime = to_ms_since_boot(get_absolute_time());
+    int i = 5;
+	while(i > 0) {
+        logMessage("main loop in " + i);
+        sleep_ms(1000);
+        i--;
+    }
 
-		if (int packetSize = LoRa.parsePacket()) {
-			if (waitingForReply) {
-				logMessage("\nReply received:");
-				onReceive(packetSize);  // Pass the packet size we already got
-				logMessage("End of reply");
-				waitingForReply = false;
-				promptShown = false;
-			} else {
-				onReceive(packetSize);  // Pass the packet size we already got
-			}
-		}
+    logMessage("\nground station\n");
 
-		if (waitingForReply && (currentTime - messageStartTime > REPLY_TIMEOUT)) {
-			logMessage("No reply received within timeout period");
-			waitingForReply = false;
-			promptShown = false;
-		}
+    if (!LoRa.begin(433E6)) {
+        logMessage("LoRa init failed. Check your connections.\n");
+        while (true);
+    }
 
-		if (!waitingForReply) {
-			if (!promptShown) {
-				logMessage("\nEnter message: ");
-				promptShown = true;
-			}
+    logMessage("init succeeded.\n");
 
-			int c = getchar_timeout_us(0);
-			if (c != PICO_ERROR_TIMEOUT) {
-				if (c == '\r' || c == '\n') {
-					if (!userInput.empty()) {
-						printf("\n");
-						sendMessage(userInput.c_str());
-						waitingForReply = true;
-						messageStartTime = currentTime;
-						userInput.clear();
-						logMessage("Waiting for reply...\n");
-					}
-				} else {
-					userInput += (char)c;
-					putchar(c);
-				}
-			}
-		}
+    string userInput;
+    bool waitingForReply = false;
+    uint32_t messageStartTime = 0;
+    const uint32_t REPLY_TIMEOUT = 5000;
+    const string ACK = "ACK:";
+    const string ERR = "ERR:";
+    const string REPLY = "REPLY:";
+    const string TIMEOUT = "TIMEOUT:";
 
-		sleep_ms(10);
-	}
-	return 0;
+    while (1) {
+        uint32_t currentTime = to_ms_since_boot(get_absolute_time());
+
+        if (int packetSize = LoRa.parsePacket()) {
+            if (waitingForReply) {
+                logMessage(REPLY + "START");
+                onReceive(packetSize);
+                logMessage(REPLY + "END");
+                waitingForReply = false;
+            } else {
+                onReceive(packetSize);
+            }
+        }
+
+        if (waitingForReply && (currentTime - messageStartTime > REPLY_TIMEOUT)) {
+            logMessage(TIMEOUT + userInput);
+            waitingForReply = false;
+        }
+
+        if (!waitingForReply) {
+            while (uart_is_readable(UART_ID)) {
+                uint8_t ch = uart_getc(UART_ID);
+                if (ch == '\n' || ch == '\r') {
+                    if (!userInput.empty()) {
+                        try {
+                            sendMessage(userInput);
+                            string ack = ACK + userInput + "\n";
+                            uart_puts(UART_ID, ack.c_str());
+                            waitingForReply = true;
+                            messageStartTime = currentTime;
+                        } catch (...) {
+                            string err = ERR + userInput + "\n";
+                            uart_puts(UART_ID, err.c_str());
+                        }
+                        userInput.clear();
+                    }
+                } else {
+                    userInput += (char)ch;
+                }
+            }
+        }
+
+        sleep_ms(10);
+    }
 }

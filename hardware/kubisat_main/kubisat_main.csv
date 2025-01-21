@@ -1,0 +1,8 @@
+Reference	Value	Datasheet	Footprint	Qty	DNP
+C1,C2	10u	~	Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A	2	
+C16	100n	~	Capacitor_SMD:C_0805_2012Metric	1	
+J6	POWER	~	Connector_JST:JST_PH_S3B-PH-SM4-TB_1x03-1MP_P2.00mm_Horizontal	1	
+J7	I2C1	~	Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal	1	
+J8	SPI0	~	Connector_JST:JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal	1	
+R11	22	~	Resistor_SMD:R_0805_2012Metric	1	
+SW2	RESET	~	Button_Switch_SMD:SW_Push_1P1T_NO_CK_KMR2	1	
