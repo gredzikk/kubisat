@@ -3,7 +3,7 @@
 	url = https://github.com/gredzikk/ground_firmware.git
 [submodule "software/kubisat_firmware"]
 	path = software/kubisat_firmware
-	url = https://github.com/gredzikk/kubisat-os.git
+	url = https://github.com/gredzikk/kubisat_firmware.git
 [submodule "software/ground_control"]
 	path = software/ground_control
-	url = https://github.com/gredzikk/kubisat_ground.git
+	url = https://github.com/gredzikk/ground_control.git
