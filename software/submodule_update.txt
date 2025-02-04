@@ -1,0 +1,12 @@
+submodule
+    git add .
+    git commit -m "Your submodule changes message"
+    git push
+
+main repo
+
+    git add kubisat_firmware    
+    git commit -m "Update submodule to latest commit"
+    git push    
+
+
