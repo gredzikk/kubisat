@@ -1,0 +1,11 @@
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_sensor\kubisat_sensors\out\kubisat_sensors-F_Cu.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_sensor\kubisat_sensors\out\kubisat_sensors-B_Cu.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_sensor\kubisat_sensors\out\kubisat_sensors-F_Paste.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_sensor\kubisat_sensors\out\kubisat_sensors-B_Paste.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_sensor\kubisat_sensors\out\kubisat_sensors-F_Silkscreen.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_sensor\kubisat_sensors\out\kubisat_sensors-B_Silkscreen.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_sensor\kubisat_sensors\out\kubisat_sensors-F_Mask.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_sensor\kubisat_sensors\out\kubisat_sensors-B_Mask.gbr'.
+Plotted to 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_sensor\kubisat_sensors\out\kubisat_sensors-Edge_Cuts.gbr'.
+Utworzono plik zadań Gerber 'C:\Users\Kuba\Desktop\inz\kubisat\hardware\kubisat_sensor\kubisat_sensors\out\kubisat_sensors-job.gbrjob'.
+Informacja: Gotowe.
