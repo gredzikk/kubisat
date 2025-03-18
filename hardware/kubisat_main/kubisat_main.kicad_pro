@@ -485,7 +485,7 @@
       "plot": "prod/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "kubisat_main.step",
       "svg": "",
       "vrml": ""
     },

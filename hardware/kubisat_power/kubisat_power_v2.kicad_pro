@@ -451,7 +451,7 @@
     ]
   },
   "meta": {
-    "filename": "kubisat_power.kicad_pro",
+    "filename": "kubisat_power_v2.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -489,7 +489,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "kubisat_power_v2.step",
       "svg": "",
       "vrml": ""
     },

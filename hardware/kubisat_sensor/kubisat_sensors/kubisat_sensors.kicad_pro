@@ -485,9 +485,9 @@
       "plot": "out/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "kubisat_sensors.step",
       "svg": "",
-      "vrml": ""
+      "vrml": "kubisat_sensors.wrl"
     },
     "page_layout_descr_file": ""
   },
