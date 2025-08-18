@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>KubiSat GPS Track</name>
+  <description>Track exported from KubiSat Operator</description>
+  <Style id="yellowLineGreenPoly">
+    <LineStyle>
+      <color>7f00ffff</color>
+      <width>4</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>7f00ff00</color>
+    </PolyStyle>
+  </Style>
+  <Placemark>
+    <name>KubiSat Trajectory</name>
+    <description>GPS trajectory recorded from KubiSat</description>
+    <styleUrl>#yellowLineGreenPoly</styleUrl>
+    <LineString>
+      <extrude>1</extrude>
+      <tessellate>1</tessellate>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>
+        18.767126,53.277066,108.5
+        18.767147,53.277148,106.4
+        18.767206,53.277256,104.3
+        18.767211,53.277242,104.2
+        18.767212,53.277234,104.0
+        18.767205,53.277218,103.8
+        18.767215,53.277237,103.9
+        18.767264,53.277358,101.5
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 21:01:16</name>
+    <description>Lat: 53.277358, Lon: 18.767264, Alt: 101.5m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767264,53.277358,101.5</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-19 21:46:22</name>
+    <description>Lat: 53.277237, Lon: 18.767215, Alt: 103.9m, Satellites: 06</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767215,53.277237,103.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-19 21:46:21</name>
+    <description>Lat: 53.277218, Lon: 18.767205, Alt: 103.8m, Satellites: 06</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767205,53.277218,103.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-19 21:46:20</name>
+    <description>Lat: 53.277234, Lon: 18.767212, Alt: 104.0m, Satellites: 06</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767212,53.277234,104.0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-19 21:46:19</name>
+    <description>Lat: 53.277242, Lon: 18.767211, Alt: 104.2m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767211,53.277242,104.2</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-19 21:46:18</name>
+    <description>Lat: 53.277256, Lon: 18.767206, Alt: 104.3m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767206,53.277256,104.3</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-19 21:46:14</name>
+    <description>Lat: 53.277148, Lon: 18.767147, Alt: 106.4m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767147,53.277148,106.4</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-19 21:46:12</name>
+    <description>Lat: 53.277066, Lon: 18.767126, Alt: 108.5m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767126,53.277066,108.5</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

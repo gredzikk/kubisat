@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>KubiSat GPS Track</name>
+  <description>Track exported from KubiSat Operator</description>
+  <Style id="yellowLineGreenPoly">
+    <LineStyle>
+      <color>7f00ffff</color>
+      <width>4</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>7f00ff00</color>
+    </PolyStyle>
+  </Style>
+  <Placemark>
+    <name>KubiSat Trajectory</name>
+    <description>GPS trajectory recorded from KubiSat</description>
+    <styleUrl>#yellowLineGreenPoly</styleUrl>
+    <LineString>
+      <extrude>1</extrude>
+      <tessellate>1</tessellate>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>
+        18.767690,53.277349,97.2
+        18.767648,53.277355,97.1
+        18.767604,53.277359,96.9
+        18.767560,53.277363,96.5
+        18.767519,53.277368,96.3
+        18.767483,53.277371,95.9
+        18.767453,53.277373,95.7
+        18.767431,53.277376,95.6
+        18.767414,53.277378,95.7
+        18.767400,53.277381,95.9
+        18.767388,53.277383,95.8
+        18.767375,53.277382,95.8
+        18.767364,53.277383,95.6
+        18.767353,53.277383,95.6
+        18.767343,53.277387,95.5
+        18.767331,53.277391,95.3
+        18.767318,53.277394,95.1
+        18.767304,53.277396,94.6
+        18.767287,53.277400,94.3
+        18.767267,53.277402,94.3
+        18.767247,53.277406,94.3
+        18.767223,53.277408,94.2
+        18.767196,53.277408,93.7
+        18.767171,53.277405,93.9
+        18.767147,53.277404,93.8
+        18.767118,53.277403,93.8
+        18.767098,53.277405,93.6
+        18.767088,53.277406,93.7
+        18.767087,53.277407,92.9
+        18.767087,53.277400,92.5
+        18.767089,53.277394,92.8
+        18.767087,53.277386,92.7
+        18.767088,53.277380,92.7
+        18.767087,53.277372,92.8
+        18.767085,53.277364,92.8
+        18.767086,53.277356,92.9
+        18.767085,53.277349,93.0
+        18.767084,53.277341,93.2
+        18.767085,53.277335,93.4
+        18.767084,53.277330,93.6
+        18.767084,53.277324,93.8
+        18.767083,53.277319,94.0
+        18.767082,53.277314,94.0
+        18.767082,53.277312,94.0
+        18.767082,53.277311,93.9
+        18.767081,53.277311,93.9
+        18.767080,53.277312,93.9
+        18.767079,53.277312,93.7
+        18.767079,53.277311,93.7
+        18.767078,53.277312,93.4
+        18.767077,53.277310,93.1
+        18.767074,53.277311,92.9
+        18.767073,53.277310,92.6
+        18.767072,53.277310,92.4
+        18.767071,53.277310,92.2
+        18.767070,53.277310,91.9
+        18.767069,53.277311,91.5
+        18.767065,53.277310,90.7
+        18.767064,53.277310,90.3
+        18.767062,53.277310,89.9
+        18.767059,53.277310,89.4
+        18.767056,53.277309,88.8
+        18.767054,53.277311,88.6
+        18.767054,53.277311,88.4
+        18.767053,53.277312,88.1
+        18.767053,53.277313,87.8
+        18.767052,53.277314,3.0
+        18.767054,53.277315,87.7
+        18.767057,53.277314,88.0
+        18.767061,53.277314,88.3
+        18.767066,53.277314,88.5
+        18.767069,53.277314,88.6
+        18.767072,53.277314,88.7
+        18.767075,53.277313,88.8
+        18.767078,53.277312,88.8
+        18.767080,53.277311,88.7
+        18.767083,53.277310,88.4
+        18.767084,53.277309,88.5
+        18.767089,53.277310,88.7
+        18.767093,53.277310,88.9
+        18.767098,53.277310,89.3
+        18.767103,53.277311,90.8
+        18.767120,53.277313,92.4
+        18.767136,53.277314,94.0
+        18.767159,53.277313,95.2
+        18.767194,53.277299,100.1
+        18.767265,53.277307,102.8
+        18.767309,53.277309,106.4
+        18.767383,53.277305,108.6
+        18.767458,53.277295,107.1
+        18.767477,53.277285,104.0
+        18.767449,53.277280,106.3
+        18.767441,53.277293,104.5
+        18.767403,53.277298,102.9
+        18.767356,53.277301,100.8
+        18.767238,53.277324,100.8
+        18.767211,53.277341,105.5
+        18.767179,53.277369,110.1
+        18.767179,53.277369,102.3
+        18.767264,53.277358,101.5
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 21:01:16</name>
+    <description>Lat: 53.277358, Lon: 18.767264, Alt: 101.5m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767264,53.277358,101.5</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:21</name>
+    <description>Lat: 53.277369, Lon: 18.767179, Alt: 102.3m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767179,53.277369,102.3</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:21</name>
+    <description>Lat: 53.277369, Lon: 18.767179, Alt: 110.1m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767179,53.277369,110.1</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:22</name>
+    <description>Lat: 53.277341, Lon: 18.767211, Alt: 105.5m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767211,53.277341,105.5</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:23</name>
+    <description>Lat: 53.277324, Lon: 18.767238, Alt: 100.8m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767238,53.277324,100.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:25</name>
+    <description>Lat: 53.277301, Lon: 18.767356, Alt: 100.8m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767356,53.277301,100.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:26</name>
+    <description>Lat: 53.277298, Lon: 18.767403, Alt: 102.9m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767403,53.277298,102.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:27</name>
+    <description>Lat: 53.277293, Lon: 18.767441, Alt: 104.5m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767441,53.277293,104.5</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:28</name>
+    <description>Lat: 53.277280, Lon: 18.767449, Alt: 106.3m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767449,53.277280,106.3</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:29</name>
+    <description>Lat: 53.277285, Lon: 18.767477, Alt: 104.0m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767477,53.277285,104.0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:30</name>
+    <description>Lat: 53.277295, Lon: 18.767458, Alt: 107.1m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767458,53.277295,107.1</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:31</name>
+    <description>Lat: 53.277305, Lon: 18.767383, Alt: 108.6m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767383,53.277305,108.6</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:32</name>
+    <description>Lat: 53.277309, Lon: 18.767309, Alt: 106.4m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767309,53.277309,106.4</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:33</name>
+    <description>Lat: 53.277307, Lon: 18.767265, Alt: 102.8m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767265,53.277307,102.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:34</name>
+    <description>Lat: 53.277299, Lon: 18.767194, Alt: 100.1m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767194,53.277299,100.1</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:36</name>
+    <description>Lat: 53.277313, Lon: 18.767159, Alt: 95.2m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767159,53.277313,95.2</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:37</name>
+    <description>Lat: 53.277314, Lon: 18.767136, Alt: 94.0m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767136,53.277314,94.0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:38</name>
+    <description>Lat: 53.277313, Lon: 18.767120, Alt: 92.4m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767120,53.277313,92.4</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:39</name>
+    <description>Lat: 53.277311, Lon: 18.767103, Alt: 90.8m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767103,53.277311,90.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:40</name>
+    <description>Lat: 53.277310, Lon: 18.767098, Alt: 89.3m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767098,53.277310,89.3</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:41</name>
+    <description>Lat: 53.277310, Lon: 18.767093, Alt: 88.9m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767093,53.277310,88.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:42</name>
+    <description>Lat: 53.277310, Lon: 18.767089, Alt: 88.7m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767089,53.277310,88.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:43</name>
+    <description>Lat: 53.277309, Lon: 18.767084, Alt: 88.5m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767084,53.277309,88.5</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:44</name>
+    <description>Lat: 53.277310, Lon: 18.767083, Alt: 88.4m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767083,53.277310,88.4</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:46</name>
+    <description>Lat: 53.277311, Lon: 18.767080, Alt: 88.7m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767080,53.277311,88.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:47</name>
+    <description>Lat: 53.277312, Lon: 18.767078, Alt: 88.8m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767078,53.277312,88.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:48</name>
+    <description>Lat: 53.277313, Lon: 18.767075, Alt: 88.8m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767075,53.277313,88.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:49</name>
+    <description>Lat: 53.277314, Lon: 18.767072, Alt: 88.7m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767072,53.277314,88.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:50</name>
+    <description>Lat: 53.277314, Lon: 18.767069, Alt: 88.6m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767069,53.277314,88.6</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:51</name>
+    <description>Lat: 53.277314, Lon: 18.767066, Alt: 88.5m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767066,53.277314,88.5</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:52</name>
+    <description>Lat: 53.277314, Lon: 18.767061, Alt: 88.3m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767061,53.277314,88.3</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:53</name>
+    <description>Lat: 53.277314, Lon: 18.767057, Alt: 88.0m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767057,53.277314,88.0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:54</name>
+    <description>Lat: 53.277315, Lon: 18.767054, Alt: 87.7m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767054,53.277315,87.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:55</name>
+    <description>Lat: 53.277314, Lon: 18.767052, Alt: 3.0m, Satellites: 05</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767052,53.277314,3.0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:56</name>
+    <description>Lat: 53.277313, Lon: 18.767053, Alt: 87.8m, Satellites: 07</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767053,53.277313,87.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:57</name>
+    <description>Lat: 53.277312, Lon: 18.767053, Alt: 88.1m, Satellites: 07</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767053,53.277312,88.1</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:58</name>
+    <description>Lat: 53.277311, Lon: 18.767054, Alt: 88.4m, Satellites: 07</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767054,53.277311,88.4</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:26:59</name>
+    <description>Lat: 53.277311, Lon: 18.767054, Alt: 88.6m, Satellites: 07</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767054,53.277311,88.6</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:00</name>
+    <description>Lat: 53.277309, Lon: 18.767056, Alt: 88.8m, Satellites: 07</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767056,53.277309,88.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:01</name>
+    <description>Lat: 53.277310, Lon: 18.767059, Alt: 89.4m, Satellites: 07</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767059,53.277310,89.4</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:02</name>
+    <description>Lat: 53.277310, Lon: 18.767062, Alt: 89.9m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767062,53.277310,89.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:03</name>
+    <description>Lat: 53.277310, Lon: 18.767064, Alt: 90.3m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767064,53.277310,90.3</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:04</name>
+    <description>Lat: 53.277310, Lon: 18.767065, Alt: 90.7m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767065,53.277310,90.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:06</name>
+    <description>Lat: 53.277311, Lon: 18.767069, Alt: 91.5m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767069,53.277311,91.5</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:07</name>
+    <description>Lat: 53.277310, Lon: 18.767070, Alt: 91.9m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767070,53.277310,91.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:08</name>
+    <description>Lat: 53.277310, Lon: 18.767071, Alt: 92.2m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767071,53.277310,92.2</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:09</name>
+    <description>Lat: 53.277310, Lon: 18.767072, Alt: 92.4m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767072,53.277310,92.4</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:10</name>
+    <description>Lat: 53.277310, Lon: 18.767073, Alt: 92.6m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767073,53.277310,92.6</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:11</name>
+    <description>Lat: 53.277311, Lon: 18.767074, Alt: 92.9m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767074,53.277311,92.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:12</name>
+    <description>Lat: 53.277310, Lon: 18.767077, Alt: 93.1m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767077,53.277310,93.1</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:13</name>
+    <description>Lat: 53.277312, Lon: 18.767078, Alt: 93.4m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767078,53.277312,93.4</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:14</name>
+    <description>Lat: 53.277311, Lon: 18.767079, Alt: 93.7m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767079,53.277311,93.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:15</name>
+    <description>Lat: 53.277312, Lon: 18.767079, Alt: 93.7m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767079,53.277312,93.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:16</name>
+    <description>Lat: 53.277312, Lon: 18.767080, Alt: 93.9m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767080,53.277312,93.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:17</name>
+    <description>Lat: 53.277311, Lon: 18.767081, Alt: 93.9m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767081,53.277311,93.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:18</name>
+    <description>Lat: 53.277311, Lon: 18.767082, Alt: 93.9m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767082,53.277311,93.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:19</name>
+    <description>Lat: 53.277312, Lon: 18.767082, Alt: 94.0m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767082,53.277312,94.0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:20</name>
+    <description>Lat: 53.277314, Lon: 18.767082, Alt: 94.0m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767082,53.277314,94.0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:21</name>
+    <description>Lat: 53.277319, Lon: 18.767083, Alt: 94.0m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767083,53.277319,94.0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:22</name>
+    <description>Lat: 53.277324, Lon: 18.767084, Alt: 93.8m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767084,53.277324,93.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:23</name>
+    <description>Lat: 53.277330, Lon: 18.767084, Alt: 93.6m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767084,53.277330,93.6</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:24</name>
+    <description>Lat: 53.277335, Lon: 18.767085, Alt: 93.4m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767085,53.277335,93.4</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:25</name>
+    <description>Lat: 53.277341, Lon: 18.767084, Alt: 93.2m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767084,53.277341,93.2</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:26</name>
+    <description>Lat: 53.277349, Lon: 18.767085, Alt: 93.0m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767085,53.277349,93.0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:27</name>
+    <description>Lat: 53.277356, Lon: 18.767086, Alt: 92.9m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767086,53.277356,92.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:28</name>
+    <description>Lat: 53.277364, Lon: 18.767085, Alt: 92.8m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767085,53.277364,92.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:29</name>
+    <description>Lat: 53.277372, Lon: 18.767087, Alt: 92.8m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767087,53.277372,92.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:30</name>
+    <description>Lat: 53.277380, Lon: 18.767088, Alt: 92.7m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767088,53.277380,92.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:31</name>
+    <description>Lat: 53.277386, Lon: 18.767087, Alt: 92.7m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767087,53.277386,92.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:32</name>
+    <description>Lat: 53.277394, Lon: 18.767089, Alt: 92.8m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767089,53.277394,92.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:33</name>
+    <description>Lat: 53.277400, Lon: 18.767087, Alt: 92.5m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767087,53.277400,92.5</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:34</name>
+    <description>Lat: 53.277407, Lon: 18.767087, Alt: 92.9m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767087,53.277407,92.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:35</name>
+    <description>Lat: 53.277406, Lon: 18.767088, Alt: 93.7m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767088,53.277406,93.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:36</name>
+    <description>Lat: 53.277405, Lon: 18.767098, Alt: 93.6m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767098,53.277405,93.6</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:37</name>
+    <description>Lat: 53.277403, Lon: 18.767118, Alt: 93.8m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767118,53.277403,93.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:38</name>
+    <description>Lat: 53.277404, Lon: 18.767147, Alt: 93.8m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767147,53.277404,93.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:39</name>
+    <description>Lat: 53.277405, Lon: 18.767171, Alt: 93.9m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767171,53.277405,93.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:40</name>
+    <description>Lat: 53.277408, Lon: 18.767196, Alt: 93.7m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767196,53.277408,93.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:41</name>
+    <description>Lat: 53.277408, Lon: 18.767223, Alt: 94.2m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767223,53.277408,94.2</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:42</name>
+    <description>Lat: 53.277406, Lon: 18.767247, Alt: 94.3m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767247,53.277406,94.3</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:43</name>
+    <description>Lat: 53.277402, Lon: 18.767267, Alt: 94.3m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767267,53.277402,94.3</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:44</name>
+    <description>Lat: 53.277400, Lon: 18.767287, Alt: 94.3m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767287,53.277400,94.3</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:45</name>
+    <description>Lat: 53.277396, Lon: 18.767304, Alt: 94.6m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767304,53.277396,94.6</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:46</name>
+    <description>Lat: 53.277394, Lon: 18.767318, Alt: 95.1m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767318,53.277394,95.1</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:47</name>
+    <description>Lat: 53.277391, Lon: 18.767331, Alt: 95.3m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767331,53.277391,95.3</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:48</name>
+    <description>Lat: 53.277387, Lon: 18.767343, Alt: 95.5m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767343,53.277387,95.5</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:49</name>
+    <description>Lat: 53.277383, Lon: 18.767353, Alt: 95.6m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767353,53.277383,95.6</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:50</name>
+    <description>Lat: 53.277383, Lon: 18.767364, Alt: 95.6m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767364,53.277383,95.6</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:51</name>
+    <description>Lat: 53.277382, Lon: 18.767375, Alt: 95.8m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767375,53.277382,95.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:52</name>
+    <description>Lat: 53.277383, Lon: 18.767388, Alt: 95.8m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767388,53.277383,95.8</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:53</name>
+    <description>Lat: 53.277381, Lon: 18.767400, Alt: 95.9m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767400,53.277381,95.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:54</name>
+    <description>Lat: 53.277378, Lon: 18.767414, Alt: 95.7m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767414,53.277378,95.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:55</name>
+    <description>Lat: 53.277376, Lon: 18.767431, Alt: 95.6m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767431,53.277376,95.6</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:56</name>
+    <description>Lat: 53.277373, Lon: 18.767453, Alt: 95.7m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767453,53.277373,95.7</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:57</name>
+    <description>Lat: 53.277371, Lon: 18.767483, Alt: 95.9m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767483,53.277371,95.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:58</name>
+    <description>Lat: 53.277368, Lon: 18.767519, Alt: 96.3m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767519,53.277368,96.3</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:27:59</name>
+    <description>Lat: 53.277363, Lon: 18.767560, Alt: 96.5m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767560,53.277363,96.5</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:28:00</name>
+    <description>Lat: 53.277359, Lon: 18.767604, Alt: 96.9m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767604,53.277359,96.9</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:28:01</name>
+    <description>Lat: 53.277355, Lon: 18.767648, Alt: 97.1m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767648,53.277355,97.1</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2025-03-11 20:28:02</name>
+    <description>Lat: 53.277349, Lon: 18.767690, Alt: 97.2m, Satellites: 09</description>
+    <Point>
+      <altitudeMode>absolute</altitudeMode>
+      <coordinates>18.767690,53.277349,97.2</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>
