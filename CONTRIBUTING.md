@@ -1,6 +1,6 @@
-# Contributing to Kubisat Firmware
+# Contributing to Kubisat
 
-We welcome contributions to the Kubisat Firmware project! Whether it's reporting a bug, suggesting a new feature, or submitting code changes, your help is appreciated.
+We welcome contributions to the Kubisat project! Whether it's reporting a bug, suggesting a new feature, or submitting code changes, your help is appreciated.
 
 ## Getting Started
 
