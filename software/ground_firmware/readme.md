@@ -2,6 +2,8 @@
 
 This repository contains the firmware for the KubiSat Ground Station, designed to run on a Raspberry Pi Pico. It acts as a communication bridge, relaying data between a host computer connected via USB/UART and a remote LoRa device, such as the KubiSat satellite.
 
+Please read doc.pdf from release directory to get grasp of satellite internal workings first.
+
 ## Features
 
 *   **LoRa-UART Bridge:** Facilitates bidirectional communication between a serial terminal and a LoRa radio module.
