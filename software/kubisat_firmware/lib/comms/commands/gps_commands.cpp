@@ -5,6 +5,7 @@
 #include "lib/location/gps_collector.h"
 #include <sstream>
 #include "system_state_manager.h"
+#include "utils_parse.h"
 
 static constexpr uint8_t gps_commands_group_id = 7;
 static constexpr uint8_t power_status_command_id = 1;
@@ -54,26 +55,17 @@ std::vector<Frame> handle_gps_power_status(const std::string &param, OperationTy
             return frames;
         }
 
-        try
-        {
-            int power_status = std::stoi(param);
-            if (power_status != 0 && power_status != 1)
-            {
-                error_str = error_code_to_string(ErrorCode::PARAM_INVALID);
-                frames.push_back(frame_build(OperationType::ERR, gps_commands_group_id, power_status_command_id, error_str));
-                return frames;
-            }
-            gpio_put(GPS_POWER_ENABLE_PIN, power_status);
-            EventEmitter::emit(EventGroup::GPS, power_status ? GPSEvent::POWER_ON : GPSEvent::POWER_OFF);
-            frames.push_back(frame_build(OperationType::RES, gps_commands_group_id, power_status_command_id, std::to_string(power_status)));
-            return frames;
-        }
-        catch (...)
+        int32_t power_status = 0;
+        if (!parse_int32(param, power_status) || (power_status != 0 && power_status != 1))
         {
             error_str = error_code_to_string(ErrorCode::PARAM_INVALID);
             frames.push_back(frame_build(OperationType::ERR, gps_commands_group_id, power_status_command_id, error_str));
             return frames;
         }
+        gpio_put(GPS_POWER_ENABLE_PIN, power_status);
+        EventEmitter::emit(EventGroup::GPS, power_status ? GPSEvent::POWER_ON : GPSEvent::POWER_OFF);
+        frames.push_back(frame_build(OperationType::RES, gps_commands_group_id, power_status_command_id, std::to_string(power_status)));
+        return frames;
     }
     else if (operationType == OperationType::GET)
     {
@@ -130,17 +122,17 @@ std::vector<Frame> handle_enable_gps_uart_passthrough(const std::string &param, 
         return frames;
     }
 
-    // Parse and validate timeout parameter
-    uint32_t timeout_ms;
-    try
+    uint32_t timeout_ms = 60000u;
+    if (!param.empty())
     {
-        timeout_ms = param.empty() ? 60000u : std::stoul(param) * 1000;
-    }
-    catch (...)
-    {
-        error_str = error_code_to_string(ErrorCode::INVALID_VALUE);
-        frames.push_back(frame_build(OperationType::ERR, gps_commands_group_id, passthrough_command_id, error_str));
-        return frames;
+        int32_t seconds = 0;
+        if (!parse_int32(param, seconds) || seconds < 1 || seconds > 600)
+        {
+            error_str = error_code_to_string(ErrorCode::INVALID_VALUE);
+            frames.push_back(frame_build(OperationType::ERR, gps_commands_group_id, passthrough_command_id, error_str));
+            return frames;
+        }
+        timeout_ms = static_cast<uint32_t>(seconds) * 1000u;
     }
 
     // Setup UART parameters and exit sequence
@@ -169,6 +161,7 @@ std::vector<Frame> handle_enable_gps_uart_passthrough(const std::string &param, 
 
     while (!exit_requested)
     {
+        feed_watchdog();
         while (uart_is_readable(DEBUG_UART_PORT))
         {
             char ch = uart_getc(DEBUG_UART_PORT);

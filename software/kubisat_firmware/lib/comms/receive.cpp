@@ -2,6 +2,8 @@
 // Licensed under the MIT License. See LICENSE file in the project root for full license information.
 
 #include "communication.h"
+#include "LoRa-RP2040.h"
+#include "pin_config.h"
 
 #define MAX_PACKET_SIZE 255
 

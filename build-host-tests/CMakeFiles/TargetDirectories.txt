@@ -1,0 +1,4 @@
+/home/gredzikk/dev/kubisat/build-host-tests/CMakeFiles/frame_crc_tests.dir
+/home/gredzikk/dev/kubisat/build-host-tests/CMakeFiles/test.dir
+/home/gredzikk/dev/kubisat/build-host-tests/CMakeFiles/edit_cache.dir
+/home/gredzikk/dev/kubisat/build-host-tests/CMakeFiles/rebuild_cache.dir

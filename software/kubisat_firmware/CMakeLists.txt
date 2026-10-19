@@ -21,29 +21,24 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(PICO_BOARD pico CACHE STRING "Board type")
-set(PICO_CXX_ENABLE_EXCEPTIONS 1)
-set(PICO_CXX_ENABLE_RTTI 1)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wunused-function -Wunused-variable -Wunused -Wunreachable-code")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Wunused-function -Wunused-variable -Wunused -Wunreachable-code")
-
-# VS Code Pico extension configuration (only needed once)
-if(WIN32)
-    set(USERHOME $ENV{USERPROFILE})
-else()
-    set(USERHOME $ENV{HOME})
-endif()
-set(sdkVersion 2.0.0)
-set(toolchainVersion 13_2_Rel1)
-set(picotoolVersion 2.0.0)
-set(picoVscode ${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
-if (EXISTS ${picoVscode})
-    include(${picoVscode})
-endif()
+set(PICO_CXX_ENABLE_EXCEPTIONS 0)
+set(PICO_CXX_ENABLE_RTTI 0)
 
 # SDK initialization
 include(pico_sdk_import.cmake)
 project(main C CXX ASM)
 pico_sdk_init()
+
+# Warning flags after SDK init so Cortex-M0+ flags from the toolchain stay intact
+add_compile_options(
+    -Wall
+    -Wextra
+    -Wunused-function
+    -Wunused-variable
+    -Wunused
+    -Wunreachable-code
+)
+
 
 add_subdirectory(lib/sensors)
 add_subdirectory(lib/clock)
@@ -92,6 +87,8 @@ target_include_directories(main PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/lib/storage
     ${CMAKE_CURRENT_SOURCE_DIR}/lib/storage/pico-vfs/include
     ${CMAKE_CURRENT_SOURCE_DIR}/lib/storage/pico-vfs/vendor/littlefs
+    ${CMAKE_CURRENT_SOURCE_DIR}/../common/LoRa
+    ${CMAKE_CURRENT_SOURCE_DIR}/../common/protocol
 )
 
 pico_enable_filesystem(${CMAKE_PROJECT_NAME} FS_INIT lib/storage/storage.cpp)
@@ -103,6 +100,7 @@ target_link_libraries(main PRIVATE
     hardware_spi
     hardware_i2c
     hardware_uart
+    hardware_watchdog
     pico_multicore
     blockdevice_flash
     blockdevice_heap
@@ -125,7 +123,7 @@ target_link_libraries(main PRIVATE
 file(READ "${CMAKE_SOURCE_DIR}/cmake/CMakeBuildNumberCache.txt" CURRENT_BUILD_NUMBER)
 string(STRIP "${CURRENT_BUILD_NUMBER}" CURRENT_BUILD_NUMBER)
 pico_set_program_name(main "kubisat_firmware")
-pico_set_program_version(main "0.276")
+pico_set_program_version(main "1.${CURRENT_BUILD_NUMBER}")
 pico_add_extra_outputs(main)
 
 add_custom_command(

@@ -61,6 +61,8 @@ std::string operation_type_to_string(OperationType type)
         return "RES";
     case OperationType::SEQ:
         return "SEQ";
+    case OperationType::ACK:
+        return "ACK";
     default:
         return "UNKNOWN";
     }
@@ -86,6 +88,8 @@ OperationType string_to_operation_type(const std::string &str)
         return OperationType::RES;
     if (str == "SEQ")
         return OperationType::SEQ;
+    if (str == "ACK")
+        return OperationType::ACK;
     return OperationType::GET; // Default to GET
 }
 

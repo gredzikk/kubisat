@@ -1,99 +1,97 @@
 # KubiSat Communication Protocol
 
-This document outlines the command structure for communicating with the KubiSat satellite firmware.
+All frames use semicolon-separated fields:
 
-## Command Frame Structure
+```text
+KBST;ADDR;TYPE;GROUP;CMD;PAYLOAD;UNIT;SEQ;CRC16;TSBK
+```
 
-All communication follows a standardized frame format, separated by semicolons (`;`).
+| Field | Description |
+|-------|-------------|
+| `KBST` / `TSBK` | Start / end tokens |
+| `ADDR` | Direction: `0` ground→sat, `1` sat→ground |
+| `TYPE` | `GET`, `SET`, `VAL`, `RES`, `SEQ`, `ERR`, `ACK` |
+| `GROUP` / `CMD` | Command identifiers |
+| `PAYLOAD` | Optional value |
+| `UNIT` | Optional unit (may be empty) |
+| `SEQ` | uint16 sequence number |
+| `CRC16` | 4-digit hex CRC-16/CCITT-FALSE over `ADDR;TYPE;GROUP;CMD;PAYLOAD;UNIT;SEQ` |
 
-`START_TOKEN;ADDRESS;COMMAND_TYPE;GROUP_ID;COMMAND_ID;PAYLOAD;END_TOKEN`
+Example (build version request with integrity):
 
-| Field          | Description                                                               | Example      |
-| -------------- | ------------------------------------------------------------------------- | ------------ |
-| `START_TOKEN`  | A fixed 4-character string that marks the beginning of a frame.           | `KBST`       |
-| `ADDRESS`      | The address of the destination device. `0` is the satellite.              | `0`          |
-| `COMMAND_TYPE` | The type of action to perform. Common types are `GET` and `SET`.          | `GET`        |
-| `GROUP_ID`     | A number identifying the functional group of the command (e.g., `1` for Diagnostics). | `1`          |
-| `COMMAND_ID`   | A number identifying the specific command within the group.               | `0`          |
-| `PAYLOAD`      | Optional data for the command. Can be empty.                              | `12345`      |
-| `END_TOKEN`    | A fixed 4-character string that marks the end of a frame.                 | `TSBK`       |
+```text
+KBST;0;GET;1;1;;;1;XXXX;TSBK
+```
+
+- **LoRa RX** requires `SEQ` + valid `CRC16`.
+- **UART** still accepts legacy frames without `SEQ`/`CRC` during transition.
+- On LoRa command RX, the satellite sends an `ACK` with the same `SEQ`, then the response.
+- Host tools should retry unanswered commands (same or new `SEQ`).
+- Ground firmware remains a transparent UART↔LoRa bridge.
 
 ---
 
-## Available Commands
+## Group 1: Diagnostics
 
-Below is a list of available commands with examples.
+| ID | Ops | Description |
+|----|-----|-------------|
+| 1.0 | GET | List commands |
+| 1.1 | GET | Build version |
+| 1.2 | GET | Power mode (`BATTERY` / `USB`) |
+| 1.3 | GET | Uptime (seconds) |
+| 1.4 | GET | Health summary (`UP,RAD,SD,ENV,LUX,IMU,BAT`) |
+| 1.5 | SET | Format SD — payload must be `FORMAT` (destructive, lab only) |
+| 1.8 | GET/SET | UART verbosity 0–4 |
+| 1.9 | SET | Enter BOOTSEL — payload `USB`, USB-powered only |
 
-### Group 1: Diagnostic Commands
+Periodic unsolicited health beacon uses group/cmd `1.4` every ~30 s over LoRa (with ACK retry).
 
--   **`1.0` - Get Commands List**
-    -   Description: Lists all available commands.
-    -   Example Request: `KBST;0;GET;1;0;;TSBK`
+## Group 2: IMU (MPU-6050)
 
--   **`1.1` - Get Build Version**
-    -   Description: Retrieves the current firmware build version.
-    -   Example Request: `KBST;0;GET;1;1;;TSBK`
+| ID | Ops | Description |
+|----|-----|-------------|
+| 2.0 | GET | IMU init status |
+| 2.1 | GET | Accel `ax,ay,az` (g) |
+| 2.2 | GET | Gyro `gx,gy,gz` (dps) |
 
--   **`1.2` - Get Power Mode**
-    -   Description: Gets the system power mode (BATTERY or USB).
-    -   Example Request: `KBST;0;GET;1;2;;TSBK`
+## Group 3: Clock
 
--   **`1.3` - Get Uptime**
-    -   Description: Gets the system uptime in seconds.
-    -   Example Request: `KBST;0;GET;1;3;;TSBK`
+| ID | Ops | Description |
+|----|-----|-------------|
+| 3.0 | GET/SET | Unix time |
+| 3.1 | GET/SET | Timezone offset (minutes, −720…720) |
+| 3.4 | GET | DS3231 internal temperature |
 
--   **`1.8` - Get/Set UART Verbosity**
-    -   Description: Gets or sets the verbosity level for UART debug messages.
-    -   Example Get: `KBST;0;GET;1;8;;TSBK`
-    -   Example Set (to level 2): `KBST;0;SET;1;8;2;TSBK`
+## Group 5: Events
 
--   **`1.9` - Enter Bootloader Mode**
-    -   Description: Resets the Pico into BOOTSEL mode for firmware updates.
-    -   Example Request: `KBST;0;SET;1;9;;TSBK`
+| ID | Ops | Description |
+|----|-----|-------------|
+| 5.1 | GET | Last N events (param N, 0 = all) |
+| 5.2 | GET | Event count |
 
-### Group 3: Clock Commands
+## Group 7: GPS
 
--   **`3.0` - Get/Set System Time**
-    -   Description: Gets or sets the system time using a Unix timestamp.
-    -   Example Get: `KBST;0;GET;3;0;;TSBK`
-    -   Example Set (to timestamp 1755312000): `KBST;0;SET;3;0;1755312000;TSBK`
+| ID | Ops | Description |
+|----|-----|-------------|
+| 7.1 | GET/SET | GPS power (`0`/`1`) |
+| 7.2 | SET | UART passthrough for N seconds |
 
--   **`3.1` - Get/Set Timezone Offset**
-    -   Description: Manages the timezone offset in seconds from UTC.
-    -   Example Get: `KBST;0;GET;3;1;;TSBK`
-    -   Example Set (to UTC-5 / -18000 seconds): `KBST;0;SET;3;1;-18000;TSBK`
+## Group 8: Telemetry
 
--   **`3.4` - Get Internal Temperature**
-    -   Description: Reads the temperature from the internal sensor of the RTC.
-    -   Example Request: `KBST;0;GET;3;4;;TSBK`
+| ID | Ops | Description |
+|----|-----|-------------|
+| 8.2 | GET | Last telemetry CSV record |
+| 8.3 | GET | Last sensor CSV record (includes IMU) |
+| 8.4 | GET | Recent N telemetry records (`\|`-separated) |
 
-### Group 5: Event Commands
+---
 
--   **`5.1` - Get Last Events**
-    -   Description: Retrieves the last N events from the log. If N is 0, it retrieves all events.
-    -   Example Request (last 10 events): `KBST;0;GET;5;1;10;TSBK`
+## Event IDs (summary)
 
--   **`5.2` - Get Event Count**
-    -   Description: Gets the total number of events currently stored in the event log.
-    -   Example Request: `KBST;0;GET;5;2;;TSBK`
-
-### Group 7: GPS Commands
-
--   **`7.1` - Get/Set GPS Power Status**
-    -   Description: Controls the power state of the GPS module (0=OFF, 1=ON).
-    -   Example Get: `KBST;0;GET;7;1;;TSBK`
-    -   Example Set (Turn ON): `KBST;0;SET;7;1;1;TSBK`
-
--   **`7.2` - Enable GPS UART Passthrough**
-    -   Description: Enables direct UART communication with GPS module for X seconds.
-    -   Example Set (Enable): `KBST;0;SET;7;2;120;TSBK`
-
-### Group 8: Telemetry Commands
-
--   **`8.2` - Get Last Telemetry Record**
-    -   Description: Retrieves the last complete telemetry record from the buffer.
-    -   Example Request: `KBST;0;GET;8;2;;TSBK`
-
--   **`8.3` - Get Last Sensor Record**
-    -   Description: Retrieves the last sensor data record.
-    -   Example Request: `KBST;0;GET;8;3;;TSBK`
+| Group | Codes |
+|-------|--------|
+| SYSTEM (0) | BOOT=1, SHUTDOWN=2, WATCHDOG_RESET=3, CORE1_START=4, CORE1_STOP=5 |
+| POWER (1) | BATTERY_LOW=1 … CHARGING=0x0A |
+| COMMS (2) | RADIO_INIT=1, RADIO_ERROR=2, MSG_RECEIVED=3, MSG_SENT=4, UART_ERROR=6 |
+| GPS (3) | LOCK=1, LOST=2, ERROR=3, POWER_ON=4, POWER_OFF=5, … |
+| CLOCK (4) | CHANGED=1, GPS_SYNC=2, GPS_SYNC_DATA_NOT_READY=3 |

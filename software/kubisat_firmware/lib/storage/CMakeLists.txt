@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.12)
-project(storage_lib)
 
 add_library(storage_lib STATIC
     storage.cpp

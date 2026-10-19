@@ -4,6 +4,7 @@
 #include "communication.h"
 #include <time.h>
 #include "DS3231.h"
+#include "utils_parse.h"
 
 static constexpr uint8_t clock_commands_group_id = 3;
 static constexpr uint8_t time_command_id = 0;
@@ -41,33 +42,24 @@ std::vector<Frame> handle_time(const std::string &param, OperationType operation
             frames.push_back(frame_build(OperationType::ERR, clock_commands_group_id, time_command_id, error_msg));
             return frames;
         }
-        try
+        int32_t newTime = 0;
+        if (!parse_int32(param, newTime) || newTime <= 1742487032 || newTime >= 1893520044)
         {
-            time_t newTime = std::stoll(param);
-            if (newTime <= 1742487032 || newTime >= 1893520044)
-            {
-                error_msg = error_code_to_string(ErrorCode::INVALID_VALUE);
-                frames.push_back(frame_build(OperationType::ERR, clock_commands_group_id, time_command_id, error_msg));
-                return frames;
-            }
-
-            if (DS3231::get_instance().set_time(newTime) != 0)
-            {
-                error_msg = error_code_to_string(ErrorCode::FAIL_TO_SET);
-                frames.push_back(frame_build(OperationType::ERR, clock_commands_group_id, time_command_id, error_msg));
-                return frames;
-            }
-
-            EventEmitter::emit(EventGroup::CLOCK, ClockEvent::CHANGED);
-            frames.push_back(frame_build(OperationType::RES, clock_commands_group_id, time_command_id, std::to_string(DS3231::get_instance().get_time())));
-            return frames;
-        }
-        catch (...)
-        {
-            error_msg = error_code_to_string(ErrorCode::INVALID_FORMAT);
+            error_msg = error_code_to_string(ErrorCode::INVALID_VALUE);
             frames.push_back(frame_build(OperationType::ERR, clock_commands_group_id, time_command_id, error_msg));
             return frames;
         }
+
+        if (DS3231::get_instance().set_time(static_cast<time_t>(newTime)) != 0)
+        {
+            error_msg = error_code_to_string(ErrorCode::FAIL_TO_SET);
+            frames.push_back(frame_build(OperationType::ERR, clock_commands_group_id, time_command_id, error_msg));
+            return frames;
+        }
+
+        EventEmitter::emit(EventGroup::CLOCK, ClockEvent::CHANGED);
+        frames.push_back(frame_build(OperationType::RES, clock_commands_group_id, time_command_id, std::to_string(DS3231::get_instance().get_time())));
+        return frames;
     }
     else if (operationType == OperationType::GET)
     {
@@ -139,27 +131,17 @@ std::vector<Frame> handle_timezone_offset(const std::string &param, OperationTyp
         return frames;
     }
 
-    try
-    {
-        int16_t offset = std::stoi(param);
-        if (offset < -720 || offset > 720)
-        {
-            error_msg = error_code_to_string(ErrorCode::PARAM_INVALID);
-            frames.push_back(frame_build(OperationType::ERR, clock_commands_group_id, timezone_offset_command_id, error_msg));
-            return frames;
-        }
-
-        DS3231::get_instance().set_timezone_offset(offset);
-        std::string offset_set = std::to_string(offset);
-        frames.push_back(frame_build(OperationType::RES, clock_commands_group_id, timezone_offset_command_id, offset_set));
-        return frames;
-    }
-    catch (...)
+    int32_t offset = 0;
+    if (!parse_int32(param, offset) || offset < -720 || offset > 720)
     {
         error_msg = error_code_to_string(ErrorCode::PARAM_INVALID);
         frames.push_back(frame_build(OperationType::ERR, clock_commands_group_id, timezone_offset_command_id, error_msg));
         return frames;
     }
+
+    DS3231::get_instance().set_timezone_offset(static_cast<int16_t>(offset));
+    frames.push_back(frame_build(OperationType::RES, clock_commands_group_id, timezone_offset_command_id, std::to_string(offset)));
+    return frames;
 }
 
 /**

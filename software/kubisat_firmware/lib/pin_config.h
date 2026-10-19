@@ -37,6 +37,8 @@
 #define SD_MOSI_PIN 11
 #define SD_SCK_PIN 10
 #define SD_CS_PIN 13
+// Optional card-detect net (unused by storage unless enabled in fs_init).
+// Do not reuse this pin for LoRa IRQ — DIO0 is on GP20.
 #define SD_CARD_DETECT_PIN 28
 
 #define SX1278_MISO 16
@@ -53,12 +55,13 @@
 #define LORA_DEFAULT_RESET_PIN 22
 #define LORA_DEFAULT_DIO0_PIN 20
 
-#define PA_OUTPUT_RFO_PIN 11
-#define PA_OUTPUT_PA_BOOST_PIN 12
+// SX127x PA select constants (not RP2040 GPIO numbers)
+#define PA_OUTPUT_RFO_PIN 0
+#define PA_OUTPUT_PA_BOOST_PIN 1
 
 inline constexpr int lora_cs_pin = 17;    // LoRa radio chip select
 inline constexpr int lora_reset_pin = 22; // LoRa radio reset
-inline constexpr int lora_irq_pin = 28;   // LoRa hardware interrupt pin
+inline constexpr int lora_irq_pin = 20;   // LoRa DIO0 (must match LORA_DEFAULT_DIO0_PIN / schematic)
 
 inline constexpr int lora_address_local = 37;  // address of this device
 inline constexpr int lora_address_remote = 21; // destination to send to

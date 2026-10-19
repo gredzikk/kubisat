@@ -1,24 +1,10 @@
 // Copyright (c) 2025 Jakub Grędzicki
 // Licensed under the MIT License. See LICENSE file in the project root for full license information.
 
-/**
- * @file gps_collector.cpp
- * @brief Implementation of the GPS data collector module.
- *
- * @details This file implements the function `collect_gps_data`, which is
- *          responsible for reading raw NMEA sentences from the GPS UART,
- *          parsing them, and updating the NMEA data in the NMEAData singleton.
- *
- * @defgroup Location Location
- * @brief Classes for handling location data.
- *
- * @{
- */
-
 #include "lib/location/gps_collector.h"
 #include "utils.h"
 #include "pico/time.h"
-#include "lib/location/NMEA/nmea_data.h"
+#include "lib/location/NMEA/NMEA_data.h"
 #include "event_manager.h"
 #include <vector>
 #include <ctime>
@@ -26,20 +12,11 @@
 #include "DS3231.h"
 #include <sstream>
 #include "system_state_manager.h"
+#include <cctype>
+#include <array>
 
-/**
- * @brief Maximum length of the raw data buffer for NMEA sentences.
- */
 #define MAX_RAW_DATA_LENGTH 256
 
-/**
- * @brief Splits a string into tokens based on a delimiter.
- *
- * @param[in] str The string to split.
- * @param[in] delimiter The delimiter character.
- * @return A vector of strings representing the tokens.
- * @ingroup Location
- */
 std::vector<std::string> splitString(const std::string &str, char delimiter)
 {
     std::vector<std::string> tokens;
@@ -52,18 +29,54 @@ std::vector<std::string> splitString(const std::string &str, char delimiter)
     return tokens;
 }
 
-/**
- * @brief Collects GPS data from the UART and updates the NMEA data.
- *
- * @details This function reads raw NMEA sentences from the GPS UART,
- *          parses them, and updates the RMC and GGA tokens in the
- *          NMEAData singleton. It also handles buffer overflow and
- *          checks for bootloader reset pending status.
- * @ingroup Location
- */
+static bool nmea_checksum_valid(const std::string &sentence)
+{
+    if (sentence.size() < 4 || sentence[0] != '$')
+    {
+        return false;
+    }
+    size_t star = sentence.find('*');
+    if (star == std::string::npos || star + 2 >= sentence.size())
+    {
+        return false;
+    }
+
+    uint8_t checksum = 0;
+    for (size_t i = 1; i < star; ++i)
+    {
+        checksum ^= static_cast<uint8_t>(sentence[i]);
+    }
+
+    auto hex_val = [](char c) -> int {
+        if (c >= '0' && c <= '9')
+            return c - '0';
+        c = static_cast<char>(std::toupper(static_cast<unsigned char>(c)));
+        if (c >= 'A' && c <= 'F')
+            return 10 + (c - 'A');
+        return -1;
+    };
+
+    int hi = hex_val(sentence[star + 1]);
+    int lo = hex_val(sentence[star + 2]);
+    if (hi < 0 || lo < 0)
+    {
+        return false;
+    }
+    return checksum == static_cast<uint8_t>((hi << 4) | lo);
+}
+
+static std::string strip_checksum(const std::string &sentence)
+{
+    size_t star = sentence.find('*');
+    if (star == std::string::npos)
+    {
+        return sentence;
+    }
+    return sentence.substr(0, star);
+}
+
 void collect_gps_data()
 {
-
     if (SystemStateManager::get_instance().is_gps_collection_paused())
     {
         return;
@@ -71,6 +84,7 @@ void collect_gps_data()
 
     std::array<char, MAX_RAW_DATA_LENGTH> raw_data_buffer;
     static int raw_data_index = 0;
+    static bool had_fix = false;
 
     while (uart_is_readable(GPS_UART_PORT))
     {
@@ -78,24 +92,52 @@ void collect_gps_data()
 
         if (c == '\r' || c == '\n')
         {
-            // End of message
             if (raw_data_index > 0)
             {
                 raw_data_buffer[raw_data_index] = '\0';
                 std::string message(raw_data_buffer.data());
                 raw_data_index = 0;
 
-                // Split the message into tokens
-                std::vector<std::string> tokens = splitString(message, ',');
+                if (!nmea_checksum_valid(message))
+                {
+                    continue;
+                }
 
-                // Update the global vectors based on the sentence type
-                if (message.find("$GPRMC") == 0)
+                std::string body = strip_checksum(message);
+                std::vector<std::string> tokens = splitString(body, ',');
+
+                bool is_rmc = message.rfind("$GPRMC", 0) == 0 || message.rfind("$GNRMC", 0) == 0;
+                bool is_gga = message.rfind("$GPGGA", 0) == 0 || message.rfind("$GNGGA", 0) == 0;
+
+                if (is_rmc)
                 {
                     NMEAData::get_instance().update_rmc_tokens(tokens);
+                    bool fix_ok = tokens.size() > 2 && tokens[2] == "A";
+                    if (fix_ok && !had_fix)
+                    {
+                        EventEmitter::emit(EventGroup::GPS, GPSEvent::LOCK);
+                        had_fix = true;
+                    }
+                    else if (!fix_ok && had_fix)
+                    {
+                        EventEmitter::emit(EventGroup::GPS, GPSEvent::LOST);
+                        had_fix = false;
+                    }
                 }
-                else if (message.find("$GPGGA") == 0)
+                else if (is_gga)
                 {
                     NMEAData::get_instance().update_gga_tokens(tokens);
+                    bool fix_ok = tokens.size() > 6 && tokens[6] != "0" && !tokens[6].empty();
+                    if (fix_ok && !had_fix)
+                    {
+                        EventEmitter::emit(EventGroup::GPS, GPSEvent::LOCK);
+                        had_fix = true;
+                    }
+                    else if (!fix_ok && had_fix)
+                    {
+                        EventEmitter::emit(EventGroup::GPS, GPSEvent::LOST);
+                        had_fix = false;
+                    }
                 }
             }
         }
@@ -112,4 +154,3 @@ void collect_gps_data()
         }
     }
 }
-/** @} */

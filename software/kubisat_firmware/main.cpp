@@ -5,6 +5,9 @@
 
 #define LOG_FILENAME "/log.txt"
 
+static constexpr uint32_t GPS_DUTY_ON_MS = 120000;
+static constexpr uint32_t GPS_DUTY_OFF_MS = 180000;
+
 void core1_entry()
 {
     uart_print("Starting core 1", VerbosityLevel::DEBUG);
@@ -12,12 +15,42 @@ void core1_entry()
 
     uint32_t last_telemetry_time = 0;
     uint32_t telemetry_collection_counter = 0;
+    uint32_t gps_duty_epoch_ms = to_ms_since_boot(get_absolute_time());
+    bool gps_duty_powered = true;
 
     TelemetryManager::get_instance().init();
 
     while (true)
     {
+        feed_watchdog();
         collect_gps_data();
+
+        // Battery-mode GPS duty cycle via power-enable pin
+        if (SystemStateManager::get_instance().get_operating_mode() == SystemOperatingMode::BATTERY_POWERED)
+        {
+            uint32_t now = to_ms_since_boot(get_absolute_time());
+            uint32_t elapsed = now - gps_duty_epoch_ms;
+            if (gps_duty_powered && elapsed >= GPS_DUTY_ON_MS)
+            {
+                gpio_put(GPS_POWER_ENABLE_PIN, false);
+                gps_duty_powered = false;
+                gps_duty_epoch_ms = now;
+                EventEmitter::emit(EventGroup::GPS, GPSEvent::POWER_OFF);
+            }
+            else if (!gps_duty_powered && elapsed >= GPS_DUTY_OFF_MS)
+            {
+                gpio_put(GPS_POWER_ENABLE_PIN, true);
+                gps_duty_powered = true;
+                gps_duty_epoch_ms = now;
+                EventEmitter::emit(EventGroup::GPS, GPSEvent::POWER_ON);
+            }
+        }
+        else if (!gps_duty_powered)
+        {
+            gpio_put(GPS_POWER_ENABLE_PIN, true);
+            gps_duty_powered = true;
+            EventEmitter::emit(EventGroup::GPS, GPSEvent::POWER_ON);
+        }
 
         uint32_t currentTime = to_ms_since_boot(get_absolute_time());
 
@@ -59,9 +92,6 @@ bool init_pico_hw()
 
     gpio_init(PICO_DEFAULT_LED_PIN);
     gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
-
-    gpio_init(PICO_DEFAULT_LED_PIN);
-    gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
     gpio_put(PICO_DEFAULT_LED_PIN, true);
 
     i2c_init(MAIN_I2C_PORT, 400 * 1000);
@@ -84,12 +114,22 @@ bool init_pico_hw()
     gpio_put(SENSORS_POWER_ENABLE_PIN, true);
 
     SystemStateManager::get_instance();
-
     EventEmitter::emit(EventGroup::GPS, GPSEvent::POWER_ON);
 
-    system("color");
-
     return true;
+}
+
+static bool init_sensor_with_retry(SensorType type, int attempts)
+{
+    for (int i = 0; i < attempts; ++i)
+    {
+        if (SensorWrapper::get_instance().sensor_init(type, SENSORS_I2C_PORT))
+        {
+            return true;
+        }
+        sleep_ms(20);
+    }
+    return false;
 }
 
 bool init_modules()
@@ -102,27 +142,11 @@ bool init_modules()
 
     if (sd_init_status)
     {
-        FILE *fp = fopen(LOG_FILENAME, "w");
+        FILE *fp = fopen(LOG_FILENAME, "a");
         if (fp)
         {
-            uart_print("Log file opened.", VerbosityLevel::DEBUG);
-            int bytes_written = fprintf(fp, "System init started.\n");
-            uart_print("Written " + std::to_string(bytes_written) + " bytes.", VerbosityLevel::DEBUG);
-            int close_status = fclose(fp);
-            uart_print("Close file status: " + std::to_string(close_status), VerbosityLevel::DEBUG);
-
-            struct stat file_stat;
-            if (stat(LOG_FILENAME, &file_stat) == 0)
-            {
-                size_t file_size = file_stat.st_size;
-                uart_print("File size: " + std::to_string(file_size) + " bytes", VerbosityLevel::DEBUG);
-            }
-            else
-            {
-                uart_print("Failed to get file size", VerbosityLevel::ERROR);
-            }
-
-            uart_print("File path: /" + std::string(LOG_FILENAME), VerbosityLevel::DEBUG);
+            fprintf(fp, "System init started.\n");
+            fclose(fp);
         }
         else
         {
@@ -130,49 +154,40 @@ bool init_modules()
         }
     }
 
-    if (sd_init_status)
-    {
-        uart_print("SD card init: OK", VerbosityLevel::DEBUG);
-    }
-    else
-    {
-        uart_print("SD card init: FAILED", VerbosityLevel::ERROR);
-    }
+    uart_print(sd_init_status ? "SD card init: OK" : "SD card init: FAILED",
+               sd_init_status ? VerbosityLevel::DEBUG : VerbosityLevel::ERROR);
+    uart_print(radio_init_status ? "Radio init: OK" : "Radio init: FAILED",
+               radio_init_status ? VerbosityLevel::DEBUG : VerbosityLevel::ERROR);
 
     if (radio_init_status)
     {
-        uart_print("Radio init: OK", VerbosityLevel::DEBUG);
+        Frame boot = frame_build(OperationType::RES, 0, 0, "HELLO");
+        send_frame_lora(boot, false);
     }
-    else
-    {
-        uart_print("Radio init: FAILED", VerbosityLevel::ERROR);
-    }
-
-    Frame boot = frame_build(OperationType::RES, 0, 0, "HELLO");
-    send_frame_lora(boot);
 
     uart_print("Initializing sensors...", VerbosityLevel::DEBUG);
 
-    SensorWrapper &sensor_wrapper = SensorWrapper::get_instance();
-    bool light_sensor_init = sensor_wrapper.sensor_init(SensorType::LIGHT, SENSORS_I2C_PORT);
+    bool light_sensor_init = init_sensor_with_retry(SensorType::LIGHT, 3);
     SystemStateManager::get_instance().set_light_sensor_init_ok(light_sensor_init);
 
-    bool env_sensor_init = sensor_wrapper.sensor_init(SensorType::ENVIRONMENT, SENSORS_I2C_PORT);
+    bool env_sensor_init = init_sensor_with_retry(SensorType::ENVIRONMENT, 3);
     SystemStateManager::get_instance().set_env_sensor_init_ok(env_sensor_init);
 
-    if (!light_sensor_init || !env_sensor_init)
+    bool imu_sensor_init = init_sensor_with_retry(SensorType::IMU, 3);
+    SystemStateManager::get_instance().set_imu_sensor_init_ok(imu_sensor_init);
+
+    if (!light_sensor_init || !env_sensor_init || !imu_sensor_init)
     {
         uart_print("One or more sensors failed to initialize", VerbosityLevel::WARNING);
     }
 
-    return sd_init_status && radio_init_status;
+    // Continue even if radio/SD failed — health beacon reports faults.
+    return true;
 }
 
 SystemOperatingMode define_system_operating_mode()
 {
-    // If system is running but measured battery voltage is below this threshold it means that power is sourced from USB
     static constexpr float BAT_VOLTAGE_THRESHOLD = 2.4f;
-    // If system is running but measured current discharge is below this threshold it means that power is sourced from USB
     static constexpr uint8_t current_discharge_threshold = 40;
     float battery_voltage = PowerManager::get_instance().get_voltage_battery();
     uint8_t current_discharge = PowerManager::get_instance().get_current_draw();
@@ -192,6 +207,7 @@ SystemOperatingMode define_system_operating_mode()
 int main()
 {
     init_pico_hw();
+    init_watchdog_and_boot_reason();
     sleep_ms(100);
     init_modules();
     EventEmitter::emit(EventGroup::SYSTEM, SystemEvent::BOOT);
@@ -215,8 +231,11 @@ int main()
 
     std::string mode_string = (current_mode == SystemOperatingMode::USB_POWERED) ? "USB" : "BATTERY";
     uart_print("Operating mode: " + mode_string, VerbosityLevel::WARNING);
-    Frame boot = frame_build(OperationType::RES, 0, 0, "START_MODE_" + mode_string);
-    send_frame_lora(boot);
+    if (SystemStateManager::get_instance().is_radio_init_ok())
+    {
+        Frame boot = frame_build(OperationType::RES, 0, 0, "START_MODE_" + mode_string);
+        send_frame_lora(boot, false);
+    }
 
     std::string boot_string = "System init completed @ " + std::to_string(to_ms_since_boot(get_absolute_time())) + " ms";
     uart_print(boot_string, VerbosityLevel::WARNING);
@@ -225,6 +244,8 @@ int main()
 
     while (true)
     {
+        feed_watchdog();
+
         int packet_size = LoRa.parse_packet();
         if (packet_size)
         {
@@ -232,6 +253,7 @@ int main()
         }
 
         handle_uart_input();
+        maybe_send_health_beacon();
     }
 
     return 0;

@@ -26,43 +26,50 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(PICO_LORA_PATH ${PROJECT_SOURCE_DIR})
 
-set(PICO_CXX_ENABLE_EXCEPTIONS 1)
+set(PICO_CXX_ENABLE_EXCEPTIONS 0)
 pico_sdk_init()
 
-add_subdirectory(LoRa) 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+set(KUBISAT_COMMON_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../common")
+add_subdirectory(${KUBISAT_COMMON_DIR}/LoRa ${CMAKE_BINARY_DIR}/common_LoRa)
+# LoRa driver pulls board pins / PA selects from pin_config.h
+target_include_directories(LoRa_pico_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${KUBISAT_COMMON_DIR}/protocol
+)
+
 add_compile_options(-Wall
         -Wno-format
         -Wno-unused-function
         -Wno-maybe-uninitialized
         )
 
-if (TARGET tinyusb_device)
-    add_executable(main
-        main.cpp
-        pin_config.cpp
-        utils.cpp
-    )
-    
-    target_link_libraries(main PRIVATE
-        pico_stdlib
-        LoRa_pico_lib
-    )
+add_executable(main
+    main.cpp
+    utils.cpp
+)
 
-    # Keep SDK stdio on the same UART as the host link (GP8/GP9),
-    # not the board default GP0/GP1 — GP1 is LoRa CS.
-    target_compile_definitions(main PRIVATE
-        PICO_DEFAULT_UART=1
-        PICO_DEFAULT_UART_TX_PIN=8
-        PICO_DEFAULT_UART_RX_PIN=9
-    )
-    
-    pico_enable_stdio_usb(main 0)
-    pico_enable_stdio_uart(main 1)
-    
-    pico_add_extra_outputs(main)
+target_link_libraries(main PRIVATE
+    pico_stdlib
+    hardware_watchdog
+    LoRa_pico_lib
+)
 
-    add_custom_command(
+# Keep SDK stdio on the same UART as the host link (GP8/GP9),
+# not the board default GP0/GP1 — GP1 is LoRa CS.
+target_compile_definitions(main PRIVATE
+    PICO_DEFAULT_UART=1
+    PICO_DEFAULT_UART_TX_PIN=8
+    PICO_DEFAULT_UART_RX_PIN=9
+)
+
+pico_enable_stdio_usb(main 0)
+pico_enable_stdio_uart(main 1)
+
+pico_add_extra_outputs(main)
+
+add_custom_command(
     TARGET main POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_SOURCE_DIR}/release"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
@@ -70,4 +77,3 @@ if (TARGET tinyusb_device)
         "${CMAKE_CURRENT_SOURCE_DIR}/release/${PROJECT_NAME}.uf2"
     COMMENT "Copying ${PROJECT_NAME}.uf2 to release directory"
 )
-endif()

@@ -22,7 +22,7 @@
 #include <cstdint>
 #include <string>
 #include "pico/stdlib.h"
-#include "lib/location/NMEA/nmea_data.h"
+#include "lib/location/NMEA/NMEA_data.h"
 #include "utils.h"
 #include "storage.h"
 #include "PowerManager.h"
@@ -117,12 +117,13 @@ struct SensorDataRecord
     float pressure;     /**< Pressure in hPa */
     float humidity;     /**< Relative humidity in % */
     float light;        /**< Light intensity in lux */
+    float accel_x;      /**< Acceleration X (g) */
+    float accel_y;      /**< Acceleration Y (g) */
+    float accel_z;      /**< Acceleration Z (g) */
+    float gyro_x;       /**< Gyro X (dps) */
+    float gyro_y;       /**< Gyro Y (dps) */
+    float gyro_z;       /**< Gyro Z (dps) */
 
-    /**
-     * @brief Converts the sensor data record to a CSV string.
-     * @return A CSV string representing the sensor data record.
-     * @ingroup TelemetryManager
-     */
     std::string to_csv() const
     {
         std::stringstream ss;
@@ -131,7 +132,9 @@ struct SensorDataRecord
            << temperature << ","
            << pressure << ","
            << humidity << ","
-           << light;
+           << light << ","
+           << accel_x << "," << accel_y << "," << accel_z << ","
+           << gyro_x << "," << gyro_y << "," << gyro_z;
         return ss.str();
     }
 };
@@ -250,6 +253,9 @@ public:
      * @return A CSV string representing the last sensor data record, or an empty string if no data is available.
      */
     std::string get_last_sensor_record_csv();
+
+    /** @brief Returns up to N newest telemetry CSV lines separated by '|'. */
+    std::string get_recent_telemetry_csv(size_t count);
 
     static constexpr int TELEMETRY_BUFFER_SIZE = 20;
 

@@ -6,6 +6,11 @@
 #include "pico/stdlib.h"
 #include "pico/bootrom.h"
 #include "system_state_manager.h"
+#include "storage.h"
+#include "PowerManager.h"
+#include "utils_parse.h"
+#include <sstream>
+#include <iomanip>
 /**
  * @defgroup DiagnosticCommands Diagnostic Commands
  * @{
@@ -16,6 +21,8 @@ static constexpr uint8_t commands_list_command_id = 0;
 static constexpr uint8_t build_version_command_id = 1;
 static constexpr uint8_t power_mode_command_id = 2;
 static constexpr uint8_t uptime_command_id = 3;
+static constexpr uint8_t health_command_id = 4;
+static constexpr uint8_t format_sd_command_id = 5;
 static constexpr uint8_t verbosity_command_id = 8;
 static constexpr uint8_t enter_bootloader_command_id = 9;
 
@@ -225,26 +232,17 @@ std::vector<Frame> handle_verbosity(const std::string &param, OperationType oper
     }
     else if (operationType == OperationType::SET)
     {
-        try
+        int32_t level = 0;
+        if (!parse_int32(param, level) || level < 0 || level > 4)
         {
-            int level = std::stoi(param);
-            if (level < 0 || level > 4)
-            {
-                error_msg = error_code_to_string(ErrorCode::PARAM_INVALID);
-                frames.push_back(frame_build(OperationType::ERR, diagnostic_commands_group_id, verbosity_command_id, error_msg));
-                return frames;
-            }
-            SystemStateManager::get_instance().set_uart_verbosity(static_cast<VerbosityLevel>(level));
-            uart_print("SET_VERBOSITY_" + std::to_string(level), VerbosityLevel::WARNING);
-            frames.push_back(frame_build(OperationType::RES, diagnostic_commands_group_id, verbosity_command_id, "LEVEL SET"));
-            return frames;
-        }
-        catch (...)
-        {
-            error_msg = error_code_to_string(ErrorCode::INVALID_FORMAT);
+            error_msg = error_code_to_string(ErrorCode::PARAM_INVALID);
             frames.push_back(frame_build(OperationType::ERR, diagnostic_commands_group_id, verbosity_command_id, error_msg));
             return frames;
         }
+        SystemStateManager::get_instance().set_uart_verbosity(static_cast<VerbosityLevel>(level));
+        uart_print("SET_VERBOSITY_" + std::to_string(level), VerbosityLevel::WARNING);
+        frames.push_back(frame_build(OperationType::RES, diagnostic_commands_group_id, verbosity_command_id, "LEVEL SET"));
+        return frames;
     }
     else
     {
@@ -295,6 +293,53 @@ std::vector<Frame> handle_enter_bootloader_mode(const std::string &param, Operat
 
     SystemStateManager::get_instance().set_bootloader_reset_pending(true);
 
+    return frames;
+}
+
+std::vector<Frame> handle_get_health(const std::string &param, OperationType operationType)
+{
+    std::vector<Frame> frames;
+    if (operationType != OperationType::GET || !param.empty())
+    {
+        frames.push_back(frame_build(OperationType::ERR, diagnostic_commands_group_id, health_command_id,
+                                     error_code_to_string(ErrorCode::INVALID_OPERATION)));
+        return frames;
+    }
+
+    auto &state = SystemStateManager::get_instance();
+    std::ostringstream payload;
+    payload << std::fixed << std::setprecision(2)
+            << "UP=" << (to_ms_since_boot(get_absolute_time()) / 1000)
+            << ",RAD=" << (state.is_radio_init_ok() ? 1 : 0)
+            << ",SD=" << (state.is_sd_card_mounted() ? 1 : 0)
+            << ",ENV=" << (state.is_env_sensor_init_ok() ? 1 : 0)
+            << ",LUX=" << (state.is_light_sensor_init_ok() ? 1 : 0)
+            << ",IMU=" << (state.is_imu_sensor_init_ok() ? 1 : 0)
+            << ",BAT=" << PowerManager::get_instance().get_voltage_battery();
+    frames.push_back(frame_build(OperationType::VAL, diagnostic_commands_group_id, health_command_id, payload.str()));
+    return frames;
+}
+
+std::vector<Frame> handle_format_sd(const std::string &param, OperationType operationType)
+{
+    std::vector<Frame> frames;
+    if (operationType != OperationType::SET)
+    {
+        frames.push_back(frame_build(OperationType::ERR, diagnostic_commands_group_id, format_sd_command_id,
+                                     error_code_to_string(ErrorCode::INVALID_OPERATION)));
+        return frames;
+    }
+    if (param != "FORMAT")
+    {
+        frames.push_back(frame_build(OperationType::ERR, diagnostic_commands_group_id, format_sd_command_id,
+                                     error_code_to_string(ErrorCode::PARAM_INVALID)));
+        return frames;
+    }
+
+    bool ok = fs_format_sd();
+    frames.push_back(frame_build(ok ? OperationType::RES : OperationType::ERR,
+                                 diagnostic_commands_group_id, format_sd_command_id,
+                                 ok ? "SD_FORMATTED" : "SD_FORMAT_FAILED"));
     return frames;
 }
 

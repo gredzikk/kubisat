@@ -20,7 +20,7 @@
 
 #include <string>
 #include "hardware/uart.h"
-#include "lib/location/NMEA/nmea_data.h" // Include the new header
+#include "lib/location/NMEA/NMEA_data.h"
 #include "pin_config.h"
 
 /**

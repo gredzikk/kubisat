@@ -62,6 +62,8 @@ private:
     bool light_sensor_init_status;
     /** @brief Flag indicating whether the environment sensor initialization was successful. */
     bool env_sensor_init_status;
+    /** @brief Flag indicating whether the IMU initialization was successful. */
+    bool imu_sensor_init_status;
     /** @brief The system operating mode. */
     SystemOperatingMode system_operating_mode;
     /** @brief Mutex for thread-safe access to the system state. */
@@ -79,6 +81,7 @@ private:
                            radio_init_status(false),
                            light_sensor_init_status(false),
                            env_sensor_init_status(false),
+                           imu_sensor_init_status(false),
                            system_operating_mode(SystemOperatingMode::BATTERY_POWERED)
     {
         recursive_mutex_init(&mutex_);
@@ -262,6 +265,21 @@ public:
     {
         recursive_mutex_enter_blocking(&mutex_);
         env_sensor_init_status = status;
+        recursive_mutex_exit(&mutex_);
+    }
+
+    bool is_imu_sensor_init_ok() const
+    {
+        recursive_mutex_enter_blocking(const_cast<recursive_mutex_t *>(&mutex_));
+        bool result = imu_sensor_init_status;
+        recursive_mutex_exit(const_cast<recursive_mutex_t *>(&mutex_));
+        return result;
+    }
+
+    void set_imu_sensor_init_ok(bool status)
+    {
+        recursive_mutex_enter_blocking(&mutex_);
+        imu_sensor_init_status = status;
         recursive_mutex_exit(&mutex_);
     }
 

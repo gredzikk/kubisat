@@ -39,6 +39,8 @@ enum class SensorType : uint8_t
     LIGHT = 0x01,
     /** @brief Environment sensor. */
     ENVIRONMENT = 0x02,
+    /** @brief Inertial measurement unit. */
+    IMU = 0x03,
 };
 
 /**
@@ -58,6 +60,18 @@ enum class SensorDataTypeIdentifier : uint8_t
     HUMIDITY = 0x03,
     /** @brief Pressure. */
     PRESSURE = 0x04,
+    /** @brief Accelerometer X (g). */
+    ACCEL_X = 0x05,
+    /** @brief Accelerometer Y (g). */
+    ACCEL_Y = 0x06,
+    /** @brief Accelerometer Z (g). */
+    ACCEL_Z = 0x07,
+    /** @brief Gyroscope X (dps). */
+    GYRO_X = 0x08,
+    /** @brief Gyroscope Y (dps). */
+    GYRO_Y = 0x09,
+    /** @brief Gyroscope Z (dps). */
+    GYRO_Z = 0x0A,
 };
 
 /**

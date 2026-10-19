@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.12)
-project(BME280_lib)
 add_library(BME280_lib STATIC
     BME280.cpp
     BME280.h

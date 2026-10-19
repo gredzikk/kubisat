@@ -18,6 +18,7 @@
 #include "ISensor.h"
 #include "lib/sensors/BH1750/BH1750_WRAPPER.h"
 #include "lib/sensors/BME280/BME280_WRAPPER.h"
+#include "lib/sensors/MPU6050/MPU6050_WRAPPER.h"
 #include "lib/utils.h"
 
 /**
@@ -29,16 +30,22 @@
  */
 bool SensorWrapper::sensor_init(SensorType type, i2c_inst_t *i2c)
 {
-    switch (type)
+    if (sensors.find(type) == sensors.end() || sensors[type] == nullptr)
     {
-    case SensorType::LIGHT:
-        sensors[type] = new BH1750Wrapper(i2c);
-        break;
-    case SensorType::ENVIRONMENT:
-        sensors[type] = new BME280Wrapper(i2c);
-        break;
-    default:
-        return false;
+        switch (type)
+        {
+        case SensorType::LIGHT:
+            sensors[type] = new BH1750Wrapper(i2c);
+            break;
+        case SensorType::ENVIRONMENT:
+            sensors[type] = new BME280Wrapper(i2c);
+            break;
+        case SensorType::IMU:
+            sensors[type] = new MPU6050Wrapper(i2c);
+            break;
+        default:
+            return false;
+        }
     }
     return sensors[type]->init();
 }

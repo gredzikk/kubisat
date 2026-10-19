@@ -23,6 +23,7 @@
 #include <queue>
 #include <chrono>
 #include "protocol.h"
+#include "LoRa-RP2040.h"
 #include <atomic>
 #include <iostream>
 #include <map>

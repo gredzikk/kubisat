@@ -1,0 +1,19 @@
+Start testing: Oct 19 19:28 CEST
+----------------------------------------------------------
+1/1 Testing: frame_crc_tests
+1/1 Test: frame_crc_tests
+Command: "/home/gredzikk/dev/kubisat/build-host-tests/frame_crc_tests"
+Directory: /home/gredzikk/dev/kubisat/build-host-tests
+"frame_crc_tests" start time: Oct 19 19:28 CEST
+Output:
+----------------------------------------------------------
+frame_crc_tests OK
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"frame_crc_tests" end time: Oct 19 19:28 CEST
+"frame_crc_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 19 19:28 CEST

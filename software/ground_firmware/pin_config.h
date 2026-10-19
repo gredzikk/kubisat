@@ -1,10 +1,10 @@
 // Copyright (c) 2025 Jakub Grędzicki
 // Licensed under the MIT License. See LICENSE file in the project root for full license information.
 
-#include <stdint.h>
-
 #ifndef PIN_CONFIG_H
 #define PIN_CONFIG_H
+
+#include <stdint.h>
 
 #define DEBUG_UART_PORT uart1
 #define BAUD_RATE 115200
@@ -25,15 +25,16 @@
 #define LORA_DEFAULT_RESET_PIN     29
 #define LORA_DEFAULT_DIO0_PIN      10
 
-#define PA_OUTPUT_RFO_PIN          11
-#define PA_OUTPUT_PA_BOOST_PIN     12
+// SX127x PA select constants (not RP2040 GPIO numbers)
+#define PA_OUTPUT_RFO_PIN          0
+#define PA_OUTPUT_PA_BOOST_PIN     1
 
-// LoRa constants - declare as extern
-extern const int csPin;      // LoRa radio chip select
-extern const int resetPin;   // LoRa radio reset  
-extern const int irqPin;     // LoRa hardware interrupt pin
-extern uint8_t localAddress; // address of this device
-extern uint8_t destination;  // destination to send to
+inline constexpr int csPin = 1;      // LoRa radio chip select
+inline constexpr int resetPin = 29;  // LoRa radio reset
+inline constexpr int irqPin = 10;    // LoRa DIO0
 
+// Ground station addresses (mirror of satellite: local=37, remote=21)
+inline constexpr uint8_t lora_address_local = 21;  // this device
+inline constexpr uint8_t lora_address_remote = 37; // satellite
 
 #endif // PIN_CONFIG_H

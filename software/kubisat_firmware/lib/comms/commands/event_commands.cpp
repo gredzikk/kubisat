@@ -4,6 +4,8 @@
 #include "communication.h"
 #include "event_manager.h"
 #include <sstream>
+#include <iomanip>
+#include "utils_parse.h"
 
 /**
  * @defgroup EventCommands Event Commands
@@ -51,19 +53,17 @@ std::vector<Frame> handle_get_last_events(const std::string &param, OperationTyp
     size_t count = 10; // Default number of events to return
     if (!param.empty())
     {
-        try
-        {
-            count = std::stoul(param);
-            if (count > EVENT_BUFFER_SIZE)
-            {
-                error_msg = error_code_to_string(ErrorCode::INVALID_VALUE);
-                frames.push_back(frame_build(OperationType::ERR, event_commands_group_id, last_events_command_id, error_msg));
-                return frames;
-            }
-        }
-        catch (...)
+        int32_t parsed = 0;
+        if (!parse_int32(param, parsed) || parsed < 0)
         {
             error_msg = error_code_to_string(ErrorCode::PARAM_INVALID);
+            frames.push_back(frame_build(OperationType::ERR, event_commands_group_id, last_events_command_id, error_msg));
+            return frames;
+        }
+        count = static_cast<size_t>(parsed);
+        if (count > EVENT_BUFFER_SIZE)
+        {
+            error_msg = error_code_to_string(ErrorCode::INVALID_VALUE);
             frames.push_back(frame_build(OperationType::ERR, event_commands_group_id, last_events_command_id, error_msg));
             return frames;
         }

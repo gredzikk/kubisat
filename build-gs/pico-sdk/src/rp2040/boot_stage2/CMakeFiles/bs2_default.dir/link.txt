@@ -1,0 +1,1 @@
+/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -g -O3 -DNDEBUG -Wl,--build-id=none --specs=nosys.specs -nostartfiles -Wl,--script=/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/boot_stage2/boot_stage2.ld -Wl,-Map=bs2_default.elf.map CMakeFiles/bs2_default.dir/compile_time_choice.S.obj -o bs2_default.elf 

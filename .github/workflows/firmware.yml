@@ -1,0 +1,48 @@
+name: Firmware CI
+
+on:
+  push:
+    paths:
+      - "software/**"
+      - ".github/workflows/firmware.yml"
+  pull_request:
+    paths:
+      - "software/**"
+      - ".github/workflows/firmware.yml"
+
+jobs:
+  host-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure host tests
+        run: |
+          cmake -S software/tests/host -B build-host-tests
+          cmake --build build-host-tests
+          ctest --test-dir build-host-tests --output-on-failure
+
+  pico-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential git python3
+      - name: Fetch Pico SDK
+        run: |
+          git clone --depth 1 --branch 2.0.0 https://github.com/raspberrypi/pico-sdk.git $HOME/pico-sdk
+          git -C $HOME/pico-sdk submodule update --init --depth 1
+      - name: Build satellite firmware
+        run: |
+          export PICO_SDK_PATH=$HOME/pico-sdk
+          cmake -S software/kubisat_firmware -B build-sat -DPICO_SDK_PATH=$PICO_SDK_PATH
+          cmake --build build-sat -j$(nproc)
+          test -f build-sat/main.uf2
+      - name: Build ground firmware
+        run: |
+          export PICO_SDK_PATH=$HOME/pico-sdk
+          cmake -S software/ground_firmware -B build-gs -DPICO_SDK_PATH=$PICO_SDK_PATH
+          cmake --build build-gs -j$(nproc)
+          test -f build-gs/main.uf2
+

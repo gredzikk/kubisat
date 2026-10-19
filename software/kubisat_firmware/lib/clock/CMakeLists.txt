@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.12)
-project(clock_lib)
 add_library(clock_lib STATIC
     DS3231.cpp
     DS3231.h

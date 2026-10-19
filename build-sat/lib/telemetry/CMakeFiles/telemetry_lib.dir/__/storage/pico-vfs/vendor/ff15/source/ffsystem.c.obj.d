@@ -1,0 +1,25 @@
+lib/telemetry/CMakeFiles/telemetry_lib.dir/__/storage/pico-vfs/vendor/ff15/source/ffsystem.c.obj: \
+ /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ffsystem.c \
+ /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ff.h \
+ /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/ChaN/ffconf.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdlib.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/reent.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_types.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/lock.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/stdlib.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/alloca.h

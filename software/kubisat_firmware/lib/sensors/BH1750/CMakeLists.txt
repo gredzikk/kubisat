@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.12)
-project(BH1750_lib)
 add_library(BH1750_lib STATIC
     BH1750.cpp
     BH1750.h

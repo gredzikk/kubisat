@@ -4,10 +4,12 @@
 #include "commands.h"
 #include "communication.h"
 #include "telemetry_manager.h"
+#include "utils_parse.h"
 
 static constexpr uint8_t telemetry_commands_group = 8;
 static constexpr uint8_t last_telemetry_command_id = 2;
 static constexpr uint8_t last_sensor_command_id = 3;
+static constexpr uint8_t recent_telemetry_command_id = 4;
 
 /**
  * @defgroup TelemetryBufferCommands Telemetry Buffer Commands
@@ -104,6 +106,42 @@ std::vector<Frame> handle_get_last_sensor_record([[maybe_unused]] const std::str
 
     frames.push_back(frame_build(OperationType::VAL, telemetry_commands_group, last_sensor_command_id, csv_data));
 
+    return frames;
+}
+
+std::vector<Frame> handle_get_recent_telemetry(const std::string &param, OperationType operationType)
+{
+    std::vector<Frame> frames;
+    if (operationType != OperationType::GET)
+    {
+        frames.push_back(frame_build(OperationType::ERR, telemetry_commands_group, recent_telemetry_command_id,
+                                     error_code_to_string(ErrorCode::INVALID_OPERATION)));
+        return frames;
+    }
+
+    int32_t count = 5;
+    if (!param.empty() && !parse_int32(param, count))
+    {
+        frames.push_back(frame_build(OperationType::ERR, telemetry_commands_group, recent_telemetry_command_id,
+                                     error_code_to_string(ErrorCode::PARAM_INVALID)));
+        return frames;
+    }
+    if (count < 1)
+    {
+        count = 1;
+    }
+    if (count > TelemetryManager::TELEMETRY_BUFFER_SIZE)
+    {
+        count = TelemetryManager::TELEMETRY_BUFFER_SIZE;
+    }
+
+    std::string csv_data = TelemetryManager::get_instance().get_recent_telemetry_csv(static_cast<size_t>(count));
+    if (csv_data.empty())
+    {
+        frames.push_back(frame_build(OperationType::ERR, telemetry_commands_group, recent_telemetry_command_id, "NO_DATA"));
+        return frames;
+    }
+    frames.push_back(frame_build(OperationType::VAL, telemetry_commands_group, recent_telemetry_command_id, csv_data));
     return frames;
 }
 /** @} */ // TelemetryBufferCommands

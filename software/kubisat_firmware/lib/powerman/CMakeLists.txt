@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.12)
-project(PowerManager_lib)
 
 # Remove add_subdirectory(INA3221)
 

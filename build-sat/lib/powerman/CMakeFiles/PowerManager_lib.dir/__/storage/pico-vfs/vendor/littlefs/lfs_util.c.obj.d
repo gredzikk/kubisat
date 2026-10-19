@@ -1,0 +1,34 @@
+lib/powerman/CMakeFiles/PowerManager_lib.dir/__/storage/pico-vfs/vendor/littlefs/lfs_util.c.obj: \
+ /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs_util.c \
+ /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs_util.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/string.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/reent.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_types.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/lock.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_locale.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/string.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/inttypes.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdlib.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/stdlib.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/alloca.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdio.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stdio.h

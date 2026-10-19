@@ -19,7 +19,6 @@
 #include "utils.h"
 #include "time.h"
 #include "build_number.h"
-#include "LoRa/LoRa-RP2040.h"
 
 /**
  * @defgroup Protocol Protocol
@@ -84,7 +83,8 @@ enum class OperationType : uint8_t
     SEQ,
     /** @brief Error occurred during command execution. */
     ERR,
-
+    /** @brief Acknowledgement of a sequenced frame. */
+    ACK,
 };
 
 /**
@@ -150,8 +150,15 @@ struct Frame
     uint8_t command;    // Command ID within group
     std::string value;  // Payload value
     std::string unit;   // Payload unit
+    uint16_t seq = 0;   // Sequence number (0 if legacy / unset)
+    uint16_t crc = 0;   // CRC16 of fields ADDR..SEQ
+    bool has_integrity = false; // true when SEQ+CRC present and validated
     std::string footer; // End marker
 };
+
+/** Build CRC input string: dir;TYPE;group;cmd;value;unit;seq */
+std::string frame_crc_payload(const Frame &frame);
+uint16_t frame_compute_crc(const Frame &frame);
 
 std::string error_code_to_string(ErrorCode code);
 std::string operation_type_to_string(OperationType type);

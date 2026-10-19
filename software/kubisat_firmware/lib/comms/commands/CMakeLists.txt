@@ -1,6 +1,4 @@
 # lib/comms/commands/CMakeLists.txt
-cmake_minimum_required(VERSION 3.12)
-project(commands_lib)
 
 add_library(commands_lib STATIC
     commands.cpp
@@ -9,6 +7,7 @@ add_library(commands_lib STATIC
     gps_commands.cpp
     event_commands.cpp
     telemetry_commands.cpp
+    imu_commands.cpp
 )
 
 target_include_directories(commands_lib PUBLIC
@@ -25,6 +24,8 @@ target_include_directories(commands_lib PUBLIC
     ${CMAKE_SOURCE_DIR}/lib/storage
     ${CMAKE_SOURCE_DIR}/lib/sensors
     ${CMAKE_SOURCE_DIR}/lib/telemetry
+    ${CMAKE_SOURCE_DIR}/../common/LoRa
+    ${CMAKE_SOURCE_DIR}/../common/protocol
 )
 
 target_link_libraries(commands_lib PUBLIC
@@ -32,6 +33,7 @@ target_link_libraries(commands_lib PUBLIC
     hardware_i2c
     hardware_spi
     hardware_flash
+    hardware_watchdog
     blockdevice_flash
     blockdevice_heap
     blockdevice_loopback
@@ -41,4 +43,5 @@ target_link_libraries(commands_lib PUBLIC
     filesystem_vfs
     storage_lib
     Sensors_lib
+    LoRa_pico_lib
 )

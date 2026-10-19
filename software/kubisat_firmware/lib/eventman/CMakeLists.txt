@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.12)
-project(eventman_lib)
 
 add_library(eventman_lib STATIC
     event_manager.cpp

@@ -93,7 +93,7 @@ bool TelemetryManager::init()
         sensor_file = fopen(SENSOR_DATA_CSV_PATH, "w");
         if (sensor_file)
         {
-            fprintf(sensor_file, "timestamp,temperature,pressure,humidity,light\n");
+            fprintf(sensor_file, "timestamp,temperature,pressure,humidity,light,ax,ay,az,gx,gy,gz\n");
             fclose(sensor_file);
             uart_print("Created new sensor data log", VerbosityLevel::INFO);
         }
@@ -217,13 +217,13 @@ void TelemetryManager::collect_gps_telemetry(TelemetryRecord &record)
         record.lon_dir = (rmc_tokens.size() > 6 && !rmc_tokens[6].empty()) ? rmc_tokens[6] : "E";
 
         std::string knots = (rmc_tokens.size() > 7 && !rmc_tokens[7].empty()) ? rmc_tokens[7] : "0";
-        try
+        char *end = nullptr;
+        float speed_knots = strtof(knots.c_str(), &end);
+        if (end != knots.c_str() && *end == '\0')
         {
-            float speed_knots = std::stof(knots);
-            float speed_ms = speed_knots * 0.514444; // Convert knots to m/s
-            record.speed = std::to_string(speed_ms);
+            record.speed = std::to_string(speed_knots * 0.514444f);
         }
-        catch (const std::exception &)
+        else
         {
             record.speed = "0";
         }
@@ -270,6 +270,12 @@ void TelemetryManager::collect_sensor_telemetry(SensorDataRecord &sensor_record)
     sensor_record.pressure = sensor_wrapper.sensor_read_data(SensorType::ENVIRONMENT, SensorDataTypeIdentifier::PRESSURE);
     sensor_record.humidity = sensor_wrapper.sensor_read_data(SensorType::ENVIRONMENT, SensorDataTypeIdentifier::HUMIDITY);
     sensor_record.light = sensor_wrapper.sensor_read_data(SensorType::LIGHT, SensorDataTypeIdentifier::LIGHT_LEVEL);
+    sensor_record.accel_x = sensor_wrapper.sensor_read_data(SensorType::IMU, SensorDataTypeIdentifier::ACCEL_X);
+    sensor_record.accel_y = sensor_wrapper.sensor_read_data(SensorType::IMU, SensorDataTypeIdentifier::ACCEL_Y);
+    sensor_record.accel_z = sensor_wrapper.sensor_read_data(SensorType::IMU, SensorDataTypeIdentifier::ACCEL_Z);
+    sensor_record.gyro_x = sensor_wrapper.sensor_read_data(SensorType::IMU, SensorDataTypeIdentifier::GYRO_X);
+    sensor_record.gyro_y = sensor_wrapper.sensor_read_data(SensorType::IMU, SensorDataTypeIdentifier::GYRO_Y);
+    sensor_record.gyro_z = sensor_wrapper.sensor_read_data(SensorType::IMU, SensorDataTypeIdentifier::GYRO_Z);
 }
 
 /**
@@ -431,4 +437,46 @@ std::string TelemetryManager::get_last_telemetry_record_csv()
 std::string TelemetryManager::get_last_sensor_record_csv()
 {
     return last_sensor_record_copy.to_csv();
+}
+
+std::string TelemetryManager::get_recent_telemetry_csv(size_t count)
+{
+    mutex_enter_blocking(&telemetry_mutex);
+    if (telemetry_buffer_count == 0 || count == 0)
+    {
+        mutex_exit(&telemetry_mutex);
+        return "";
+    }
+
+    size_t n = count;
+    if (n > telemetry_buffer_count)
+    {
+        n = telemetry_buffer_count;
+    }
+
+    size_t start = 0;
+    if (telemetry_buffer_count == TELEMETRY_BUFFER_SIZE)
+    {
+        start = telemetry_buffer_write_index;
+    }
+
+    // Move to the first of the last n records
+    size_t index = start;
+    for (size_t i = 0; i < telemetry_buffer_count - n; ++i)
+    {
+        index = (index + 1) % TELEMETRY_BUFFER_SIZE;
+    }
+
+    std::stringstream ss;
+    for (size_t i = 0; i < n; ++i)
+    {
+        if (i > 0)
+        {
+            ss << "|";
+        }
+        ss << telemetry_buffer[index].to_csv();
+        index = (index + 1) % TELEMETRY_BUFFER_SIZE;
+    }
+    mutex_exit(&telemetry_mutex);
+    return ss.str();
 }

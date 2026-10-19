@@ -9,6 +9,8 @@ I later decided to transform it into an open-source project, hoping it would be 
 
 
 *   **Modular Architecture:** Organized into libraries for communications, sensor handling ([`lib/sensors`](lib/sensors)), power management ([`lib/powerman`](lib/powerman)), and more.
+*   **Pin map:** See [`PINMAP.md`](PINMAP.md) before changing GPIO assignments.
+*   **Flight checklist:** See [`FLIGHT_CHECKLIST.md`](FLIGHT_CHECKLIST.md).
 *   **Data Logging:** Utilizes the [`pico-vfs`](lib/storage/pico-vfs/README.md) library to manage a virtual file system, enabling robust logging to an SD card.
 *   **LoRa Communication:** Integrates LoRa functionality for sending and receiving data frames.
 *   **Automated Build Process:** Uses CMake for building the firmware, with automatic build numbering and release artifact generation.
@@ -16,7 +18,7 @@ I later decided to transform it into an open-source project, hoping it would be 
 
 ## Prerequisites
 
-Before you can build the firmware, you need to set up the Raspberry Pi Pico C/C++ development environment. Please follow the official [Getting started with Raspberry Pi Pico](httpss://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf) guide.
+Before you can build the firmware, you need to set up the Raspberry Pi Pico C/C++ development environment. Please follow the official [Getting started with Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf) guide.
 
 Ensure you have the following installed:
 *   ARM GCC Compiler
@@ -30,7 +32,7 @@ For generating documentation, you will also need:
 
 ## Building the Firmware
 
-The recommended way to build the firmware is by using [Visual Studio Code](httpss://code.visualstudio.com/) with the official [Raspberry Pi Pico/RP2040](httpss://marketplace.visualstudio.com/items?itemName=raspberry-pi.pico-wgo) extension.
+The recommended way to build the firmware is by using [Visual Studio Code](https://code.visualstudio.com/) with the official [Raspberry Pi Pico/RP2040](https://marketplace.visualstudio.com/items?itemName=raspberry-pi.pico-wgo) extension.
 
 1.  Open the project folder in VS Code.
 2.  Open Pico SDK Extension and select "Import project"
@@ -134,7 +136,7 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-The following source code has been written with reference to the [ARM Embed OS](httpss://github.com/ARMmbed/mbed-os) source
+The following source code has been written with reference to the [ARM Embed OS](https://github.com/ARMmbed/mbed-os) source
 code; ARM Embed OS is licensed under the Apache 2.0 licence.
 
 - `src/blockdevice/sd.c`
