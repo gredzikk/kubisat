@@ -938,6 +938,7 @@ lib/comms/CMakeFiles/Comms_lib.dir/communication.cpp.obj: /home/gredzikk/dev/kub
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
@@ -982,6 +983,7 @@ lib/comms/CMakeFiles/Comms_lib.dir/communication.cpp.obj: /home/gredzikk/dev/kub
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info/defs.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info/structure.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info/code.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/lora_defaults.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_watchdog/include/hardware/watchdog.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/watchdog.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/watchdog.h
@@ -1237,6 +1239,7 @@ lib/comms/CMakeFiles/Comms_lib.dir/frame.cpp.obj: /home/gredzikk/dev/kubisat/sof
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
@@ -3919,6 +3922,7 @@ lib/comms/CMakeFiles/Comms_lib.dir/receive.cpp.obj: /home/gredzikk/dev/kubisat/s
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
@@ -4215,6 +4219,7 @@ lib/comms/CMakeFiles/Comms_lib.dir/send.cpp.obj: /home/gredzikk/dev/kubisat/soft
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
@@ -4511,6 +4516,7 @@ lib/comms/CMakeFiles/Comms_lib.dir/utils_converters.cpp.obj: /home/gredzikk/dev/
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
@@ -4713,6 +4719,8 @@ lib/comms/CMakeFiles/Comms_lib.dir/utils_converters.cpp.obj: /home/gredzikk/dev/
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h:
 
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h:
+
+/home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h:
 
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h:
 
@@ -5035,6 +5043,8 @@ generated/pico_base/pico/config_autogen.h:
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/exception:
+
+/home/gredzikk/dev/kubisat/software/common/protocol/lora_defaults.h:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/cxxabi_init_exception.h:
 

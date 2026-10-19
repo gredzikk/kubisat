@@ -218,14 +218,6 @@ public:
     bool flush_telemetry();
 
     /**
-     * @brief Save buffered sensor data to storage
-     * @return True if data was successfully saved
-     * @details Writes all records from the sensor data buffer to the CSV file
-     *          and clears the buffer after successful writing
-     */
-    bool flush_sensor_data();
-
-    /**
      * @brief Check if it's time to collect telemetry based on interval
      * @param current_time Current system time in milliseconds
      * @param last_collection_time Previous collection time in milliseconds

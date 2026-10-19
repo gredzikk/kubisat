@@ -78,6 +78,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/gredzikk/dev/kubisat/software/common/LoRa"
+  "/home/gredzikk/dev/kubisat/software/common/LoRa/../protocol"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib"
   "/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_atomic/include"
   "/home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_stdlib_headers/include"

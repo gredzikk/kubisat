@@ -82,6 +82,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms"
+  "/home/gredzikk/dev/kubisat/software/kubisat_firmware/../common/protocol"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/powerman"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/powerman/INA3221"
   "/home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/hardware_i2c/include"

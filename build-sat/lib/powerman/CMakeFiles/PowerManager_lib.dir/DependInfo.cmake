@@ -91,6 +91,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/ChaN"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms"
+  "/home/gredzikk/dev/kubisat/software/kubisat_firmware/../common/protocol"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/powerman/INA3221"
   "/home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/hardware_i2c/include"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/clock"

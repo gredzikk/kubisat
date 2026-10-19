@@ -5,7 +5,6 @@
 #include "LoRa-RP2040.h"
 #include "system_state_manager.h"
 #include "pico/time.h"
-#include <cstring>
 #include <vector>
 
 static volatile uint16_t g_last_ack_seq = 0;
@@ -51,16 +50,13 @@ bool wait_for_ack(uint16_t seq, uint32_t timeout_ms)
 
 void send_message(std::string outgoing)
 {
-    std::vector<char> send(outgoing.length() + 1);
-    strcpy(send.data(), outgoing.c_str());
-
     uart_print("LoRa packet begin", VerbosityLevel::DEBUG);
     LoRa.beginPacket();
     LoRa.write(lora_address_remote);
     LoRa.write(lora_address_local);
-    for (size_t i = 0; i < send.size(); i++)
+    for (size_t i = 0; i < outgoing.size(); i++)
     {
-        LoRa.write(static_cast<uint8_t>(send[i]));
+        LoRa.write(static_cast<uint8_t>(outgoing[i]));
     }
     LoRa.endPacket(false);
 

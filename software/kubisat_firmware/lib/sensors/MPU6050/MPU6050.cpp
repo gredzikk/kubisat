@@ -33,13 +33,10 @@ bool MPU6050::begin()
     {
         return false;
     }
+    // Fail closed: only known MPU-6050 / clone WHO_AM_I values
     if (who != 0x68 && who != 0x70 && who != 0x71)
     {
-        // Accept common WHO_AM_I variants seen on MPU6050 clones
-        if (who == 0)
-        {
-            return false;
-        }
+        return false;
     }
     // Wake device
     return write_reg(REG_PWR_MGMT_1, 0x00);

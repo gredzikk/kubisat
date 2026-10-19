@@ -1,59 +1,53 @@
 # KubiSat Ground Station Firmware
 
-This repository contains the firmware for the KubiSat Ground Station, designed to run on a Raspberry Pi Pico. It acts as a communication bridge, relaying data between a host computer connected via USB/UART and a remote LoRa device, such as the KubiSat satellite.
+UART ↔ LoRa bridge for the KubiSat satellite. Runs on a Raspberry Pi Pico (RP2040).
 
-Please read doc.pdf from release directory to get grasp of satellite internal workings first.
+The ground station is intentionally a **dumb bridge**: it does not encode/decode SEQ or CRC. Host tools (see `../kubisat_operator`) and the satellite own the application protocol described in [`../commands.md`](../commands.md).
 
 ## Features
 
-*   **LoRa-UART Bridge:** Facilitates bidirectional communication between a serial terminal and a LoRa radio module.
-*   **Simple Addressing:** Uses a basic addressing scheme to ensure messages are sent to and received from the correct device.
-*   **Timestamped Logging:** All messages printed to the serial console are timestamped for easier debugging and data analysis.
-*   **Signal Strength Reporting:** Can be triggered to report the RSSI (Received Signal Strength Indicator) and SNR (Signal-to-Noise Ratio) of the last received packet.
-*   **Pico C/C++ SDK:** Built using the standard Raspberry Pi Pico C/C++ SDK and CMake.
+* **LoRa–UART bridge** — bidirectional relay between a host serial port and the satellite radio
+* **Addressing** — wire format `[dest][sender][payload…]` (ground local=`21`, satellite=`37`)
+* **Raw protocol frames** — `KBST…TSBK` printed without timestamps; logs use `[Nms] - …`
+* **RSSI/SNR** — send a line containing only `?` to append `;rssi;snr` to the next RX frame
+* **Watchdog** — 8 s hardware watchdog; LoRa init failure reboots instead of hanging
+* **Status LED** — onboard LED blinks on TX/RX; solid on LoRa init fault
 
-## Hardware Prerequisites
+## Hardware
 
-*   A Raspberry Pi Pico or Pico W.
-*   A LoRa module (e.g., based on the Semtech SX1276/7/8) connected to the Pico via SPI.
+| Function | Pico pin |
+|----------|----------|
+| UART TX (to host) | GP8 |
+| UART RX (from host) | GP9 |
+| LoRa SPI MISO / MOSI / SCK / CS | GP4 / GP3 / GP2 / GP1 |
+| LoRa RESET / DIO0 | GP29 / GP10 |
 
-The default pin configuration and LoRa addresses are defined in [`pin_config.h`](pin_config.h).
+**Host link is UART1 @ 115200 8N1 on GP8/GP9** (USB CDC stdio is disabled). Use a USB–UART adapter or the Pico UART pins, not the USB serial console.
 
-## Building the Firmware
+Pins and addresses: [`pin_config.h`](pin_config.h). Shared LoRa driver + sync word: [`../common/`](../common/).
 
-The recommended way to build the firmware is by using [Visual Studio Code](https://code.visualstudio.com/) with the official [Raspberry Pi Pico/RP2040](https://marketplace.visualstudio.com/items?itemName=raspberry-pi.pico-wgo) extension.
+## Build
 
-1.  Open the project folder in VS Code.
-2.  Open Pico SDK Extension and select "Import project"
-3.  Select directory of repository on disk
-4.  Click import button
-5.  Use the "Build" button in the status bar at the bottom of the VS Code window to compile the project.
+With the [Pico SDK](https://github.com/raspberrypi/pico-sdk) (2.0.0):
 
-Alternatively, you can build from the command line:
+```sh
+export PICO_SDK_PATH=/path/to/pico-sdk
+cmake -S . -B build
+cmake --build build
+# UF2 also copied to release/main.uf2
+```
 
-1.  Ensure you have the [Raspberry Pi Pico C/C++ SDK](https://github.com/raspberrypi/pico-sdk) set up.
-2.  Clone this repository.
-3.  Create a build directory:
-    ```sh
-    mkdir build
-    cd build
-    ```
-4.  Run CMake and Make:
-    ```sh
-    cmake ..
-    make
-    ```
-5.  A `main.uf2` file will be generated in the `build/` directory and also copied to the `release/` directory.
+Or use VS Code with the Raspberry Pi Pico extension (import this folder).
 
-## Flashing and Usage
+## Flash and use
 
-1.  Connect your Raspberry Pi Pico to your computer while holding down the `BOOTSEL` button.
-2.  Drag and drop the `main.uf2` file onto the `RPI-RP2` mass storage device. The Pico will reboot automatically.
-3.  Connect to the Pico's serial port using a terminal emulator (e.g., PuTTY, minicom, VS Code Serial Monitor) with a baud rate of `115200`.
-4.  Type a message and press Enter to send it via LoRa.
-5.  Incoming LoRa messages will be displayed in the terminal.
-6.  To request signal strength on the next incoming packet, send a line containing only `?`. RSSI and SNR are appended to that frame as `;rssi;snr` (protocol frames themselves are printed without timestamps).
+1. Hold `BOOTSEL`, plug in USB, copy `release/main.uf2` to `RPI-RP2`.
+2. Open serial on the UART adapter at **115200**.
+3. Send a full protocol frame ending with newline; replies appear as raw `KBST…TSBK`.
+4. Send `?` alone to arm RSSI/SNR on the next received frame.
+
+Status notes: [`STATUS.md`](STATUS.md).
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENCE](software/ground_firmware/LICENCE) file for details.
+MIT — see the repository root [`LICENSE`](../../LICENSE).

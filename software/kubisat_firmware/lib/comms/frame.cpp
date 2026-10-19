@@ -101,7 +101,7 @@ Frame frame_decode(const std::string &data)
     std::stringstream ss(data);
     std::string token;
 
-    uart_print("Decoding frame: " + data, VerbosityLevel::WARNING);
+    uart_print("Decoding frame: " + data, VerbosityLevel::DEBUG);
 
     if (!std::getline(ss, token, DELIMITER) || token != FRAME_BEGIN)
     {

@@ -86,6 +86,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/../../../common/LoRa"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/../../../common/protocol"
   "/home/gredzikk/dev/kubisat/software/common/LoRa"
+  "/home/gredzikk/dev/kubisat/software/common/LoRa/../protocol"
   "/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_atomic/include"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/commands"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/powerman/INA3221"

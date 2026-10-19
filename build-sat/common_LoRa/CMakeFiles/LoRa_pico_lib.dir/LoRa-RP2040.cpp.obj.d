@@ -85,5 +85,6 @@ common_LoRa/CMakeFiles/LoRa_pico_lib.dir/LoRa-RP2040.cpp.obj: \
  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_locale.h \
  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h \
  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/string.h \
+ /home/gredzikk/dev/kubisat/software/common/LoRa/../protocol/lora_defaults.h \
  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdio.h \
  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stdio.h

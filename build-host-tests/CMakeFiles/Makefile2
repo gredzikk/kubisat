@@ -64,6 +64,8 @@ CMAKE_BINARY_DIR = /home/gredzikk/dev/kubisat/build-host-tests
 
 # The main recursive "all" target.
 all: CMakeFiles/frame_crc_tests.dir/all
+all: CMakeFiles/ground_bridge_tests.dir/all
+all: CMakeFiles/frame_decode_vectors.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +74,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/frame_crc_tests.dir/clean
+clean: CMakeFiles/ground_bridge_tests.dir/clean
+clean: CMakeFiles/frame_decode_vectors.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,6 +103,58 @@ frame_crc_tests: CMakeFiles/frame_crc_tests.dir/rule
 CMakeFiles/frame_crc_tests.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_crc_tests.dir/build.make CMakeFiles/frame_crc_tests.dir/clean
 .PHONY : CMakeFiles/frame_crc_tests.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ground_bridge_tests.dir
+
+# All Build rule for target.
+CMakeFiles/ground_bridge_tests.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ground_bridge_tests.dir/build.make CMakeFiles/ground_bridge_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ground_bridge_tests.dir/build.make CMakeFiles/ground_bridge_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gredzikk/dev/kubisat/build-host-tests/CMakeFiles --progress-num=7,8 "Built target ground_bridge_tests"
+.PHONY : CMakeFiles/ground_bridge_tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ground_bridge_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gredzikk/dev/kubisat/build-host-tests/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ground_bridge_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gredzikk/dev/kubisat/build-host-tests/CMakeFiles 0
+.PHONY : CMakeFiles/ground_bridge_tests.dir/rule
+
+# Convenience name for target.
+ground_bridge_tests: CMakeFiles/ground_bridge_tests.dir/rule
+.PHONY : ground_bridge_tests
+
+# clean rule for target.
+CMakeFiles/ground_bridge_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ground_bridge_tests.dir/build.make CMakeFiles/ground_bridge_tests.dir/clean
+.PHONY : CMakeFiles/ground_bridge_tests.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/frame_decode_vectors.dir
+
+# All Build rule for target.
+CMakeFiles/frame_decode_vectors.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_decode_vectors.dir/build.make CMakeFiles/frame_decode_vectors.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_decode_vectors.dir/build.make CMakeFiles/frame_decode_vectors.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gredzikk/dev/kubisat/build-host-tests/CMakeFiles --progress-num=4,5,6 "Built target frame_decode_vectors"
+.PHONY : CMakeFiles/frame_decode_vectors.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/frame_decode_vectors.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gredzikk/dev/kubisat/build-host-tests/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/frame_decode_vectors.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gredzikk/dev/kubisat/build-host-tests/CMakeFiles 0
+.PHONY : CMakeFiles/frame_decode_vectors.dir/rule
+
+# Convenience name for target.
+frame_decode_vectors: CMakeFiles/frame_decode_vectors.dir/rule
+.PHONY : frame_decode_vectors
+
+# clean rule for target.
+CMakeFiles/frame_decode_vectors.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_decode_vectors.dir/build.make CMakeFiles/frame_decode_vectors.dir/clean
+.PHONY : CMakeFiles/frame_decode_vectors.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

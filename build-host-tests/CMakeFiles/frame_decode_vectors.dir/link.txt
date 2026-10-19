@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/frame_decode_vectors.dir/test_frame_decode_vectors.cpp.o CMakeFiles/frame_decode_vectors.dir/home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.o -o frame_decode_vectors 

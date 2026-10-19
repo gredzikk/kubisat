@@ -164,4 +164,9 @@ CMakeFiles/main.dir/main.cpp.obj: \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_spi/include/hardware/spi.h \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
- /home/gredzikk/dev/kubisat/software/ground_firmware/../common/protocol/frame_markers.h
+ /home/gredzikk/dev/kubisat/software/ground_firmware/../common/protocol/frame_markers.h \
+ /home/gredzikk/dev/kubisat/software/ground_firmware/../common/protocol/bridge_frame.h \
+ /home/gredzikk/dev/kubisat/software/ground_firmware/../common/protocol/frame_markers.h \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/cstdint \
+ /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/cstring \
+ /home/gredzikk/dev/kubisat/software/ground_firmware/../common/protocol/lora_defaults.h

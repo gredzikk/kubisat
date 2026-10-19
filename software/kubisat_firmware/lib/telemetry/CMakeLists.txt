@@ -5,6 +5,9 @@ add_library(telemetry_lib STATIC
 
 target_include_directories(telemetry_lib PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}/lib
+    ${CMAKE_SOURCE_DIR}/lib/comms
+    ${CMAKE_SOURCE_DIR}/../common/protocol
 )
 
 target_link_libraries(telemetry_lib PUBLIC

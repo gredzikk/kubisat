@@ -816,6 +816,47 @@ CMakeFiles/main.dir/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_i2
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_time/include/pico/timeout_helper.h
 
+CMakeFiles/main.dir/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_interp/interp.c.obj: /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_interp/interp.c \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_interp/include/hardware/interp.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+  generated/pico_base/pico/version.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/boards/include/boards/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/pico_platform/include/pico/platform.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/error.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/hardware_claim/include/hardware/claim.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h
+
 CMakeFiles/main.dir/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_irq/irq.c.obj: /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_irq/irq.c \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_irq/include/hardware/irq.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico.h \
@@ -1653,6 +1694,57 @@ CMakeFiles/main.dir/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_double
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/error.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_bootrom/include/pico/bootrom/sf_table.h
+
+CMakeFiles/main.dir/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_flash/flash.c.obj: /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_flash/flash.c \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_flash/include/pico/flash.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+  generated/pico_base/pico/version.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/boards/include/boards/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/pico_platform/include/pico/platform.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/error.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_multicore/include/pico/multicore.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/sync.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/sem.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/lock_core.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_time/include/pico/time.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/mutex.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/critical_section.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/interp.h
 
 CMakeFiles/main.dir/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj: /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_float/float_init_rom_rp2040.c \
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/string.h \
@@ -3203,6 +3295,629 @@ CMakeFiles/main.dir/lib/storage/pico-vfs/src/blockdevice/flash.c.obj: /home/gred
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/stdlib.h \
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/alloca.h
 
+CMakeFiles/main.dir/lib/storage/pico-vfs/src/blockdevice/heap.c.obj: /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/blockdevice/heap.c \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/errno.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/errno.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/reent.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/lock.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/mutex.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/lock_core.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+  generated/pico_base/pico/version.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/boards/include/boards/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/pico_platform/include/pico/platform.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/error.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_time/include/pico/time.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/alloca.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_locale.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/string.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/blockdevice/heap.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/blockdevice/blockdevice.h
+
+CMakeFiles/main.dir/lib/storage/pico-vfs/src/blockdevice/loopback.c.obj: /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/blockdevice/loopback.c \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/errno.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/errno.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/reent.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/lock.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/fcntl.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/fcntl.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_default_fcntl.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/endian.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_endian.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/select.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_sigset.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_timeval.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/timespec.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_timespec.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_pthreadtypes.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/sched.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stat.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/time.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/time.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_locale.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/alloca.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/unistd.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/unistd.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/mutex.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/lock_core.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  generated/pico_base/pico/version.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/boards/include/boards/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/pico_platform/include/pico/platform.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/error.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_time/include/pico/time.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/blockdevice/loopback.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/blockdevice/blockdevice.h
+
+CMakeFiles/main.dir/lib/storage/pico-vfs/src/blockdevice/sd.c.obj: /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/blockdevice/sd.c \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/errno.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/errno.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/reent.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/lock.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/inttypes.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_locale.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+  generated/pico_base/pico/version.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/boards/include/boards/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/pico_platform/include/pico/platform.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/error.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/clocks.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/clocks.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/mutex.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/lock_core.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_time/include/pico/time.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_stdlib_headers/include/pico/stdlib.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/pads_bank0.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/io_bank0.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/pico_platform/include/pico/platform/cpu_regs.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/m0plus.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/nvic.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/scb.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_uart/include/hardware/uart.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_resets/include/hardware/resets.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/blockdevice/sd.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_spi/include/hardware/spi.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/blockdevice/blockdevice.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/alloca.h
+
+CMakeFiles/main.dir/lib/storage/pico-vfs/src/filesystem/fat.c.obj: /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/filesystem/fat.c \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/reent.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/lock.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/alloca.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_locale.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/time.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/time.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/endian.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_endian.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/select.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_sigset.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_timeval.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/timespec.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_timespec.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_pthreadtypes.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/sched.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/unistd.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/unistd.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/mutex.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/lock_core.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  generated/pico_base/pico/version.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/boards/include/boards/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/pico_platform/include/pico/platform.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/error.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_time/include/pico/time.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/blockdevice/blockdevice.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/fat.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/filesystem.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/errno.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/errno.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/fcntl.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/fcntl.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_default_fcntl.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stat.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ff.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/ChaN/ffconf.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/diskio.h
+
+CMakeFiles/main.dir/lib/storage/pico-vfs/src/filesystem/littlefs.c.obj: /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/filesystem/littlefs.c \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/errno.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/errno.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/reent.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/lock.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/fcntl.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/fcntl.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_default_fcntl.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/endian.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_endian.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/select.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_sigset.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_timeval.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/timespec.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_timespec.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_pthreadtypes.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/sched.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stat.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/time.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/time.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_locale.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/mutex.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/lock_core.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  generated/pico_base/pico/version.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/boards/include/boards/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/pico_platform/include/pico/platform.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/error.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_time/include/pico/time.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs_util.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/inttypes.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/alloca.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stdio.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/blockdevice/blockdevice.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/littlefs.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/filesystem.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/unistd.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/unistd.h
+
+CMakeFiles/main.dir/lib/storage/pico-vfs/src/filesystem/vfs.c.obj: /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/filesystem/vfs.c \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/reent.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/lock.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_locale.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/errno.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/sys/dirent.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/filesystem.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/errno.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/fcntl.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/fcntl.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_default_fcntl.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/endian.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_endian.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/select.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_sigset.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_timeval.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/timespec.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_timespec.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_pthreadtypes.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/sched.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stat.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/time.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/time.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/unistd.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/unistd.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/blockdevice/blockdevice.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/alloca.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/mutex.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_sync/include/pico/lock_core.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h \
+  generated/pico_base/pico/version.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/boards/include/boards/pico.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/pico_platform/include/pico/platform.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/types.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include/pico/error.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_time/include/pico/time.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/vfs.h
+
+CMakeFiles/main.dir/lib/storage/pico-vfs/vendor/ff15/source/ff.c.obj: /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ff.c \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/reent.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/lock.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_locale.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/string.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ff.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/ChaN/ffconf.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/diskio.h
+
+CMakeFiles/main.dir/lib/storage/pico-vfs/vendor/ff15/source/ffsystem.c.obj: /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ffsystem.c \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ff.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/ChaN/ffconf.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/reent.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/lock.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/alloca.h
+
+CMakeFiles/main.dir/lib/storage/pico-vfs/vendor/ff15/source/ffunicode.c.obj: /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ffunicode.c \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ff.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/ChaN/ffconf.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h
+
+CMakeFiles/main.dir/lib/storage/pico-vfs/vendor/littlefs/lfs.c.obj: /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs.c \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs.h \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs_util.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/reent.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/lock.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_locale.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/inttypes.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/alloca.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stdio.h
+
+CMakeFiles/main.dir/lib/storage/pico-vfs/vendor/littlefs/lfs_util.c.obj: /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs_util.c \
+  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs_util.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_default_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/features.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_newlib_version.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_intsup.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdbool.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/newlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/config.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/ieeefp.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/reent.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/_ansi.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/cdefs.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/lock.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_locale.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/string.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/inttypes.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/stdlib.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/alloca.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdio.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
+  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stdio.h
+
 CMakeFiles/main.dir/lib/storage/storage.cpp.obj: /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.cpp \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h \
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdio.h \
@@ -3946,6 +4661,11 @@ CMakeFiles/main.dir/main.cpp.obj: /home/gredzikk/dev/kubisat/software/kubisat_fi
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/uniform_int_dist.h \
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/stl_tempbuf.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/LoRa/LoRa-RP2040.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info/defs.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info/structure.h \
+  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info/code.h \
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/atomic \
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/atomic_base.h \
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/atomic_lockfree_defines.h \
@@ -3970,7 +4690,25 @@ CMakeFiles/main.dir/main.cpp.obj: /home/gredzikk/dev/kubisat/software/kubisat_fi
 
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.cpp:
 
-/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_flash/include/pico/flash.h:
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs_util.c:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ffunicode.c:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ffsystem.c:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ff.c:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/sys/dirent.h:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/filesystem/littlefs.c:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/filesystem/ChaN/ffconf.h:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/blockdevice/sd.c:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/blockdevice/loopback.h:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/blockdevice/heap.c:
 
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/blockdevice/flash.c:
 
@@ -4009,8 +4747,6 @@ CMakeFiles/main.dir/main.cpp.obj: /home/gredzikk/dev/kubisat/software/kubisat_fi
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/hashtable.h:
 
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/protocol.h:
-
-/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/std_mutex.h:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/parse_numbers.h:
 
@@ -4076,8 +4812,6 @@ CMakeFiles/main.dir/main.cpp.obj: /home/gredzikk/dev/kubisat/software/kubisat_fi
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/system_error:
 
-/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/tuple:
-
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/limits:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/uses_allocator_args.h:
@@ -4115,6 +4849,8 @@ CMakeFiles/main.dir/main.cpp.obj: /home/gredzikk/dev/kubisat/software/kubisat_fi
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/stl_construct.h:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/ext/alloc_traits.h:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/filesystem/vfs.c:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/basic_string.h:
 
@@ -4168,6 +4904,10 @@ CMakeFiles/main.dir/main.cpp.obj: /home/gredzikk/dev/kubisat/software/kubisat_fi
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/gthr.h:
 
+/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/ios_base.h:
+
+/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/cctype:
+
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_double/double_init_rom_rp2040.c:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/io_qspi.h:
@@ -4190,7 +4930,17 @@ CMakeFiles/main.dir/main.cpp.obj: /home/gredzikk/dev/kubisat/software/kubisat_fi
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/typeinfo:
 
+/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/unordered_map.h:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs_util.h:
+
+/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/ext/atomicity.h:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h:
+
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/pll.h:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs.c:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_boot_lock/include/hardware/boot_lock.h:
 
@@ -4336,6 +5086,8 @@ CMakeFiles/main.dir/main.cpp.obj: /home/gredzikk/dev/kubisat/software/kubisat_fi
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_atomic/include/stdatomic.h:
 
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/diskio.h:
+
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_stdint.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync/include/hardware/sync.h:
@@ -4348,6 +5100,8 @@ CMakeFiles/main.dir/main.cpp.obj: /home/gredzikk/dev/kubisat/software/kubisat_fi
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_stdlib_headers/include/pico/stdlib.h:
 
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source/ff.h:
+
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/locale_classes.tcc:
@@ -4356,6 +5110,8 @@ CMakeFiles/main.dir/main.cpp.obj: /home/gredzikk/dev/kubisat/software/kubisat_fi
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/machine/_types.h:
 
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/blockdevice/loopback.c:
+
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/hardware_claim/claim.c:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/pico_platform/include/pico/platform.h:
@@ -4363,6 +5119,10 @@ CMakeFiles/main.dir/main.cpp.obj: /home/gredzikk/dev/kubisat/software/kubisat_fi
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h:
+
+/home/gredzikk/dev/kubisat/software/common/LoRa/LoRa-RP2040.h:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_flash/include/pico/flash.h:
 
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/system_state_manager.h:
 
@@ -4550,9 +5310,17 @@ generated/pico_base/pico/config_autogen.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_gpio/gpio.c:
 
-/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/dreq.h:
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/sensors/ISensor.cpp:
 
-/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/ios_base.h:
+/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/ctype.h:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_stdio/stdio.c:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/timer.h:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_i2c/include/hardware/i2c.h:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/dreq.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/resets.h:
 
@@ -4561,6 +5329,16 @@ generated/pico_base/pico/config_autogen.h:
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/clocks.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_clib_interface/newlib_interface.c:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_interp/interp.c:
+
+/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/std_mutex.h:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_interp/include/hardware/interp.h:
+
+/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h:
+
+/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/pstl/pstl_config.h:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/stdexcept:
 
@@ -4597,6 +5375,8 @@ generated/pico_base/pico/config_autogen.h:
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++locale.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/spi.h:
+
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/src/filesystem/fat.c:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/ctype_base.h:
 
@@ -4642,6 +5422,8 @@ generated/pico_base/pico/config_autogen.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_bootrom/bootrom_lock.c:
 
+/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/blockdevice/heap.h:
+
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/psm.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_xosc/xosc.c:
@@ -4663,6 +5445,10 @@ generated/pico_base/pico/config_autogen.h:
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/ctime:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/include/stdatomic.h:
+
+/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/tuple:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_flash/flash.c:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h:
 
@@ -4688,13 +5474,21 @@ generated/pico_base/pico/config_autogen.h:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h:
 
-/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/assert.h:
-
-/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/pstl/pstl_config.h:
-
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/i2c.h:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/std_abs.h:
+
+/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/alloc_traits.h:
+
+/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/string.h:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/m0plus.h:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_uart/uart.c:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/rtc.h:
+
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_multicore/include/pico/multicore.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_bootrom/include/pico/bootrom/lock.h:
 
@@ -4713,18 +5507,6 @@ generated/pico_base/pico/config_autogen.h:
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_multicore/multicore.c:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/postypes.h:
-
-/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/alloc_traits.h:
-
-/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/string.h:
-
-/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/m0plus.h:
-
-/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_uart/uart.c:
-
-/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/rtc.h:
-
-/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_multicore/include/pico/multicore.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_printf/printf.c:
 
@@ -4745,16 +5527,6 @@ generated/pico_base/pico/config_autogen.h:
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_runtime/runtime.c:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info/structure.h:
-
-/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/sensors/ISensor.cpp:
-
-/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_stdio/stdio.c:
-
-/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/timer.h:
-
-/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_i2c/include/hardware/i2c.h:
-
-/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/ctype.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_stdio_uart/stdio_uart.c:
 
@@ -4795,13 +5567,3 @@ generated/pico_base/pico/config_autogen.h:
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/clocale:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/locale.h:
-
-/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/cctype:
-
-/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/unordered_map.h:
-
-/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs/lfs_util.h:
-
-/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h:
-
-/home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/ext/atomicity.h:

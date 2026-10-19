@@ -13,4 +13,5 @@ target_link_libraries(LoRa_pico_lib PUBLIC
 
 target_include_directories(LoRa_pico_lib PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/../protocol
 )

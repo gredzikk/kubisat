@@ -104,6 +104,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/sensors/BME280"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/sensors/MPU6050"
   "/home/gredzikk/dev/kubisat/software/common/LoRa"
+  "/home/gredzikk/dev/kubisat/software/common/LoRa/../protocol"
   "/home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_stdlib_headers/include"
   "/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_gpio/include"
   "/home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_base_headers/include"

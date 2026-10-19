@@ -250,6 +250,7 @@ lib/comms/commands/CMakeFiles/commands_lib.dir/telemetry_commands.cpp.obj: \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+ /home/gredzikk/dev/kubisat/software/kubisat_firmware/../common/protocol/frame_markers.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/communication.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/protocol.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \

@@ -83,7 +83,7 @@ std::vector<Frame> handle_get_last_events(const std::string &param, OperationTyp
         for (size_t i = 0; i < 10 && to_return > 0; ++i)
         {
             event_index--;
-            const EventLog &event = event_manager.get_event(event_index);
+            EventLog event = event_manager.get_event(event_index);
 
             ss << std::setw(4) << event.id
                << std::setw(8) << event.timestamp

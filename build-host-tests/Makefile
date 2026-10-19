@@ -139,12 +139,39 @@ frame_crc_tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_crc_tests.dir/build.make CMakeFiles/frame_crc_tests.dir/build
 .PHONY : frame_crc_tests/fast
 
+#=============================================================================
+# Target rules for targets named ground_bridge_tests
+
+# Build rule for target.
+ground_bridge_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ground_bridge_tests
+.PHONY : ground_bridge_tests
+
+# fast build rule for target.
+ground_bridge_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ground_bridge_tests.dir/build.make CMakeFiles/ground_bridge_tests.dir/build
+.PHONY : ground_bridge_tests/fast
+
+#=============================================================================
+# Target rules for targets named frame_decode_vectors
+
+# Build rule for target.
+frame_decode_vectors: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 frame_decode_vectors
+.PHONY : frame_decode_vectors
+
+# fast build rule for target.
+frame_decode_vectors/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_decode_vectors.dir/build.make CMakeFiles/frame_decode_vectors.dir/build
+.PHONY : frame_decode_vectors/fast
+
 home/gredzikk/dev/kubisat/software/common/protocol/crc16.o: home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.o
 .PHONY : home/gredzikk/dev/kubisat/software/common/protocol/crc16.o
 
 # target to build an object file
 home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_crc_tests.dir/build.make CMakeFiles/frame_crc_tests.dir/home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_decode_vectors.dir/build.make CMakeFiles/frame_decode_vectors.dir/home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.o
 .PHONY : home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.o
 
 home/gredzikk/dev/kubisat/software/common/protocol/crc16.i: home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.i
@@ -153,6 +180,7 @@ home/gredzikk/dev/kubisat/software/common/protocol/crc16.i: home/gredzikk/dev/ku
 # target to preprocess a source file
 home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_crc_tests.dir/build.make CMakeFiles/frame_crc_tests.dir/home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_decode_vectors.dir/build.make CMakeFiles/frame_decode_vectors.dir/home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.i
 .PHONY : home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.i
 
 home/gredzikk/dev/kubisat/software/common/protocol/crc16.s: home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.s
@@ -161,6 +189,7 @@ home/gredzikk/dev/kubisat/software/common/protocol/crc16.s: home/gredzikk/dev/ku
 # target to generate assembly for a file
 home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_crc_tests.dir/build.make CMakeFiles/frame_crc_tests.dir/home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_decode_vectors.dir/build.make CMakeFiles/frame_decode_vectors.dir/home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.s
 .PHONY : home/gredzikk/dev/kubisat/software/common/protocol/crc16.cpp.s
 
 test_frame_crc.o: test_frame_crc.cpp.o
@@ -187,6 +216,54 @@ test_frame_crc.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_crc_tests.dir/build.make CMakeFiles/frame_crc_tests.dir/test_frame_crc.cpp.s
 .PHONY : test_frame_crc.cpp.s
 
+test_frame_decode_vectors.o: test_frame_decode_vectors.cpp.o
+.PHONY : test_frame_decode_vectors.o
+
+# target to build an object file
+test_frame_decode_vectors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_decode_vectors.dir/build.make CMakeFiles/frame_decode_vectors.dir/test_frame_decode_vectors.cpp.o
+.PHONY : test_frame_decode_vectors.cpp.o
+
+test_frame_decode_vectors.i: test_frame_decode_vectors.cpp.i
+.PHONY : test_frame_decode_vectors.i
+
+# target to preprocess a source file
+test_frame_decode_vectors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_decode_vectors.dir/build.make CMakeFiles/frame_decode_vectors.dir/test_frame_decode_vectors.cpp.i
+.PHONY : test_frame_decode_vectors.cpp.i
+
+test_frame_decode_vectors.s: test_frame_decode_vectors.cpp.s
+.PHONY : test_frame_decode_vectors.s
+
+# target to generate assembly for a file
+test_frame_decode_vectors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frame_decode_vectors.dir/build.make CMakeFiles/frame_decode_vectors.dir/test_frame_decode_vectors.cpp.s
+.PHONY : test_frame_decode_vectors.cpp.s
+
+test_ground_bridge.o: test_ground_bridge.cpp.o
+.PHONY : test_ground_bridge.o
+
+# target to build an object file
+test_ground_bridge.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ground_bridge_tests.dir/build.make CMakeFiles/ground_bridge_tests.dir/test_ground_bridge.cpp.o
+.PHONY : test_ground_bridge.cpp.o
+
+test_ground_bridge.i: test_ground_bridge.cpp.i
+.PHONY : test_ground_bridge.i
+
+# target to preprocess a source file
+test_ground_bridge.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ground_bridge_tests.dir/build.make CMakeFiles/ground_bridge_tests.dir/test_ground_bridge.cpp.i
+.PHONY : test_ground_bridge.cpp.i
+
+test_ground_bridge.s: test_ground_bridge.cpp.s
+.PHONY : test_ground_bridge.s
+
+# target to generate assembly for a file
+test_ground_bridge.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ground_bridge_tests.dir/build.make CMakeFiles/ground_bridge_tests.dir/test_ground_bridge.cpp.s
+.PHONY : test_ground_bridge.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -197,12 +274,20 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... frame_crc_tests"
+	@echo "... frame_decode_vectors"
+	@echo "... ground_bridge_tests"
 	@echo "... home/gredzikk/dev/kubisat/software/common/protocol/crc16.o"
 	@echo "... home/gredzikk/dev/kubisat/software/common/protocol/crc16.i"
 	@echo "... home/gredzikk/dev/kubisat/software/common/protocol/crc16.s"
 	@echo "... test_frame_crc.o"
 	@echo "... test_frame_crc.i"
 	@echo "... test_frame_crc.s"
+	@echo "... test_frame_decode_vectors.o"
+	@echo "... test_frame_decode_vectors.i"
+	@echo "... test_frame_decode_vectors.s"
+	@echo "... test_ground_bridge.o"
+	@echo "... test_ground_bridge.i"
+	@echo "... test_ground_bridge.s"
 .PHONY : help
 
 

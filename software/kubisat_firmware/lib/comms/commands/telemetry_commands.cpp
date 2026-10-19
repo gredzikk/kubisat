@@ -58,7 +58,7 @@ std::vector<Frame> handle_get_last_telemetry_record([[maybe_unused]] const std::
     if (csv_data.empty())
     {
         error_msg = "NO_DATA";
-        frames.push_back(frame_build(OperationType::ERR, telemetry_commands_group, last_sensor_command_id, error_msg));
+        frames.push_back(frame_build(OperationType::ERR, telemetry_commands_group, last_telemetry_command_id, error_msg));
         return frames;
     }
     frames.push_back(frame_build(OperationType::VAL, telemetry_commands_group, last_telemetry_command_id, csv_data));

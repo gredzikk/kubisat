@@ -1,7 +1,7 @@
 # KubiSat Firmware Status
 
 Snapshot of satellite + ground firmware after the reliability/features roadmap.  
-Last updated: 2026-10-19.
+Last updated: 2026-10-19 (improvement plan implementation).
 
 ## Scope
 
@@ -9,7 +9,8 @@ Last updated: 2026-10-19.
 |------|------|
 | [`kubisat_firmware/`](kubisat_firmware/) | Satellite (RP2040 + SX1278 + sensors + SD) |
 | [`ground_firmware/`](ground_firmware/) | LoRa ↔ UART bridge |
-| [`common/`](common/) | Shared LoRa driver + CRC16 |
+| [`common/`](common/) | Shared LoRa driver + CRC16 + frame markers + sync word |
+| [`kubisat_operator/`](kubisat_operator/) | Host GUI (nested git repo) — SEQ+CRC+retry |
 | [`commands.md`](commands.md) | Command / frame protocol reference |
 
 ---
@@ -21,6 +22,7 @@ Last updated: 2026-10-19.
 - [x] LoRa DIO0 pin set to **GP20** (`lora_irq_pin` aligned with `LORA_DEFAULT_DIO0_PIN`)
 - [x] Pin map documented: [`kubisat_firmware/PINMAP.md`](kubisat_firmware/PINMAP.md)
 - [x] Single shared LoRa library under [`common/LoRa/`](common/LoRa/)
+- [x] Shared `frame_markers.h` + `lora_defaults.h` (sync word `0x4B`)
 - [x] C++ exceptions / RTTI disabled for sat firmware
 - [x] Program version tied to build number; README URL fixes; Linux-friendly `make doc`
 - [x] Both firmwares build to `main.uf2` (local verify: Pico SDK 2.0.0)
@@ -29,15 +31,16 @@ Last updated: 2026-10-19.
 
 - [x] Hardware watchdog armed (~8 s); `WATCHDOG_RESET` emitted on watchdog reboot
 - [x] Watchdog fed from core0 main loop and core1 telemetry loop
-- [x] Periodic health beacon (~30 s) on LoRa (`GET/VAL` group **1.4**)
+- [x] Periodic health beacon (~30 s) on LoRa (`GET/VAL` group **1.4**) — fire-and-forget (host may still ACK)
 - [x] SD mount is non-destructive (no auto-format on boot)
+- [x] Telemetry/sensor CSV **append-or-create** on boot (no truncate of existing logs)
 - [x] Explicit SD format command: `SET;1;5;FORMAT` (lab only)
 - [x] Text protocol with `SEQ` + CRC-16/CCITT + `ACK` type  
   Frame shape: `KBST;ADDR;TYPE;GROUP;CMD;PAYLOAD;UNIT;SEQ;CRC16;TSBK`  
   LoRa RX requires integrity; UART still accepts legacy frames
-- [x] Health / unsolicited beacon TX retries with ACK wait (up to 3×)
 - [x] Radio init retries; system continues if radio or SD fails (beacon reports flags)
-- [x] Sensor init retries (light / env / IMU)
+- [x] Sensor init retries (light / env / IMU); IMU WHO_AM_I fail-closed
+- [x] Multicore-safe last telem/sensor copies; event log returned by value
 
 ### GPS / sensors / features
 
@@ -48,13 +51,19 @@ Last updated: 2026-10-19.
 - [x] IMU columns in sensor CSV / last-sensor record
 - [x] Recent telemetry dump command **8.4**
 
+### Operator / host tooling
+
+- [x] Operator SEQ + CRC-16 encode/decode + command retry
+- [x] Radio debug: standalone `?` line (not frame suffix)
+- [x] Auto-ACK for unsolicited health beacons; live beacon UI
+- [x] Commands UI: health `1.4`, IMU `2.x`, format SD `1.5`, recent telem `8.4`
+- [x] Host CRC + ground bridge framing tests: [`tests/host/`](tests/host/)
+
 ### Quality / docs / CI
 
-- [x] Host CRC/frame tests: [`tests/host/`](tests/host/)
-- [x] GitHub Actions: [`.github/workflows/firmware.yml`](../.github/workflows/firmware.yml) (host tests + both UF2 builds)
+- [x] GitHub Actions: [`.github/workflows/firmware.yml`](../.github/workflows/firmware.yml) (host tests + both UF2 builds; Pico SDK cache)
 - [x] Protocol + event IDs: [`commands.md`](commands.md)
 - [x] Operator checklist: [`kubisat_firmware/FLIGHT_CHECKLIST.md`](kubisat_firmware/FLIGHT_CHECKLIST.md)
-- [x] Ground “secure handshake” comment removed (bridge only)
 
 ### Command map (handlers present)
 
@@ -69,36 +78,40 @@ Last updated: 2026-10-19.
 
 ---
 
+## Hardware validation (lab — requires physical boards)
+
+These cannot be completed in CI. Track pass/fail on the assembled hardware:
+
+| # | Check | Status |
+|---|--------|--------|
+| 1 | Confirm DIO0 = GP20 (continuity / IRQ) | **PENDING** |
+| 2 | Smoke-test CRC frames E2E via ground bridge + operator | **PENDING** |
+| 3 | Lab `1.5 FORMAT` once; confirm boot never auto-formats / never wipes logs | **PENDING** |
+| 4 | Watchdog hang → reboot + `WATCHDOG_RESET` in event log | **PENDING** |
+| 5 | IMU WHO_AM_I on assembled sensor board | **PENDING** |
+| 6 | Battery vs USB mode heuristic vs real INA3221 | **PENDING** |
+
+Update this table after each lab session. See [`kubisat_firmware/FLIGHT_CHECKLIST.md`](kubisat_firmware/FLIGHT_CHECKLIST.md).
+
+---
+
 ## Planned future fixes / follow-ups
-
-These were deferred by the roadmap or need hardware/ops work after flash testing.
-
-### Must validate on hardware (before flight)
-
-1. **Confirm DIO0 = GP20** with continuity / working board (silk + defaults assumed; no rewiring possible).
-2. **Smoke-test** new CRC frames end-to-end through ground bridge (host must send `SEQ;CRC`; ACK replies).
-3. **Exercise SD format once** in lab (`1.5`), then confirm boot never wipes a card with existing logs.
-4. **Watchdog**: force a hang and confirm reboot + `WATCHDOG_RESET` in event log.
-5. **IMU**: confirm MPU-6050 address/WHO_AM_I on the assembled sensor board.
 
 ### Comms / protocol hardening
 
 | Item | Notes |
 |------|--------|
-| Host CLI / script with SEQ+CRC+retry | Sat replies include SEQ; ground stays dumb bridge — tooling still needed |
-| Auto-ACK from host for health beacon | Beacon uses `require_ack`; without host ACK, sat spends ~2 s retrying every 30 s |
-| Drop UART legacy frames | After tools migrate, require CRC on UART too |
-| Command-response sat-side ACK retry | Currently replies are fire-and-forget with SEQ; host should retry |
+| Drop UART legacy frames | After all tools migrate, require CRC on UART too |
 | Optional app-layer anti-replay | SEQ window / reject duplicates (not started) |
+| Re-enable beacon `require_ack` | Optional once host ACK is field-proven |
 
 ### Storage / telemetry
 
 | Item | Notes |
 |------|--------|
 | Optional use of `SD_CARD_DETECT_PIN` | Defined but unused — wire into `fs_init` or remove |
-| Append-only telemetry on boot | Telemetry CSV still truncated/recreated on init when SD mounts — prefer append + rotate |
 | On-demand SD file dump over LoRa | `8.4` is RAM buffer only; full SD download not implemented |
-| Compressed / binary beacon | Summary beacon is text today |
+| Log rotate | Prefer rotate after large append-only files |
 
 ### Platform / architecture (out of current roadmap)
 
@@ -107,25 +120,17 @@ These were deferred by the roadmap or need hardware/ops work after flash testing
 | True OTA (dual-slot / UF2 over LoRa) | Remote BOOTSEL only for now |
 | FreeRTOS / message queues | Intentionally deferred; stay multicore + mutexes |
 | Binary radio framing | Deferred; keep text `KBST…TSBK` |
-| Crypto / authenticated commands | Not planned; remove any remaining “secure” wording if found |
-| PCB respin | Out of scope (pin_config only) |
+| Crypto / authenticated commands | Not planned |
+| Magnetometer (HMC5883L) | Schematic only; no driver yet |
 
 ### CI / quality gaps
 
 | Item | Notes |
 |------|--------|
-| Expand host tests | Decode/encode of full firmware `frame.cpp`; command dispatch table check |
-| CI cache for Pico SDK | Workflow clones SDK each run |
+| Expand host tests further | Full firmware `frame.cpp` decode; command dispatch table check |
 | `-Werror` on first-party code | Not enabled yet |
-| Generate `commands.md` from handler map | Docs are hand-synced to [`commands.cpp`](kubisat_firmware/lib/comms/commands/commands.cpp) |
+| Generate `commands.md` from handler map | Docs are hand-synced |
 | HIL / on-target smoke job | None |
-
-### Smaller cleanups
-
-- Deduplicate Pico SDK object compilation across static libs (link `pico_stdlib` privately where possible) to shrink build time.
-- Align ground `documentation.cmake` / Doxyfile with sat if PDF docs are still required.
-- Release UF2 naming vs configure-time build number (copy can lag PRE_BUILD increment by one).
-- Magnetometer (HMC5883L) on sensor board schematic — no driver yet.
 
 ---
 
@@ -134,4 +139,4 @@ These were deferred by the roadmap or need hardware/ops work after flash testing
 1. Protocol details: [`commands.md`](commands.md)  
 2. Pins: [`kubisat_firmware/PINMAP.md`](kubisat_firmware/PINMAP.md)  
 3. Pre-flight steps: [`kubisat_firmware/FLIGHT_CHECKLIST.md`](kubisat_firmware/FLIGHT_CHECKLIST.md)  
-4. Host CRC test: `cmake -S software/tests/host -B build-host-tests && cmake --build build-host-tests && ctest --test-dir build-host-tests`
+4. Host tests: `cmake -S software/tests/host -B build-host-tests && cmake --build build-host-tests && ctest --test-dir build-host-tests`

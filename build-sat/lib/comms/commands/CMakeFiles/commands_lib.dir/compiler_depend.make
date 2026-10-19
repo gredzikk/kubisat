@@ -938,6 +938,7 @@ lib/comms/commands/CMakeFiles/commands_lib.dir/clock_commands.cpp.obj: /home/gre
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
@@ -1238,6 +1239,7 @@ lib/comms/commands/CMakeFiles/commands_lib.dir/commands.cpp.obj: /home/gredzikk/
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/communication.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/protocol.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
@@ -1531,6 +1533,7 @@ lib/comms/commands/CMakeFiles/commands_lib.dir/diagnostic_commands.cpp.obj: /hom
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
@@ -1834,6 +1837,7 @@ lib/comms/commands/CMakeFiles/commands_lib.dir/event_commands.cpp.obj: /home/gre
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
@@ -2131,6 +2135,7 @@ lib/comms/commands/CMakeFiles/commands_lib.dir/gps_commands.cpp.obj: /home/gredz
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h \
   /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
@@ -4803,6 +4808,7 @@ lib/comms/commands/CMakeFiles/commands_lib.dir/imu_commands.cpp.obj: /home/gredz
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/communication.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/protocol.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
@@ -5099,6 +5105,7 @@ lib/comms/commands/CMakeFiles/commands_lib.dir/telemetry_commands.cpp.obj: /home
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/communication.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/protocol.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
@@ -5339,6 +5346,8 @@ lib/comms/commands/CMakeFiles/commands_lib.dir/telemetry_commands.cpp.obj: /home
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h:
 
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h:
+
+/home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h:
 
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h:
 

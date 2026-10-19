@@ -64,49 +64,39 @@ bool TelemetryManager::init()
 
     bool success = true;
 
-    FILE *telemetry_file = fopen(TELEMETRY_CSV_PATH, "w");
-    if (!telemetry_file)
-    {
-        telemetry_file = fopen(TELEMETRY_CSV_PATH, "w");
-        if (telemetry_file)
+    // Append-or-create: never truncate existing flight logs on boot.
+    auto ensure_csv = [](const char *path, const char *header, const char *label) -> bool {
+        FILE *existing = fopen(path, "r");
+        if (existing)
         {
-            fprintf(telemetry_file, "timestamp,build,battery_v,system_v,usb_ma,solar_ma,discharge_ma,"
-                                    "gps_time,latitude,lat_dir,longitude,lon_dir,speed_mps,course_deg,date,"
-                                    "fix_quality,satellites,altitude_m\n");
-            fclose(telemetry_file);
-            uart_print("Created new telemetry log", VerbosityLevel::INFO);
+            // File already present — keep contents.
+            fclose(existing);
+            return true;
         }
-        else
-        {
-            uart_print("Failed to create telemetry log", VerbosityLevel::ERROR);
-            success = false;
-        }
-    }
-    else
-    {
-        fclose(telemetry_file);
-    }
 
-    FILE *sensor_file = fopen(SENSOR_DATA_CSV_PATH, "w");
-    if (!sensor_file)
-    {
-        sensor_file = fopen(SENSOR_DATA_CSV_PATH, "w");
-        if (sensor_file)
+        FILE *created = fopen(path, "w");
+        if (!created)
         {
-            fprintf(sensor_file, "timestamp,temperature,pressure,humidity,light,ax,ay,az,gx,gy,gz\n");
-            fclose(sensor_file);
-            uart_print("Created new sensor data log", VerbosityLevel::INFO);
+            uart_print(std::string("Failed to create ") + label, VerbosityLevel::ERROR);
+            return false;
         }
-        else
-        {
-            uart_print("Failed to create sensor data log", VerbosityLevel::ERROR);
-            success = false;
-        }
-    }
-    else
-    {
-        fclose(sensor_file);
-    }
+        fputs(header, created);
+        fclose(created);
+        uart_print(std::string("Created new ") + label, VerbosityLevel::INFO);
+        return true;
+    };
+
+    static const char *kTelemHeader =
+        "timestamp,build,battery_v,system_v,usb_ma,solar_ma,discharge_ma,"
+        "gps_time,latitude,lat_dir,longitude,lon_dir,speed_mps,course_deg,date,"
+        "fix_quality,satellites,altitude_m\n";
+    static const char *kSensorHeader =
+        "timestamp,temperature,pressure,humidity,light,ax,ay,az,gx,gy,gz\n";
+
+    if (!ensure_csv(TELEMETRY_CSV_PATH, kTelemHeader, "telemetry log"))
+        success = false;
+    if (!ensure_csv(SENSOR_DATA_CSV_PATH, kSensorHeader, "sensor data log"))
+        success = false;
 
     return success;
 }
@@ -426,7 +416,10 @@ bool TelemetryManager::is_telemetry_flush_time(uint32_t &collection_counter)
  */
 std::string TelemetryManager::get_last_telemetry_record_csv()
 {
-    return last_telemetry_record_copy.to_csv();
+    mutex_enter_blocking(&telemetry_mutex);
+    std::string csv = last_telemetry_record_copy.to_csv();
+    mutex_exit(&telemetry_mutex);
+    return csv;
 }
 
 /**
@@ -436,7 +429,10 @@ std::string TelemetryManager::get_last_telemetry_record_csv()
  */
 std::string TelemetryManager::get_last_sensor_record_csv()
 {
-    return last_sensor_record_copy.to_csv();
+    mutex_enter_blocking(&telemetry_mutex);
+    std::string csv = last_sensor_record_copy.to_csv();
+    mutex_exit(&telemetry_mutex);
+    return csv;
 }
 
 std::string TelemetryManager::get_recent_telemetry_csv(size_t count)

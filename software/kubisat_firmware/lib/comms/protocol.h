@@ -19,31 +19,19 @@
 #include "utils.h"
 #include "time.h"
 #include "build_number.h"
+#include "frame_markers.h"
 
 /**
  * @defgroup Protocol Protocol
  * @brief Definitions for the communication protocol used by the satellite.
  */
-/**
- * @def FRAME_BEGIN
- * @brief Defines the start marker for a communication frame.
- * @ingroup Protocol
- */
-const std::string FRAME_BEGIN = "KBST";
-
-/**
- * @def FRAME_END
- * @brief Defines the end marker for a communication frame.
- * @ingroup Protocol
- */
-const std::string FRAME_END = "TSBK";
-
+/** Frame markers come from software/common/protocol/frame_markers.h (shared with ground). */
 /**
  * @def DELIMITER
  * @brief Defines the delimiter used to separate fields within a communication frame.
  * @ingroup Protocol
  */
-const char DELIMITER = ';';
+const char DELIMITER = FRAME_DELIMITER;
 
 /**
  * @enum ErrorCode

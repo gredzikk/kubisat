@@ -250,6 +250,7 @@ lib/comms/CMakeFiles/Comms_lib.dir/receive.cpp.obj: \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+ /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/../../../common/protocol/frame_markers.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h \

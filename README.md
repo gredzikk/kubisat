@@ -6,9 +6,12 @@ Welcome to the KubiSat project! This repository contains all the necessary files
 
 The repository is organized into several key directories:
 
--   [**`software/`**](software/): Contains the firmware for both the satellite and the ground station.
-    -   [**`kubisat_firmware/`**](software/kubisat_firmware/): Firmware for the satellite. See the [firmware README](software/kubisat_firmware/readme.md) for details.
-    -   [**`ground_firmware/`**](software/ground_firmware/): Firmware for the ground station. See the [ground station README](software/ground_firmware/readme.md) for details.
+-   [**`software/`**](software/): Firmware, shared protocol/radio code, and host tooling.
+    -   [**`kubisat_firmware/`**](software/kubisat_firmware/): Satellite firmware. See the [firmware README](software/kubisat_firmware/readme.md).
+    -   [**`ground_firmware/`**](software/ground_firmware/): Ground station LoRa↔UART bridge. See the [ground README](software/ground_firmware/readme.md).
+    -   [**`common/`**](software/common/): Shared LoRa driver and protocol helpers (CRC, frame markers, sync word).
+    -   [**`kubisat_operator/`**](software/kubisat_operator/): Avalonia/.NET operator GUI (nested git repository) for talking to the ground station over serial.
+    -   Status: [`software/FIRMWARE_STATUS.md`](software/FIRMWARE_STATUS.md), protocol: [`software/commands.md`](software/commands.md).
 -   [**`hardware/`**](hardware/): KiCad project files for the satellite's printed circuit boards (PCBs), including the main board, power board, and sensor board.
 -   [**`case_stl/`**](case_stl/): Contains the STL files for the 3D-printable satellite chassis.
 -   [**`doc/`**](doc/): A collection of datasheets for the main components used in the project.

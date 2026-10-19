@@ -4,6 +4,7 @@
 #include "communication.h"
 #include "LoRa-RP2040.h"
 #include "pin_config.h"
+#include <cstring>
 
 #define MAX_PACKET_SIZE 255
 
@@ -31,7 +32,7 @@ bool extract_and_process_frames(const std::string &buffer, Interface interface)
 
         if (footer_pos > header_pos)
         {
-            std::string frame_data = buffer.substr(header_pos, footer_pos + FRAME_END.length() - header_pos);
+            std::string frame_data = buffer.substr(header_pos, footer_pos + strlen(FRAME_END) - header_pos);
             uart_print("Extracted frame (length=" + std::to_string(frame_data.length()) +
                            "): " + frame_data,
                        VerbosityLevel::DEBUG);
@@ -39,7 +40,7 @@ bool extract_and_process_frames(const std::string &buffer, Interface interface)
             found_frame = true;
         }
 
-        search_pos = footer_pos + FRAME_END.length();
+        search_pos = footer_pos + strlen(FRAME_END);
     }
 
     if (!found_frame)

@@ -295,6 +295,7 @@ lib/telemetry/CMakeFiles/telemetry_lib.dir/telemetry_manager.cpp.obj: \
  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/uniform_int_dist.h \
  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/stl_tempbuf.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+ /home/gredzikk/dev/kubisat/software/kubisat_firmware/../common/protocol/frame_markers.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/system_state_manager.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \

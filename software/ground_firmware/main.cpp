@@ -17,15 +17,49 @@
 #include "pin_config.h"
 #include "LoRa-RP2040.h"
 #include "frame_markers.h"
+#include "bridge_frame.h"
+#include "lora_defaults.h"
 
 using std::string;
 
 /** Send a line containing only this character to append RSSI/SNR to the next RX frame. */
 constexpr char RSSI_SNR_TRIGGER = '?';
 
+static volatile int g_rx_packet_size = 0;
+static volatile bool g_rx_pending = false;
+
+enum class LedMode : uint8_t { Idle, Tx, Rx, Fault };
+
+static void status_led(LedMode mode)
+{
+    // Brief patterns on the onboard LED for field debugging.
+    switch (mode)
+    {
+    case LedMode::Fault:
+        gpio_put(PICO_DEFAULT_LED_PIN, 1);
+        break;
+    case LedMode::Tx:
+    case LedMode::Rx:
+        gpio_put(PICO_DEFAULT_LED_PIN, 1);
+        sleep_ms(15);
+        gpio_put(PICO_DEFAULT_LED_PIN, 0);
+        break;
+    case LedMode::Idle:
+    default:
+        gpio_put(PICO_DEFAULT_LED_PIN, 0);
+        break;
+    }
+}
+
 static void lora_tx_done_callback()
 {
     LoRa.receive(0);
+}
+
+static void lora_rx_callback(int packet_size)
+{
+    g_rx_packet_size = packet_size;
+    g_rx_pending = true;
 }
 
 /**
@@ -52,6 +86,7 @@ static bool send_message(const string &outgoing)
         return false;
     }
 
+    status_led(LedMode::Tx);
     LoRa.write(lora_address_remote); // destination (satellite)
     LoRa.write(lora_address_local);  // sender (ground)
     LoRa.write(reinterpret_cast<const uint8_t *>(outgoing.data()), outgoing.length());
@@ -65,47 +100,8 @@ static bool send_message(const string &outgoing)
 
     uart_print("TX " + std::to_string(outgoing.length()) + " bytes");
     LoRa.flush();
-    // onTxDone restores RX; also call receive in case IRQ is late/missed
     LoRa.receive(0);
     return true;
-}
-
-/**
- * @brief Extract first KBST…TSBK frame from payload; optionally append ;rssi;snr.
- */
-static bool extract_frame(const string &payload, bool append_rssi_snr, string &out_frame)
-{
-    size_t header_pos = payload.find(FRAME_BEGIN);
-    if (header_pos == string::npos)
-    {
-        return false;
-    }
-
-    size_t footer_pos = payload.find(FRAME_END, header_pos);
-    if (footer_pos == string::npos || footer_pos < header_pos)
-    {
-        return false;
-    }
-
-    out_frame = payload.substr(header_pos, footer_pos + strlen(FRAME_END) - header_pos);
-
-    if (append_rssi_snr)
-    {
-        out_frame += FRAME_DELIMITER;
-        out_frame += std::to_string(LoRa.packetRssi());
-        out_frame += FRAME_DELIMITER;
-        out_frame += std::to_string(LoRa.packetSnr());
-    }
-
-    return true;
-}
-
-static void strip_trailing_nuls(string &s)
-{
-    while (!s.empty() && s.back() == '\0')
-    {
-        s.pop_back();
-    }
 }
 
 static void handle_lora_packet(int packet_size, bool &append_rssi_snr)
@@ -124,35 +120,34 @@ static void handle_lora_packet(int packet_size, bool &append_rssi_snr)
         return;
     }
 
-    // Wire format: [destination, sender, payload…] — same as satellite
     const uint8_t received_destination = buffer[0];
     const uint8_t received_sender = buffer[1];
 
-    if (received_destination != lora_address_local)
+    if (!kubisat_bridge::address_ok(received_destination, received_sender,
+                                    lora_address_local, lora_address_remote))
     {
-        uart_print("Error: destination address mismatch");
-        LoRa.receive(0);
-        return;
-    }
-
-    if (received_sender != lora_address_remote)
-    {
-        uart_print("Error: sender address mismatch");
+        if (received_destination != lora_address_local)
+            uart_print("Error: destination address mismatch");
+        else
+            uart_print("Error: sender address mismatch");
         LoRa.receive(0);
         return;
     }
 
     string received(reinterpret_cast<char *>(buffer + LORA_ADDRESS_BYTES),
                     static_cast<size_t>(bytes_read - LORA_ADDRESS_BYTES));
-    strip_trailing_nuls(received);
+    kubisat_bridge::strip_trailing_nuls(received);
 
     string frame;
-    if (extract_frame(received, append_rssi_snr, frame))
+    const int rssi = LoRa.packetRssi();
+    const float snr = LoRa.packetSnr();
+    if (kubisat_bridge::extract_frame(received, append_rssi_snr, rssi, snr, frame))
     {
         if (append_rssi_snr)
         {
             append_rssi_snr = false;
         }
+        status_led(LedMode::Rx);
         uart_write_raw(frame);
     }
     else
@@ -170,7 +165,6 @@ static void handle_uart_line(string &uart_buffer, bool &append_rssi_snr)
         return;
     }
 
-    // Standalone "?" arms RSSI/SNR append for the next RX frame (not transmitted).
     if (uart_buffer.size() == 1 && uart_buffer[0] == RSSI_SNR_TRIGGER)
     {
         append_rssi_snr = true;
@@ -187,6 +181,10 @@ static void init_system()
 {
     stdio_init_all();
 
+    gpio_init(PICO_DEFAULT_LED_PIN);
+    gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
+    gpio_put(PICO_DEFAULT_LED_PIN, 0);
+
     uart_init(DEBUG_UART_PORT, BAUD_RATE);
     gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
     gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
@@ -202,15 +200,13 @@ static void init_system()
         uart_print("Power on");
     }
 
-    // ~8s; kicked in the main loop
     watchdog_enable(8000, true);
 
     LoRa.setPins(csPin, resetPin, irqPin);
-    const long frequency = 433E6;
-    if (!LoRa.begin(frequency))
+    if (!LoRa.begin(KUBISAT_LORA_FREQUENCY_HZ))
     {
         uart_print("LoRa init failed. Check SPI wiring (expect version 0x12). Rebooting via watchdog.");
-        // Do not kick the watchdog — let it reset the board.
+        status_led(LedMode::Fault);
         while (true)
         {
             tight_loop_contents();
@@ -218,9 +214,11 @@ static void init_system()
     }
 
     LoRa.onTxDone(lora_tx_done_callback);
+    LoRa.onReceive(lora_rx_callback);
     LoRa.receive(0);
 
-    uart_print("LoRa initialized at " + std::to_string(frequency) + " Hz");
+    uart_print("LoRa initialized at " + std::to_string(KUBISAT_LORA_FREQUENCY_HZ) +
+               " Hz sync=0x" + std::to_string(KUBISAT_LORA_SYNC_WORD));
 }
 
 int main()
@@ -236,10 +234,21 @@ int main()
     {
         watchdog_update();
 
-        const int packet_size = LoRa.parsePacket();
-        if (packet_size)
+        if (g_rx_pending)
         {
-            handle_lora_packet(packet_size, append_rssi_snr);
+            g_rx_pending = false;
+            const int packet_size = g_rx_packet_size;
+            if (packet_size > 0)
+            {
+                handle_lora_packet(packet_size, append_rssi_snr);
+            }
+        }
+
+        // Fallback poll in case IRQ was missed (preserves continuous RX — see parse_packet).
+        const int polled = LoRa.parsePacket();
+        if (polled)
+        {
+            handle_lora_packet(polled, append_rssi_snr);
         }
 
         while (uart_is_readable(DEBUG_UART_PORT))

@@ -87,6 +87,7 @@ common_LoRa/CMakeFiles/LoRa_pico_lib.dir/LoRa-RP2040.cpp.obj: /home/gredzikk/dev
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/_locale.h \
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h \
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/string.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/lora_defaults.h \
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/stdio.h \
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/sys/stdio.h
 
@@ -2383,6 +2384,8 @@ common_LoRa/CMakeFiles/LoRa_pico_lib.dir/home/gredzikk/.pico-sdk/sdk/2.0.0/src/r
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_util/include/pico/util/queue.h:
 
+/home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_util/include/pico/util/pheap.h:
+
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_gpio/include/hardware/gpio.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h:
@@ -2629,6 +2632,8 @@ generated/pico_base/pico/version.h:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/strings.h:
 
+/home/gredzikk/dev/kubisat/software/common/protocol/lora_defaults.h:
+
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_xosc/include/hardware/xosc.h:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_bootrom/include/pico/bootrom/lock.h:
@@ -2704,5 +2709,3 @@ generated/pico_base/pico/version.h:
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c:
 
 /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_util/pheap.c:
-
-/home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_util/include/pico/util/pheap.h:

@@ -242,11 +242,11 @@ public:
     void log_event(uint8_t group, uint8_t event);
 
     /**
-     * @brief Gets an event from the event buffer.
+     * @brief Gets an event from the event buffer (by value; safe across cores).
      * @param[in] index Index of the event to retrieve.
-     * @return A const reference to the event log entry.
+     * @return A copy of the event log entry, or a zeroed entry if out of range.
      */
-    const EventLog &get_event(size_t index) const;
+    EventLog get_event(size_t index) const;
 
     /**
      * @brief Gets the number of events in the buffer.

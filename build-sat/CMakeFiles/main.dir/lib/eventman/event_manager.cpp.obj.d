@@ -288,6 +288,7 @@ CMakeFiles/main.dir/lib/eventman/event_manager.cpp.obj: \
  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/sstream.tcc \
  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/cstring \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+ /home/gredzikk/dev/kubisat/software/kubisat_firmware/../common/protocol/frame_markers.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/communication.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/protocol.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \

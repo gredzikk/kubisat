@@ -310,6 +310,7 @@ CMakeFiles/main.dir/main.cpp.obj: \
  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/uniform_int_dist.h \
  /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/stl_tempbuf.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+ /home/gredzikk/dev/kubisat/software/kubisat_firmware/../common/protocol/frame_markers.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/../common/LoRa/LoRa-RP2040.h \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info.h \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info/defs.h \

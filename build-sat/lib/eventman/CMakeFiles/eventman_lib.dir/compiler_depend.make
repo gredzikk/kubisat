@@ -976,6 +976,7 @@ lib/eventman/CMakeFiles/eventman_lib.dir/event_manager.cpp.obj: /home/gredzikk/d
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/sstream.tcc \
   /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/cstring \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+  /home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/communication.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/protocol.h \
   /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
@@ -3447,6 +3448,8 @@ lib/eventman/CMakeFiles/eventman_lib.dir/home/gredzikk/.pico-sdk/sdk/2.0.0/src/r
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/location/gps_collector.h:
 
 /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/clock/DS3231.h:
+
+/home/gredzikk/dev/kubisat/software/common/protocol/frame_markers.h:
 
 /home/gredzikk/.pico-sdk/toolchain/13_2_Rel1/arm-none-eabi/include/c++/13.2.1/bits/sstream.tcc:
 

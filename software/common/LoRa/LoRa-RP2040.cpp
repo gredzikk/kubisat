@@ -1,6 +1,7 @@
 // Board pin overrides must precede LoRa-RP2040.h (ifndef defaults).
 #include "pin_config.h"
 #include "LoRa-RP2040.h"
+#include "lora_defaults.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -155,14 +156,14 @@ int LoRaClass::begin(long frequency)
   // set auto AGC
   writeRegister(REG_MODEM_CONFIG_3, 0x04);
 
-  setSpreadingFactor(8);       // SF12
+  setSpreadingFactor(8);        // SF8
   setSignalBandwidth(125E3);    // 125 kHz
-  setCodingRate4(8);           // Coding Rate 4/8
-  setTxPower(17); // +20 dBm (if supported)
+  setCodingRate4(8);            // Coding Rate 4/8
+  setTxPower(17);               // ~17 dBm on PA_BOOST
   setPreambleLength(12);        // Preamble length of 12
-  setSyncWord(0x12);            // Custom sync word
-  enableCrc();                 // Enable CRC
-  explicitHeaderMode();        // Explicit Header Mode
+  setSyncWord(KUBISAT_LORA_SYNC_WORD);
+  enableCrc();                  // Enable CRC
+  explicitHeaderMode();         // Explicit Header Mode
 
   // put in standby mode
   idle();
@@ -269,14 +270,15 @@ int LoRaClass::parse_packet(int size)
 
     // put in standby mode
     idle();
-  } else if (readRegister(REG_OP_MODE) != (MODE_LONG_RANGE_MODE | MODE_RX_SINGLE)) {
-    // not currently in RX mode
-
-    // reset FIFO address
-    writeRegister(REG_FIFO_ADDR_PTR, 0);
-
-    // put in single RX mode
-    writeRegister(REG_OP_MODE, MODE_LONG_RANGE_MODE | MODE_RX_SINGLE);
+  } else {
+    const uint8_t mode = readRegister(REG_OP_MODE);
+    const bool in_rx_continuous = mode == (MODE_LONG_RANGE_MODE | MODE_RX_CONTINUOUS);
+    const bool in_rx_single = mode == (MODE_LONG_RANGE_MODE | MODE_RX_SINGLE);
+    // Preserve continuous RX (used by ground/sat bridges). Only enter single RX when idle.
+    if (!in_rx_continuous && !in_rx_single) {
+      writeRegister(REG_FIFO_ADDR_PTR, 0);
+      writeRegister(REG_OP_MODE, MODE_LONG_RANGE_MODE | MODE_RX_SINGLE);
+    }
   }
 
   return packetLength;

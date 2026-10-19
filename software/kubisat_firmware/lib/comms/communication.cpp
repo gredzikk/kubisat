@@ -4,6 +4,7 @@
 #include "communication.h"
 #include "LoRa-RP2040.h"
 #include "pin_config.h"
+#include "lora_defaults.h"
 #include "system_state_manager.h"
 #include "PowerManager.h"
 #include "hardware/watchdog.h"
@@ -17,7 +18,7 @@ static uint32_t g_last_beacon_ms = 0;
 bool initialize_radio()
 {
     LoRa.set_pins(lora_cs_pin, lora_reset_pin, lora_irq_pin);
-    long frequency = 433E6;
+    const long frequency = KUBISAT_LORA_FREQUENCY_HZ;
     bool init_status = false;
 
     for (int attempt = 0; attempt < 3 && !init_status; ++attempt)
@@ -29,7 +30,9 @@ bool initialize_radio()
         }
         else
         {
-            uart_print("LoRa initialized with frequency " + std::to_string(frequency), VerbosityLevel::INFO);
+            uart_print("LoRa initialized with frequency " + std::to_string(frequency) +
+                           " sync=0x" + std::to_string(KUBISAT_LORA_SYNC_WORD),
+                       VerbosityLevel::INFO);
             LoRa.onTxDone(lora_tx_done_callback);
             LoRa.enableCrc();
             LoRa.receive(0);
@@ -88,6 +91,7 @@ void maybe_send_health_beacon()
             << ",BAT=" << battery_v;
 
     Frame beacon = frame_build(OperationType::VAL, 1, 4, payload.str(), ValueUnit::TEXT);
-    send_frame_lora(beacon, true);
+    // Fire-and-forget until host reliably ACKs beacons (operator auto-ACK); avoids ~2s RX blackout every 30s.
+    send_frame_lora(beacon, false);
     uart_print("Health beacon: " + payload.str(), VerbosityLevel::INFO);
 }

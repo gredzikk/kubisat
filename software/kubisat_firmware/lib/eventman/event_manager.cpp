@@ -105,17 +105,16 @@ void EventManager::log_event(uint8_t group, uint8_t event)
 /**
  * @brief Gets an event from the event buffer.
  * @param[in] index Index of the event to retrieve.
- * @return A const reference to the event log entry.
+ * @return A copy of the event log entry (safe after unlock).
  * @ingroup EventManagement
  */
-const EventLog &EventManager::get_event(size_t index) const
+EventLog EventManager::get_event(size_t index) const
 {
     mutex_enter_blocking(const_cast<mutex_t *>(&eventMutex));
     if (index >= eventCount)
     {
-        static EventLog emptyEvent;
         mutex_exit(const_cast<mutex_t *>(&eventMutex));
-        return emptyEvent;
+        return EventLog{};
     }
 
     size_t readIndex;
@@ -127,7 +126,7 @@ const EventLog &EventManager::get_event(size_t index) const
     {
         readIndex = index;
     }
-    const EventLog &event = events[readIndex];
+    EventLog event = events[readIndex];
     mutex_exit(const_cast<mutex_t *>(&eventMutex));
     return event;
 }

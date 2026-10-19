@@ -79,10 +79,12 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/telemetry"
+  "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib"
+  "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms"
+  "/home/gredzikk/dev/kubisat/software/kubisat_firmware/../common/protocol"
   "/home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_atomic/include"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware"
-  "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/include/blockdevice"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/littlefs"
@@ -91,7 +93,6 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/pico-vfs/vendor/ff15/source"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/powerman"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman"
-  "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/powerman/INA3221"
   "/home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/hardware_i2c/include"
   "/home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/clock"

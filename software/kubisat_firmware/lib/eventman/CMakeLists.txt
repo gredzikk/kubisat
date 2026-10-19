@@ -8,6 +8,7 @@ target_include_directories(eventman_lib PUBLIC
     ${CMAKE_SOURCE_DIR}
     ${CMAKE_SOURCE_DIR}/lib
     ${CMAKE_SOURCE_DIR}/lib/comms
+    ${CMAKE_SOURCE_DIR}/../common/protocol
     ${CMAKE_SOURCE_DIR}/lib/powerman
     ${CMAKE_SOURCE_DIR}/lib/powerman/INA3221
     ${PICO_SDK_PATH}/src/common/hardware_i2c/include

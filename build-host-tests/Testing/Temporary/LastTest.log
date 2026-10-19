@@ -1,10 +1,10 @@
-Start testing: Oct 19 19:28 CEST
+Start testing: Oct 19 22:06 CEST
 ----------------------------------------------------------
-1/1 Testing: frame_crc_tests
-1/1 Test: frame_crc_tests
+1/3 Testing: frame_crc_tests
+1/3 Test: frame_crc_tests
 Command: "/home/gredzikk/dev/kubisat/build-host-tests/frame_crc_tests"
 Directory: /home/gredzikk/dev/kubisat/build-host-tests
-"frame_crc_tests" start time: Oct 19 19:28 CEST
+"frame_crc_tests" start time: Oct 19 22:06 CEST
 Output:
 ----------------------------------------------------------
 frame_crc_tests OK
@@ -12,8 +12,40 @@ frame_crc_tests OK
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"frame_crc_tests" end time: Oct 19 19:28 CEST
+"frame_crc_tests" end time: Oct 19 22:06 CEST
 "frame_crc_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 19 19:28 CEST
+2/3 Testing: ground_bridge_tests
+2/3 Test: ground_bridge_tests
+Command: "/home/gredzikk/dev/kubisat/build-host-tests/ground_bridge_tests"
+Directory: /home/gredzikk/dev/kubisat/build-host-tests
+"ground_bridge_tests" start time: Oct 19 22:06 CEST
+Output:
+----------------------------------------------------------
+ground_bridge_tests OK
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ground_bridge_tests" end time: Oct 19 22:06 CEST
+"ground_bridge_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: frame_decode_vectors
+3/3 Test: frame_decode_vectors
+Command: "/home/gredzikk/dev/kubisat/build-host-tests/frame_decode_vectors"
+Directory: /home/gredzikk/dev/kubisat/build-host-tests
+"frame_decode_vectors" start time: Oct 19 22:06 CEST
+Output:
+----------------------------------------------------------
+frame_decode_vectors OK crc(GET1.1)=da6c
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"frame_decode_vectors" end time: Oct 19 22:06 CEST
+"frame_decode_vectors" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 19 22:06 CEST

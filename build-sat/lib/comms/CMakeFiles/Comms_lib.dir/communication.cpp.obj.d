@@ -250,6 +250,7 @@ lib/comms/CMakeFiles/Comms_lib.dir/communication.cpp.obj: \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/utils.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/pin_config.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/build_number.h \
+ /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/../../../common/protocol/frame_markers.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/eventman/event_manager.h \
  /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/storage/storage.h \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
@@ -294,6 +295,7 @@ lib/comms/CMakeFiles/Comms_lib.dir/communication.cpp.obj: \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info/defs.h \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info/structure.h \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/common/pico_binary_info/include/pico/binary_info/code.h \
+ /home/gredzikk/dev/kubisat/software/kubisat_firmware/lib/comms/../../../common/protocol/lora_defaults.h \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2_common/hardware_watchdog/include/hardware/watchdog.h \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_structs/include/hardware/structs/watchdog.h \
  /home/gredzikk/.pico-sdk/sdk/2.0.0/src/rp2040/hardware_regs/include/hardware/regs/watchdog.h

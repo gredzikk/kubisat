@@ -29,20 +29,26 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential git python3
+      - name: Cache Pico SDK
+        id: cache-pico-sdk
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/pico-sdk
+          key: pico-sdk-2.0.0-${{ runner.os }}
       - name: Fetch Pico SDK
+        if: steps.cache-pico-sdk.outputs.cache-hit != 'true'
         run: |
-          git clone --depth 1 --branch 2.0.0 https://github.com/raspberrypi/pico-sdk.git $HOME/pico-sdk
-          git -C $HOME/pico-sdk submodule update --init --depth 1
+          git clone --depth 1 --branch 2.0.0 https://github.com/raspberrypi/pico-sdk.git ${{ runner.temp }}/pico-sdk
+          git -C ${{ runner.temp }}/pico-sdk submodule update --init --depth 1
       - name: Build satellite firmware
         run: |
-          export PICO_SDK_PATH=$HOME/pico-sdk
+          export PICO_SDK_PATH=${{ runner.temp }}/pico-sdk
           cmake -S software/kubisat_firmware -B build-sat -DPICO_SDK_PATH=$PICO_SDK_PATH
           cmake --build build-sat -j$(nproc)
           test -f build-sat/main.uf2
       - name: Build ground firmware
         run: |
-          export PICO_SDK_PATH=$HOME/pico-sdk
+          export PICO_SDK_PATH=${{ runner.temp }}/pico-sdk
           cmake -S software/ground_firmware -B build-gs -DPICO_SDK_PATH=$PICO_SDK_PATH
           cmake --build build-gs -j$(nproc)
           test -f build-gs/main.uf2
-
