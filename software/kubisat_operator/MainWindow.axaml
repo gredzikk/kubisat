@@ -1,0 +1,1492 @@
+﻿<Window
+    x:Class="kubisat_operator.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kubisat_operator"
+    xmlns:oxy="using:OxyPlot.Avalonia"
+    Title="kubisat_operator"
+    Width="1920"
+    Height="1080"
+    MinWidth="1280"
+    MinHeight="720"
+    MaxWidth="1920"
+    MaxHeight="1080"
+    WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel>
+            <Border DockPanel.Dock="Top" Padding="8,4" BorderBrush="Gray" BorderThickness="0,0,0,1">
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <Label Content="Port:" />
+                    <ComboBox x:Name="PortComboBox" Width="150" />
+
+                    <Button
+                        x:Name="ConnectButton"
+                        Margin="30,0,0,0"
+                        Click="ConnectButton_Click"
+                        Content="Połącz" />
+                    <CheckBox
+                        x:Name="RadioDebugCheckBox"
+                        Margin="30,0,0,0"
+                        VerticalAlignment="Center"
+                        Content="Debug radia" />
+                    <Label Margin="30,0,0,0" Content="RSSI:" 
+                    VerticalContentAlignment="Center"
+                    />
+                    <Label
+                        x:Name="RssiValueLabel"
+                        Width="75"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Content="--" />
+                    <Label Margin="30,0,0,0" Content="SNR:" 
+                    VerticalContentAlignment="Center"
+                    />
+                    <Label
+                        x:Name="SnrValueLabel"
+                        Width="75"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Content="--" />
+                </StackPanel>
+            </Border>
+            <Grid x:Name="ContentGrid" Margin="0,10,0,0">
+                <TabControl x:Name="MainTabControl" IsVisible="False">
+                    <!--  Diagnostic Commands Tab  -->
+                    <TabItem Header="Parametry systemowe">
+                        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                        <UniformGrid Columns="2">
+                            <local:GroupBox
+                                Margin="10,10,10,30"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                BorderBrush="LightSkyBlue"
+                                Header="Diagnostyka">
+                                <StackPanel Orientation="Vertical">
+                                    <UniformGrid Columns="2">
+
+                                        <!--  GetBuildVersion  -->
+                                        <local:GroupBox
+                                            Margin="10"
+                                            HorizontalAlignment="Stretch"
+                                            HorizontalContentAlignment="Center"
+                                            Header="Wersja oprogramowania">
+                                            <UniformGrid Margin="10" Columns="2">
+                                                <Button
+                                                    Height="30"
+                                                    Click="GetBuildVersionButton_Click"
+                                                    Content="Pobierz wersję" />
+                                                <Label
+                                                    x:Name="GetBuildVersionLabel"
+                                                    Height="30"
+                                                    HorizontalContentAlignment="Center"
+                                                    Content="---" />
+                                            </UniformGrid>
+                                        </local:GroupBox>
+
+                                        <!--  EnterBootloader  -->
+                                        <local:GroupBox
+                                            Margin="10"
+                                            HorizontalAlignment="Stretch"
+                                            HorizontalContentAlignment="Center"
+                                            BorderBrush="LightSalmon"
+                                            Header="USB bootloader">
+                                            <StackPanel
+                                                Margin="10"
+                                                HorizontalAlignment="Stretch"
+                                                Orientation="Vertical">
+                                                <Button
+                                                    Height="30"
+                                                    HorizontalAlignment="Stretch"
+                                                    VerticalAlignment="Center"
+                                                    Click="EnterBootloaderButton_Click"
+                                                    Content="Uruchom Bootloader" />
+                                            </StackPanel>
+                                        </local:GroupBox>
+                                    </UniformGrid>
+
+                                    <UniformGrid Columns="2">
+
+                                        <!--  uptime  -->
+                                        <local:GroupBox
+                                            Margin="10"
+                                            HorizontalAlignment="Stretch"
+                                            HorizontalContentAlignment="Center"
+                                            Header="Czas pracy">
+                                            <UniformGrid Margin="10" Columns="2">
+                                                <Button
+                                                    Height="30"
+                                                    Click="GetSystemUptimeButton_Click"
+                                                    Content="Pobierz czas" />
+                                                <Label
+                                                    x:Name="GetSystemUptimeLabel"
+                                                    Height="30"
+                                                    HorizontalContentAlignment="Center"
+                                                    Content="---" />
+                                            </UniformGrid>
+                                        </local:GroupBox>
+
+                                        <!--  power mode  -->
+                                        <local:GroupBox
+                                            Margin="10"
+                                            HorizontalAlignment="Stretch"
+                                            HorizontalContentAlignment="Center"
+                                            Header="Tryb pracy">
+                                            <UniformGrid Margin="10" Columns="2">
+                                                <Button
+                                                    Height="30"
+                                                    Click="GetPowerModeButton_Click"
+                                                    Content="Pobierz tryb" />
+                                                <Label
+                                                    x:Name="GetPowerModeLabel"
+                                                    Height="30"
+                                                    HorizontalContentAlignment="Center"
+                                                    Content="---" />
+                                            </UniformGrid>
+                                        </local:GroupBox>
+                                    </UniformGrid>
+
+                                    <!--  Health + IMU  -->
+                                    <UniformGrid Columns="2">
+                                        <local:GroupBox
+                                            Margin="10"
+                                            HorizontalAlignment="Stretch"
+                                            Header="Zdrowie systemu (1.4)">
+                                            <StackPanel Margin="10" Orientation="Vertical" Spacing="6">
+                                                <Button
+                                                    Height="30"
+                                                    HorizontalAlignment="Stretch"
+                                                    Click="GetHealthButton_Click"
+                                                    Content="Pobierz zdrowie" />
+                                                <TextBlock
+                                                    x:Name="GetHealthLabel"
+                                                    TextWrapping="Wrap"
+                                                    Text="---" />
+                                                <TextBlock
+                                                    x:Name="HealthBeaconLabel"
+                                                    Foreground="DarkGreen"
+                                                    TextWrapping="Wrap"
+                                                    Text="Beacon: (brak)" />
+                                            </StackPanel>
+                                        </local:GroupBox>
+
+                                        <local:GroupBox
+                                            Margin="10"
+                                            HorizontalAlignment="Stretch"
+                                            Header="IMU (MPU-6050)">
+                                            <StackPanel Margin="10" Orientation="Vertical" Spacing="6">
+                                                <UniformGrid Columns="2">
+                                                    <Button Height="30" Margin="0,0,4,0" Click="GetImuStatusButton_Click" Content="Status" />
+                                                    <Label x:Name="GetImuStatusLabel" VerticalContentAlignment="Center" Content="---" />
+                                                </UniformGrid>
+                                                <UniformGrid Columns="2">
+                                                    <Button Height="30" Margin="0,0,4,0" Click="GetAccelButton_Click" Content="Accel" />
+                                                    <Label x:Name="GetAccelLabel" VerticalContentAlignment="Center" Content="---" />
+                                                </UniformGrid>
+                                                <UniformGrid Columns="2">
+                                                    <Button Height="30" Margin="0,0,4,0" Click="GetGyroButton_Click" Content="Gyro" />
+                                                    <Label x:Name="GetGyroLabel" VerticalContentAlignment="Center" Content="---" />
+                                                </UniformGrid>
+                                            </StackPanel>
+                                        </local:GroupBox>
+                                    </UniformGrid>
+
+                                    <local:GroupBox
+                                        Margin="10"
+                                        BorderBrush="OrangeRed"
+                                        Header="Format SD (lab only)">
+                                        <Button
+                                            Margin="10"
+                                            Height="30"
+                                            HorizontalAlignment="Stretch"
+                                            Click="FormatSdButton_Click"
+                                            Content="Sformatuj kartę SD (FORMAT)" />
+                                    </local:GroupBox>
+
+                                    <!--  Verbosity  -->
+                                    <local:GroupBox
+                                        Margin="10"
+                                        HorizontalAlignment="Stretch"
+                                        HorizontalContentAlignment="Center"
+                                        Header="Poziom Szczegółowości UART">
+                                        <UniformGrid Margin="10" Columns="4">
+                                            <Button
+                                                Height="30"
+                                                Click="GetVerbosityLevelButton_Click"
+                                                Content="Pobierz wartość" />
+                                            <Label
+                                                x:Name="GetVerbosityLevelLabel"
+                                                Height="30"
+                                                HorizontalContentAlignment="Center"
+                                                Content="---" />
+                                            <ComboBox
+                                                x:Name="SetVerbosityComboBox"
+                                                VerticalContentAlignment="Center"
+                                                SelectedIndex="0">
+                                                <ComboBoxItem Content="0 - SILENT" Tag="0" />
+                                                <ComboBoxItem Content="1 - ERROR" Tag="1" />
+                                                <ComboBoxItem Content="2 - WARNING" Tag="2" />
+                                                <ComboBoxItem Content="3 - INFO" Tag="3" />
+                                                <ComboBoxItem Content="4 - DEBUG" Tag="4" />
+                                            </ComboBox>
+                                            <Button
+                                                Height="30"
+                                                Click="SetVerbosityLevel_Click"
+                                                Content="Ustaw wartość" />
+                                        </UniformGrid>
+                                    </local:GroupBox>
+
+                                    <!--  GetCommandsList  -->
+                                    <local:GroupBox
+                                        Margin="10"
+                                        VerticalAlignment="Top"
+                                        Header="Lista poleceń">
+                                        <DockPanel Margin="10">
+                                            <Button
+                                                DockPanel.Dock="Top"
+                                                Height="30"
+                                                Margin="10"
+                                                HorizontalAlignment="Stretch"
+                                                Click="GetCommandsListButton_Click"
+                                                Content="Pobierz dostęne polecenia" />
+                                            <DataGrid
+                                                x:Name="GetCommandsListDataGrid"
+                                                Height="280"
+                                                MaxHeight="280"
+                                                Margin="10"
+                                                HorizontalAlignment="Stretch"
+                                                AutoGenerateColumns="False"
+                                                IsReadOnly="True">
+                                                <DataGrid.Columns>
+                                                    <DataGridTextColumn
+                                                        Width="Auto"
+                                                        Binding="{Binding GroupId}"
+                                                        Header="Grupa" />
+                                                    <DataGridTextColumn
+                                                        Width="Auto"
+                                                        Binding="{Binding Id}"
+                                                        Header="Polecenie" />
+                                                    <DataGridTextColumn
+                                                        Width="Auto"
+                                                        Binding="{Binding Access}"
+                                                        Header="Prawa dostępu" />
+                                                    <DataGridTextColumn
+                                                        Width="*"
+                                                        Binding="{Binding CommandDescription}"
+                                                        Header="Opis" />
+                                                </DataGrid.Columns>
+                                            </DataGrid>
+                                        </DockPanel>
+                                    </local:GroupBox>
+                                </StackPanel>
+                            </local:GroupBox>
+                            <StackPanel Orientation="Vertical">
+                                <local:GroupBox
+                                    Margin="10,10,10,15"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Stretch"
+                                    BorderBrush="LightSkyBlue"
+                                    Header="Zegar">
+                                    <StackPanel Orientation="Vertical">
+                                        <!--  Time  -->
+                                        <local:GroupBox
+                                            Margin="10"
+                                            HorizontalAlignment="Stretch"
+                                            HorizontalContentAlignment="Center"
+                                            Header="Czas">
+                                            <UniformGrid Margin="10" Columns="4">
+                                                <Button
+                                                    Height="30"
+                                                    Click="GetTimeButton_Click"
+                                                    Content="Pobierz wartość" />
+                                                <Label
+                                                    x:Name="GetTimeLabel"
+                                                    HorizontalContentAlignment="Center"
+                                                    Content="---" />
+                                                <TextBox
+                                                    x:Name="SetTimeTextBox"
+                                                    HorizontalContentAlignment="Center"
+                                                    VerticalContentAlignment="Center"
+                                                    Text="hh:mm:ss dd-mm-rrrr" />
+                                                <Button
+                                                    Height="30"
+                                                    Click="SetTimeButton_Click"
+                                                    Content="Ustaw wartość" />
+                                            </UniformGrid>
+                                        </local:GroupBox>
+                                        <!--  Timezone offset  -->
+                                        <local:GroupBox
+                                            Margin="10"
+                                            HorizontalAlignment="Stretch"
+                                            HorizontalContentAlignment="Center"
+                                            Header="Strefa czasowa">
+                                            <UniformGrid Margin="10" Columns="4">
+                                                <Button
+                                                    Height="30"
+                                                    Click="GetTimezoneOffsetButton_Click"
+                                                    Content="Pobierz strefę" />
+                                                <Label
+                                                    x:Name="GetTimezoneOffsetLabel"
+                                                    Height="30"
+                                                    HorizontalContentAlignment="Center"
+                                                    Content="---" />
+                                                <TextBox
+                                                    x:Name="SetTimezoneOffsetTextBox"
+                                                    HorizontalContentAlignment="Center"
+                                                    VerticalContentAlignment="Center"
+                                                    Text="mm" />
+                                                <Button
+                                                    Height="30"
+                                                    Click="SetTimezoneOffsetButton_Click"
+                                                    Content="Ustaw strefę" />
+                                            </UniformGrid>
+                                        </local:GroupBox>
+                                        <!--  internal temp  -->
+                                        <local:GroupBox
+                                            Margin="10"
+                                            HorizontalAlignment="Stretch"
+                                            HorizontalContentAlignment="Left"
+                                            Header="Temperatura zegara">
+                                            <UniformGrid Margin="10" Columns="4">
+                                                <Button
+                                                    Height="30"
+                                                    Click="GetClockInternalTemperatureButton_Click"
+                                                    Content="Pobierz wartość" />
+                                                <Label
+                                                    x:Name="GetClockInternalTemperatureLabel"
+                                                    Height="30"
+                                                    HorizontalContentAlignment="Center"
+                                                    Content="---" />
+                                            </UniformGrid>
+                                        </local:GroupBox>
+                                    </StackPanel>
+                                </local:GroupBox>
+                                <local:GroupBox
+                                    Margin="10,0,10,10"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Stretch"
+                                    BorderBrush="LightSkyBlue"
+                                    Header="Zdarzenia">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <!--  event count  -->
+                                        <local:GroupBox Margin="10" Header="Liczba zdarzeń w logu">
+                                            <UniformGrid Margin="10" Columns="4">
+                                                <Button
+                                                    Height="30"
+                                                    Click="GetTotalEventCountButton_Click"
+                                                    Content="Pobierz wartość" />
+                                                <Label
+                                                    x:Name="GetTotalEventCountLabel"
+                                                    Height="30"
+                                                    HorizontalAlignment="Center"
+                                                    HorizontalContentAlignment="Center"
+                                                    Content="---" />
+                                            </UniformGrid>
+                                        </local:GroupBox>
+                                        <!--  event log  -->
+                                        <local:GroupBox
+                                            Grid.Row="1"
+                                            Margin="10"
+                                            VerticalAlignment="Top"
+                                            Header="Log zdarzeń">
+                                            <DockPanel Margin="10">
+                                                <Grid
+                                                    DockPanel.Dock="Top"
+                                                    Margin="10"
+                                                    ColumnDefinitions="*,Auto,Auto,*">
+                                                    <Button
+                                                        Grid.Column="0"
+                                                        Height="30"
+                                                        Margin="0,0,8,0"
+                                                        HorizontalAlignment="Stretch"
+                                                        Click="GetAllEventsButton_Click"
+                                                        Content="Pobierz wszystkie zdarzenia" />
+                                                    <Button
+                                                        Grid.Column="1"
+                                                        Height="30"
+                                                        Margin="0,0,8,0"
+                                                        MinWidth="140"
+                                                        Click="GetLastEventsButton_Click"
+                                                        Content="Pobierz zdarzenia" />
+                                                    <NumericUpDown
+                                                        Grid.Column="2"
+                                                        x:Name="GetLastEventsCount"
+                                                        Width="110"
+                                                        Height="32"
+                                                        MinWidth="110"
+                                                        Margin="0,0,8,0"
+                                                        Value="10"
+                                                        Minimum="0"
+                                                        Maximum="999999"
+                                                        FormatString="0"
+                                                        Increment="1"
+                                                        HorizontalContentAlignment="Center" />
+                                                    <Button
+                                                        Grid.Column="3"
+                                                        Height="30"
+                                                        HorizontalAlignment="Stretch"
+                                                        Click="ExportEventLogToCsv"
+                                                        Content="Eksportuj zdarzenia do CSV" />
+                                                </Grid>
+
+                                                <DataGrid
+                                                    x:Name="EventLogDataGrid"
+                                                    Height="280"
+                                                    MaxHeight="280"
+                                                    Margin="10"
+                                                    HorizontalAlignment="Stretch"
+                                                    AutoGenerateColumns="False"
+                                                    IsReadOnly="True"
+                                                    ItemsSource="{Binding EventLogEntries}">
+                                                    <DataGrid.Columns>
+                                                        <DataGridTextColumn
+                                                            Width="Auto"
+                                                            Binding="{Binding EventId}"
+                                                            Header="ID" />
+                                                        <DataGridTextColumn
+                                                            Width="Auto"
+                                                            Binding="{Binding EventTimestamp}"
+                                                            Header="Czas" />
+                                                        <DataGridTextColumn
+                                                            Width="Auto"
+                                                            Binding="{Binding EventGroupId}"
+                                                            Header="Grupa" />
+                                                        <DataGridTextColumn
+                                                            Width="Auto"
+                                                            Binding="{Binding EventCode}"
+                                                            Header="Zdarzenie" />
+                                                        <DataGridTextColumn
+                                                            Width="*"
+                                                            Binding="{Binding EventDescription}"
+                                                            Header="Opis" />
+                                                    </DataGrid.Columns>
+                                                </DataGrid>
+                                            </DockPanel>
+                                        </local:GroupBox>
+
+                                    </Grid>
+                                </local:GroupBox>
+
+                            </StackPanel>
+                        </UniformGrid>
+                        </ScrollViewer>
+                    </TabItem>
+
+                    <!--  unsafe Commands Tab  -->
+                    <TabItem Header="GPS">
+                        <local:GroupBox
+                            Margin="10"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            BorderBrush="LightSkyBlue"
+                            Header="GPS">
+                            <StackPanel Orientation="Vertical">
+                                <local:GroupBox
+                                    Margin="10"
+                                    HorizontalAlignment="Stretch"
+                                    HorizontalContentAlignment="Left"
+                                    BorderBrush="LightSalmon"
+                                    Header="Zasilanie modułu GPS">
+                                    <UniformGrid
+                                        Margin="10"
+                                        VerticalAlignment="Center"
+                                        Columns="4">
+
+                                        <Button
+                                            Height="30"
+                                            Click="GetGpsPowerStatusButton_Click"
+                                            Content="Pobierz wartość" />
+                                        <Label
+                                            x:Name="GetGpsPowerStatusLabel"
+                                            Height="30"
+                                            HorizontalContentAlignment="Center"
+                                            Content="---" />
+
+                                        <Button
+                                            Height="30"
+                                            Click="SetGpsPowerOffStatusButton_Click"
+                                            Content="Wyłącz zasilanie" />
+                                        <Button
+                                            Height="30"
+                                            Click="SetGpsPowerOnStatusButton_Click"
+                                            Content="Włącz zasilanie" />
+                                    </UniformGrid>
+
+                                </local:GroupBox>
+
+                                <!--  UART Transparent Mode  -->
+                                <local:GroupBox
+                                    Margin="10"
+                                    HorizontalAlignment="Stretch"
+                                    HorizontalContentAlignment="Left"
+                                    BorderBrush="LightSalmon"
+                                    Header="Tryb przezroczysty USB-UART">
+                                    <Grid Margin="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="2*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Button
+                                            Grid.Column="0"
+                                            Height="30"
+                                            Margin="0,0,8,0"
+                                            HorizontalAlignment="Stretch"
+                                            Click="StartGpsPassthroughModeButton_Click"
+                                            Content="Włącz tryb" />
+                                        <StackPanel
+                                            Grid.Column="1"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Orientation="Horizontal">
+                                            <NumericUpDown x:Name="GpsPassthroughModeDuration" Width="110" Height="32" MinWidth="110" Value="10" Minimum="0" Maximum="999999" FormatString="0" Increment="1" HorizontalContentAlignment="Center" />
+                                            <Label
+                                                Width="30"
+                                                Height="30"
+                                                HorizontalContentAlignment="Left"
+                                                Content="s" />
+                                        </StackPanel>
+
+                                        <Grid Grid.Column="2">
+                                            <ProgressBar
+                                                x:Name="GpsPassthroughModeDurationRemainingProgressBar"
+                                                Height="30"
+                                                HorizontalAlignment="Stretch"
+                                                Value="50" />
+                                            <Label
+                                                x:Name="GpsPassthroughModeDurationRemainingLabel"
+                                                Height="30"
+                                                HorizontalAlignment="Stretch"
+                                                VerticalAlignment="Center"
+                                                HorizontalContentAlignment="Center"
+                                                Content="50" />
+                                        </Grid>
+
+                                    </Grid>
+                                </local:GroupBox>
+                            </StackPanel>
+
+                        </local:GroupBox>
+                    </TabItem>
+
+                    <TabItem Header="Telemetria">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <!--  First Row - Get Telemetry Button  -->
+                            <StackPanel
+                                Grid.Row="0"
+                                Margin="0,0,0,10"
+                                Orientation="Horizontal">
+                                <Button
+                                    x:Name="GetLastTelemetryRecordButton"
+                                    Margin="0,0,10,0"
+                                    Padding="10,5"
+                                    Click="GetLastTelemetryRecordButton_Click"
+                                    Content="Pobierz ostatni rekord telemetryczny" />
+                                <Button
+                                    Margin="10,0,0,0"
+                                    Padding="10,5"
+                                    Click="ImportTelemetryDataButton_Click"
+                                    Content="Importuj historyczne dane" />
+                                <Button
+                                    Margin="10,0,0,0"
+                                    Padding="10,5"
+                                    Click="GetRecentTelemetryButton_Click"
+                                    Content="Ostatnie N (8.4)" />
+                                <NumericUpDown
+                                    x:Name="RecentTelemetryCount"
+                                    Width="70"
+                                    Margin="10,0,0,0"
+                                    Value="5"
+                                    Minimum="1"
+                                    Maximum="20"
+                                    FormatString="0" />
+                            </StackPanel>
+
+                            <Grid Grid.Row="1" Margin="0,0,0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Button
+                                    x:Name="StartTelemetryAutoRefreshButton"
+                                    Grid.Column="0"
+                                    Margin="0,0,10,0"
+                                    Padding="10,5"
+                                    Click="StartTelemetryAutoRefreshButton_Click"
+                                    Content="Rozpocznij auto-odświeżanie" />
+
+                                <NumericUpDown
+                                    x:Name="TelemetryRefreshInterval"
+                                    Grid.Column="1"
+                                    Width="110"
+                                    Height="32"
+                                    MinWidth="110"
+                                    Value="5"
+                                    Minimum="0"
+                                    Maximum="999999"
+                                    FormatString="0"
+                                    Increment="1"
+                                    HorizontalContentAlignment="Center" />
+
+                                <Label
+                                    Grid.Column="2"
+                                    VerticalAlignment="Center"
+                                    Content="s" />
+
+                                <Grid Grid.Column="3">
+                                    <ProgressBar
+                                        x:Name="TelemetryRefreshProgressBar"
+                                        Height="20"
+                                        Margin="10,0"
+                                        HorizontalAlignment="Stretch"
+                                        Value="0" />
+                                    <Label
+                                        x:Name="TelemetryRefreshStatusLabel"
+                                        Height="25"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        HorizontalContentAlignment="Center"
+                                        Content="" />
+
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Row="2" Margin="0,10">
+                                <TabControl>
+                                    <TabItem Header="Dane">
+                                        <DataGrid
+                                            AutoGenerateColumns="False"
+                                            GridLinesVisibility="All"
+                                            HeadersVisibility="Column"
+                                            IsReadOnly="True"
+                                            ItemsSource="{Binding TelemetryData}">
+                                            <DataGrid.Columns>
+                                                <DataGridTextColumn
+                                                    Width="*"
+                                                    Binding="{Binding Key}"
+                                                    FontSize="24"
+                                                    Header="Parametr" />
+                                                <DataGridTextColumn
+                                                    Width="*"
+                                                    Binding="{Binding Value}"
+                                                    FontSize="24"
+                                                    Header="Wartość" />
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+                                    </TabItem>
+                                    <TabItem Header="Prądy">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <oxy:PlotView x:Name="CurrentPlot" Grid.Row="0" />
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="5"
+                                                Padding="10,5"
+                                                HorizontalAlignment="Right"
+                                                Click="ExportCurrentPlotButton_Click"
+                                                Content="Eksportuj wykres" />
+                                        </Grid>
+                                    </TabItem>
+                                    <TabItem Header="Napięcia">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <oxy:PlotView x:Name="VoltagePlot" Grid.Row="0" />
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="5"
+                                                Padding="10,5"
+                                                HorizontalAlignment="Right"
+                                                Click="ExportVoltagePlotButton_Click"
+                                                Content="Eksportuj wykres" />
+                                        </Grid>
+                                    </TabItem>
+                                    <TabItem Header="GPS Czas">
+                                        <Grid>
+                                            <StackPanel
+                                                Margin="10"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center">
+                                                <TextBlock
+                                                    x:Name="GpsTimeDisplay"
+                                                    HorizontalAlignment="Center"
+                                                    FontFamily="Segoe UI Light"
+                                                    FontSize="72" />
+                                                <TextBlock
+                                                    x:Name="GpsDateDisplay"
+                                                    Margin="0,20,0,0"
+                                                    HorizontalAlignment="Center"
+                                                    FontFamily="Segoe UI Light"
+                                                    FontSize="48" />
+                                                <TextBlock
+                                                    x:Name="GpsUtcLabel"
+                                                    Margin="0,10,0,0"
+                                                    HorizontalAlignment="Center"
+                                                    FontSize="24"
+                                                    Text="UTC" />
+                                            </StackPanel>
+                                        </Grid>
+                                    </TabItem>
+
+                                    <TabItem Header="Satelity">
+                                        <Grid>
+                                            <StackPanel
+                                                Margin="10"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center">
+                                                <TextBlock
+                                                    HorizontalAlignment="Center"
+                                                    FontSize="24"
+                                                    Text="Status GPS" />
+                                                <TextBlock
+                                                    x:Name="GpsSatelliteCount"
+                                                    HorizontalAlignment="Center"
+                                                    FontSize="48" />
+                                                <TextBlock
+                                                    x:Name="GpsFixQuality"
+                                                    HorizontalAlignment="Center"
+                                                    FontSize="36" />
+                                            </StackPanel>
+                                        </Grid>
+                                    </TabItem>
+
+                                    <TabItem Header="Pozycja 3D">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+
+                                            <!--  Control Panel  -->
+                                            <StackPanel
+                                                Grid.Row="0"
+                                                Margin="0,0,0,10"
+                                                Orientation="Horizontal">
+                                                <local:GroupBox Margin="5" Header="Widok 3D">
+                                                    <UniformGrid Columns="3">
+                                                        <Button
+                                                            x:Name="TrackSatelliteButton"
+                                                            Margin="2"
+                                                            Click="TrackSatellite_Click"
+                                                            Content="Śledzenie satelity" />
+                                                        <Button
+                                                            x:Name="ClearTrackingButton"
+                                                            Margin="2"
+                                                            Click="ClearTracking_Click"
+                                                            Content="Wyczyść ślad" />
+                                                        <Button
+                                                            x:Name="ExportKmlButton"
+                                                            Margin="2"
+                                                            Click="ExportKml_Click"
+                                                            Content="Eksportuj KML" />
+                                                    </UniformGrid>
+                                                </local:GroupBox>
+                                            </StackPanel>
+
+                                            <!--  Position Summary  -->
+                                            <local:GroupBox
+                                                Grid.Row="1"
+                                                Margin="5"
+                                                Header="Aktualna pozycja">
+                                                <StackPanel>
+                                                    <TextBlock
+                                                        x:Name="GpsPositionSummary"
+                                                        Margin="5"
+                                                        FontSize="18"
+                                                        TextAlignment="Center" />
+                                                    <Button
+                                                        x:Name="ViewInMapsButton"
+                                                        Margin="5"
+                                                        Padding="10,5"
+                                                        Click="ViewInMaps_Click"
+                                                        Content="Zobacz na mapie"
+                                                        IsEnabled="False" />
+                                                </StackPanel>
+                                            </local:GroupBox>
+
+                                            <!--  Position History  -->
+                                            <local:GroupBox
+                                                Grid.Row="2"
+                                                Margin="5"
+                                                Header="Historia pozycji">
+                                                <DataGrid
+                                                    x:Name="PositionHistoryGrid"
+                                                    AutoGenerateColumns="False"
+                                                    IsReadOnly="True">
+                                                    <DataGrid.Columns>
+                                                        <DataGridTextColumn
+                                                            Width="200"
+                                                            Binding="{Binding Timestamp}"
+                                                            Header="Czas" />
+                                                        <DataGridTextColumn
+                                                            Width="150"
+                                                            Binding="{Binding Latitude}"
+                                                            Header="Szerokość" />
+                                                        <DataGridTextColumn
+                                                            Width="150"
+                                                            Binding="{Binding Longitude}"
+                                                            Header="Długość" />
+                                                        <DataGridTextColumn
+                                                            Width="150"
+                                                            Binding="{Binding Altitude}"
+                                                            Header="Wysokość" />
+                                                        <DataGridTextColumn
+                                                            Width="150"
+                                                            Binding="{Binding Satellites}"
+                                                            Header="Satelity" />
+                                                    </DataGrid.Columns>
+                                                </DataGrid>
+                                            </local:GroupBox>
+                                        </Grid>
+                                    </TabItem>
+
+                                </TabControl>
+                            </Grid>
+                        </Grid>
+                    </TabItem>
+
+
+
+                    <TabItem Header="Sensory">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <StackPanel
+                                Grid.Row="0"
+                                Margin="0,0,0,10"
+                                Orientation="Horizontal">
+                                <Button
+                                    x:Name="GetLastSensorDataButton"
+                                    Margin="0,0,10,0"
+                                    Padding="10,5"
+                                    Click="GetLastSensorDataButton_Click"
+                                    Content="Pobierz ostatni pomiar z czujników" />
+                                <Button
+                                    Margin="10,0,0,0"
+                                    Padding="10,5"
+                                    Click="ImportSensorDataButton_Click"
+                                    Content="Importuj historyczne dane" />
+                            </StackPanel>
+
+                            <DataGrid
+                                Grid.Row="1"
+                                Height="160"
+                                Margin="0,0,0,10"
+                                HorizontalAlignment="Stretch"
+                                AutoGenerateColumns="False"
+                                IsReadOnly="True"
+                                ItemsSource="{Binding SensorData}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Parametr" Binding="{Binding Key}" Width="*" />
+                                    <DataGridTextColumn Header="Wartość" Binding="{Binding Value}" Width="*" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <Grid Grid.Row="2" Margin="0,0,0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Button
+                                    x:Name="StartSensorAutoRefreshButton"
+                                    Grid.Column="0"
+                                    Margin="0,0,10,0"
+                                    Padding="10,5"
+                                    Click="StartSensorAutoRefreshButton_Click"
+                                    Content="Rozpocznij auto-odświeżanie" />
+
+                                <NumericUpDown
+                                    x:Name="SensorRefreshInterval"
+                                    Grid.Column="1"
+                                    Width="110"
+                                    Height="32"
+                                    MinWidth="110"
+                                    Value="5"
+                                    Minimum="0"
+                                    Maximum="999999"
+                                    FormatString="0"
+                                    Increment="1"
+                                    HorizontalContentAlignment="Center" />
+
+                                <Label
+                                    Grid.Column="2"
+                                    VerticalAlignment="Center"
+                                    Content="s" />
+
+                                <Grid Grid.Column="3">
+                                    <ProgressBar
+                                        x:Name="SensorRefreshProgressBar"
+                                        Height="20"
+                                        Margin="10,0"
+                                        HorizontalAlignment="Stretch"
+                                        Value="0" />
+                                    <Label
+                                        x:Name="SensorRefreshStatusLabel"
+                                        Height="25"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        HorizontalContentAlignment="Center"
+                                        Content="" />
+                                </Grid>
+                            </Grid>
+
+                            <Grid Grid.Row="3" Margin="0,10">
+                                <TabControl>
+                                    <TabItem Header="Temperatura i wilgotność">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <oxy:PlotView x:Name="EnvironmentPlot" Grid.Row="0" />
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="5"
+                                                Padding="10,5"
+                                                HorizontalAlignment="Right"
+                                                Click="ExportEnvironmentPlotButton_Click"
+                                                Content="Eksportuj wykres" />
+                                        </Grid>
+                                    </TabItem>
+                                    <TabItem Header="Ciśnienie">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <oxy:PlotView x:Name="PressurePlot" Grid.Row="0" />
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="5"
+                                                Padding="10,5"
+                                                HorizontalAlignment="Right"
+                                                Click="ExportPressurePlotButton_Click"
+                                                Content="Eksportuj wykres" />
+                                        </Grid>
+                                    </TabItem>
+                                    <TabItem Header="Natężenie światła">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <oxy:PlotView x:Name="LightPlot" Grid.Row="0" />
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="5"
+                                                Padding="10,5"
+                                                HorizontalAlignment="Right"
+                                                Click="ExportLightPlotButton_Click"
+                                                Content="Eksportuj wykres" />
+                                        </Grid>
+                                    </TabItem>
+                                </TabControl>
+                            </Grid>
+                        </Grid>
+                    </TabItem>
+
+                    <!--  Trzecia zakładka dla Monitora Portu Szeregowego  -->
+                    <TabItem Header="Log komunikacji">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <!--  Controls panel for log customization  -->
+                            <StackPanel
+                                Grid.Row="0"
+                                Margin="10,5,10,5"
+                                Orientation="Horizontal">
+                                <Label VerticalAlignment="Center" Content="Rozmiar czcionki:" />
+                                <ComboBox
+                                    x:Name="FontSizeSelector"
+                                    Width="70"
+                                    SelectedIndex="2"
+                                    SelectionChanged="FontSizeSelector_SelectionChanged">
+                                    <ComboBoxItem Content="12" />
+                                    <ComboBoxItem Content="14" />
+                                    <ComboBoxItem Content="16" />
+                                    <ComboBoxItem Content="18" />
+                                    <ComboBoxItem Content="20" />
+                                </ComboBox>
+
+                                <CheckBox
+                                    x:Name="AutoScrollCheckBox"
+                                    Margin="20,0,0,0"
+                                    VerticalAlignment="Center"
+                                    Content="Auto-przewijanie"
+                                    IsChecked="True" />
+
+                                <Button
+                                    Width="120"
+                                    Margin="20,0,0,0"
+                                    Click="ClearSerialMonitor_Click"
+                                    Content="Wyczyść log" />
+
+                                <Button
+                                    Width="120"
+                                    Margin="10,0,0,0"
+                                    Click="SaveSerialMonitor_Click"
+                                    Content="Zapisz log" />
+
+                                <CheckBox
+                                    x:Name="ShowTimestampsCheckBox"
+                                    Margin="20,0,0,0"
+                                    VerticalAlignment="Center"
+                                    Content="Pokaż znaczniki czasu"
+                                    IsChecked="True"
+                                    IsCheckedChanged="ShowTimestampsCheckBox_Changed" />
+                            </StackPanel>
+
+                            <!--  Serial monitor display area  -->
+                            <Border
+                                Grid.Row="1"
+                                Margin="10,0,10,10"
+                                BorderBrush="#AAAAAA"
+                                BorderThickness="1">
+                                <ScrollViewer x:Name="SerialMonitorScrollViewer">
+                                    <ItemsControl x:Name="SerialMonitorItems" FontFamily="Consolas" FontSize="12">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Text}" Foreground="{Binding Foreground}" TextWrapping="NoWrap" />
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </ScrollViewer>
+                            </Border>
+                        </Grid>
+                    </TabItem>
+
+                    <TabItem Header="Tryb testowy">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <!--  Command selection controls  -->
+                            <local:GroupBox
+                                Grid.Row="0"
+                                Margin="10"
+                                Header="Wybór komendy do testowania">
+                                <Grid Margin="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!--  Command group selection  -->
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        VerticalAlignment="Center"
+                                        Content="Grupa komend:" />
+                                    <ComboBox
+                                        x:Name="TestCommandGroupComboBox"
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Margin="5"
+                                        SelectionChanged="TestCommandGroupComboBox_SelectionChanged">
+                                        <ComboBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Name}" />
+                                            </DataTemplate>
+                                        </ComboBox.ItemTemplate>
+                                    </ComboBox>
+
+                                    <!--  Command selection  -->
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        VerticalAlignment="Center"
+                                        Content="Komenda:" />
+                                    <ComboBox
+                                        x:Name="TestCommandComboBox"
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        Margin="5"
+                                        SelectionChanged="TestCommandComboBox_SelectionChanged">
+                                        <ComboBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Name}" />
+                                            </DataTemplate>
+                                        </ComboBox.ItemTemplate>
+                                    </ComboBox>
+
+                                    <!--  Command details  -->
+                                    <StackPanel
+                                        Grid.Row="2"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        Margin="5"
+                                        Orientation="Vertical">
+                                        <TextBlock
+                                            x:Name="TestCommandDetailsText"
+                                            Margin="0,5"
+                                            TextWrapping="Wrap" />
+                                        <TextBlock
+                                            x:Name="TestCommandAccessText"
+                                            Margin="0,5"
+                                            FontWeight="Bold" />
+                                    </StackPanel>
+                                </Grid>
+                            </local:GroupBox>
+
+                            <!--  Test tabs (Basic test, Batch test, Stress test)  -->
+                            <TabControl Grid.Row="1" Margin="10">
+                                <!--  Basic Test Tab  -->
+                                <TabItem Header="Test podstawowy">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <!--  Test operation panel  -->
+                                        <local:GroupBox
+                                            Grid.Row="0"
+                                            Margin="5"
+                                            Header="Operacje testowe">
+                                            <Grid Margin="5">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <!--  Parameter input  -->
+                                                <Label
+                                                    Grid.Column="0"
+                                                    VerticalAlignment="Center"
+                                                    Content="Parametr:" />
+                                                <TextBox
+                                                    x:Name="TestCommandParameterTextBox"
+                                                    Grid.Column="1"
+                                                    Margin="5"
+                                                    VerticalContentAlignment="Center" />
+
+                                                <!--  Operation buttons  -->
+                                                <StackPanel
+                                                    Grid.Column="2"
+                                                    Margin="5"
+                                                    Orientation="Horizontal">
+                                                    <Button
+                                                        x:Name="TestCommandGetButton"
+                                                        Width="80"
+                                                        Margin="5"
+                                                        Click="TestCommandGetButton_Click"
+                                                        Content="GET" />
+                                                    <Button
+                                                        x:Name="TestCommandSetButton"
+                                                        Width="80"
+                                                        Margin="5"
+                                                        Click="TestCommandSetButton_Click"
+                                                        Content="SET" />
+                                                </StackPanel>
+                                            </Grid>
+                                        </local:GroupBox>
+
+                                        <!--  Test results  -->
+                                        <local:GroupBox
+                                            Grid.Row="1"
+                                            Margin="5"
+                                            Header="Wynik testu">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+
+                                                <Label
+                                                    Grid.Row="0"
+                                                    Grid.Column="0"
+                                                    VerticalAlignment="Center"
+                                                    Content="Status:" />
+                                                <TextBlock
+                                                    x:Name="TestStatusTextBlock"
+                                                    Grid.Row="0"
+                                                    Grid.Column="1"
+                                                    Margin="5"
+                                                    VerticalAlignment="Center" />
+
+                                                <Label
+                                                    Grid.Row="1"
+                                                    Grid.Column="0"
+                                                    VerticalAlignment="Center"
+                                                    Content="Odpowiedź:" />
+                                                <TextBox
+                                                    x:Name="TestResponseTextBox"
+                                                    Grid.Row="1"
+                                                    Grid.Column="1"
+                                                    Margin="5"
+                                                    IsReadOnly="True"
+                                                    TextWrapping="Wrap" />
+
+                                                <Label
+                                                    Grid.Row="2"
+                                                    Grid.Column="0"
+                                                    VerticalAlignment="Center"
+                                                    Content="Czas wykonania:" />
+                                                <TextBlock
+                                                    x:Name="TestExecutionTimeTextBlock"
+                                                    Grid.Row="2"
+                                                    Grid.Column="1"
+                                                    Margin="5"
+                                                    VerticalAlignment="Center" />
+                                            </Grid>
+                                        </local:GroupBox>
+
+                                        <!--  Log of test operations  -->
+                                        <local:GroupBox
+                                            Grid.Row="2"
+                                            Margin="5"
+                                            Header="Log operacji testowych">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+
+                                                <ListBox
+                                                    x:Name="TestLogListBox"
+                                                    Grid.Row="0"
+                                                    Margin="5"
+                                                    ScrollViewer.VerticalScrollBarVisibility="Auto" />
+
+                                                <Button
+                                                    Grid.Row="1"
+                                                    Margin="5"
+                                                    Padding="10,5"
+                                                    HorizontalAlignment="Right"
+                                                    Click="ClearTestLogButton_Click"
+                                                    Content="Wyczyść log" />
+                                            </Grid>
+                                        </local:GroupBox>
+                                    </Grid>
+                                </TabItem>
+
+                                <!--  Batch Test Tab  -->
+                                <TabItem Header="Test wsadowy">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <!--  Batch test configuration  -->
+                                        <local:GroupBox
+                                            Grid.Row="0"
+                                            Margin="5"
+                                            Header="Konfiguracja testu wsadowego">
+                                            <Grid Margin="5">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <Label
+                                                    Grid.Column="0"
+                                                    VerticalAlignment="Center"
+                                                    Content="Liczba powtórzeń:" />
+                                                <NumericUpDown
+                                                    x:Name="BatchTestRepetitionsUpDown"
+                                                    Grid.Column="1"
+                                                    Width="110"
+                                                    MinWidth="110"
+                                                    Height="32"
+                                                    Margin="5"
+                                                    Value="10"
+                                                    Minimum="0"
+                                                    Maximum="999999"
+                                                    FormatString="0"
+                                                    Increment="1"
+                                                    HorizontalContentAlignment="Center" />
+
+                                                <Label
+                                                    Grid.Column="2"
+                                                    VerticalAlignment="Center"
+                                                    Content="Opóźnienie (ms):" />
+                                                <NumericUpDown
+                                                    x:Name="BatchTestDelayUpDown"
+                                                    Grid.Column="3"
+                                                    Width="110"
+                                                    MinWidth="110"
+                                                    Height="32"
+                                                    Margin="5"
+                                                    Value="100"
+                                                    Minimum="0"
+                                                    Maximum="999999"
+                                                    FormatString="0"
+                                                    Increment="1"
+                                                    HorizontalContentAlignment="Center" />
+
+                                                <Button
+                                                    x:Name="RunBatchTestButton"
+                                                    Grid.Column="4"
+                                                    Margin="5"
+                                                    Padding="10,5"
+                                                    Click="RunBatchTestButton_Click"
+                                                    Content="Uruchom test wsadowy" />
+                                            </Grid>
+                                        </local:GroupBox>
+
+                                        <!--  Test progress  -->
+                                        <local:GroupBox
+                                            Grid.Row="1"
+                                            Margin="5"
+                                            Header="Postęp testu">
+                                            <Grid Margin="5">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+
+                                                <ProgressBar
+                                                    x:Name="BatchTestProgressBar"
+                                                    Grid.Row="0"
+                                                    Height="20"
+                                                    Margin="5" />
+                                                <TextBlock
+                                                    x:Name="BatchTestStatusTextBlock"
+                                                    Grid.Row="1"
+                                                    Margin="5"
+                                                    HorizontalAlignment="Center" />
+                                            </Grid>
+                                        </local:GroupBox>
+
+                                        <!--  Test results  -->
+                                        <local:GroupBox
+                                            Grid.Row="2"
+                                            Margin="5"
+                                            Header="Wyniki testu wsadowego">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+
+                                                <Grid Grid.Row="0" Margin="5">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto" />
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="Auto" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label
+                                                        Grid.Column="0"
+                                                        VerticalAlignment="Center"
+                                                        Content="Średni czas odpowiedzi:" />
+                                                    <TextBlock
+                                                        x:Name="BatchTestAvgTimeTextBlock"
+                                                        Grid.Column="1"
+                                                        Margin="5"
+                                                        VerticalAlignment="Center" />
+
+                                                    <Label
+                                                        Grid.Column="2"
+                                                        VerticalAlignment="Center"
+                                                        Content="Skuteczność:" />
+                                                    <TextBlock
+                                                        x:Name="BatchTestSuccessRateTextBlock"
+                                                        Grid.Column="3"
+                                                        Margin="5"
+                                                        VerticalAlignment="Center" />
+                                                </Grid>
+
+                                                <DataGrid
+                                                    x:Name="BatchTestResultsDataGrid"
+                                                    Grid.Row="1"
+                                                    Margin="5"
+                                                    AutoGenerateColumns="False"
+                                                    IsReadOnly="True">
+                                                    <DataGrid.Columns>
+                                                        <DataGridTextColumn
+                                                            Width="40"
+                                                            Binding="{Binding Index}"
+                                                            Header="#" />
+                                                        <DataGridTextColumn
+                                                            Width="80"
+                                                            Binding="{Binding Operation}"
+                                                            Header="Operacja" />
+                                                        <DataGridTextColumn
+                                                            Width="100"
+                                                            Binding="{Binding Parameter}"
+                                                            Header="Parametr" />
+                                                        <DataGridTextColumn
+                                                            Width="80"
+                                                            Binding="{Binding Status}"
+                                                            Header="Status" />
+                                                        <DataGridTextColumn
+                                                            Width="80"
+                                                            Binding="{Binding ExecutionTime}"
+                                                            Header="Czas [ms]" />
+                                                        <DataGridTextColumn
+                                                            Width="*"
+                                                            Binding="{Binding Response}"
+                                                            Header="Odpowiedź" />
+                                                    </DataGrid.Columns>
+                                                </DataGrid>
+
+                                                <Button
+                                                    Grid.Row="2"
+                                                    Margin="5"
+                                                    Padding="10,5"
+                                                    HorizontalAlignment="Right"
+                                                    Click="ExportBatchResultsButton_Click"
+                                                    Content="Eksportuj wyniki do CSV" />
+                                            </Grid>
+                                        </local:GroupBox>
+                                    </Grid>
+                                </TabItem>
+                            </TabControl>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

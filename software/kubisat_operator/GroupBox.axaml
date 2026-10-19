@@ -1,0 +1,40 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:kubisat_operator">
+    <Style Selector="local|GroupBox">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Border
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Margin="0,8,0,0"
+                        Padding="8,12,8,8"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="4">
+                        <ContentPresenter Content="{TemplateBinding Content}" />
+                    </Border>
+                    <Border
+                        Grid.Row="0"
+                        Margin="12,0,0,0"
+                        Padding="4,0"
+                        HorizontalAlignment="Left"
+                        Background="{DynamicResource SystemControlBackgroundAltHighBrush}"
+                        IsHitTestVisible="False">
+                        <ContentPresenter Content="{TemplateBinding Header}" />
+                    </Border>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="8" />
+        <Setter Property="Margin" Value="4" />
+    </Style>
+</Styles>
