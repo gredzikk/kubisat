@@ -113,9 +113,10 @@ int LoRaClass::begin(long frequency)
 
   bi_decl(bi_1pin_with_name(PIN_CS, "SPI CS"));
 
-  // check version
+  // check version (SX1276/77/78/79 = 0x12)
   uint8_t version = readRegister(REG_VERSION);
   if (version != 0x12) {
+    printf("LoRa REG_VERSION=0x%02x (expected 0x12)\n", version);
     return 0;
   }
 

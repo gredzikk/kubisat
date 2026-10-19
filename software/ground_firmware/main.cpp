@@ -85,7 +85,7 @@ void init_system()
     long frequency = 433E6;
     if (!LoRa.begin(frequency))
     {
-        uart_print("LoRa init failed. Check your connections.");
+        uart_print("LoRa init failed. Check SPI wiring (expect version 0x12).");
         while (true)
             ;
     }
@@ -180,7 +180,7 @@ int main()
                     if (uart_buffer.find(RSSI_SNR_TRIGGER) != std::string::npos)
                     {
                         append_rssi_snr = true;
-                        uart_buffer.erase(uart_buffer.find(RSSI_SNR_TRIGGER), 1); 
+                        uart_buffer.erase(uart_buffer.find(RSSI_SNR_TRIGGER), 1);
                         uart_print("RSSI/SNR append triggered");
                     }
                     send_message(uart_buffer);

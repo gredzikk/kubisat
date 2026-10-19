@@ -48,6 +48,14 @@ if (TARGET tinyusb_device)
         pico_stdlib
         LoRa_pico_lib
     )
+
+    # Keep SDK stdio on the same UART as the host link (GP8/GP9),
+    # not the board default GP0/GP1 — GP1 is LoRa CS.
+    target_compile_definitions(main PRIVATE
+        PICO_DEFAULT_UART=1
+        PICO_DEFAULT_UART_TX_PIN=8
+        PICO_DEFAULT_UART_RX_PIN=9
+    )
     
     pico_enable_stdio_usb(main 0)
     pico_enable_stdio_uart(main 1)
